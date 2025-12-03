@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvfaipfafntli"]
+
+[ext_resource type="Script" uid="uid://cftrt2jv2qg5x" path="res://ash_avatar.gd" id="1_o27im"]
+[ext_resource type="Texture2D" uid="uid://d2v472ogt8u6x" path="res://Sprite Sheets/ashton_avatar.png" id="1_qssd1"]
+[ext_resource type="Script" uid="uid://b1aaigj17xljg" path="res://avatar_text.gd" id="2_hcfmy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ela5w"]
+size = Vector2(260, 512.75)
+
+[node name="ash_avatar" type="Node2D"]
+script = ExtResource("1_o27im")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(182, 319)
+shape = SubResource("RectangleShape2D_ela5w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 74.0
+offset_top = 78.0
+offset_right = 292.0
+offset_bottom = 222.0
+text = "A Baseball Player.
+Weapon: Splintered Bat
+Special Skill: Foul Ball
+HP: 30
+Strength: 10    Speed: 8
+Smarts: 4         Spirit: 5"
+horizontal_alignment = 1
+script = ExtResource("2_hcfmy")
+
+[node name="AshtonAvatar" type="Sprite2D" parent="."]
+position = Vector2(178, 372)
+scale = Vector2(10.0996, 9.67188)
+texture = ExtResource("1_qssd1")
