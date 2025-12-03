@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://djdbn2q3psxyp"]
+
+[ext_resource type="Script" uid="uid://be8gybhokwqts" path="res://character_select.gd" id="1_tddig"]
+
+[node name="character_select" type="Node2D"]
+script = ExtResource("1_tddig")
+
+[node name="temp_rect" type="ColorRect" parent="."]
+offset_right = 1146.0
+offset_bottom = 652.0
+color = Color(0.515208, 0.515208, 0.515208, 1)
+
+[node name="ash_button" type="Button" parent="."]
+offset_left = 53.0
+offset_top = 525.0
+offset_right = 259.0
+offset_bottom = 604.0
+text = "Ashton"
+
+[node name="tia_button" type="Button" parent="."]
+offset_left = 332.0
+offset_top = 525.0
+offset_right = 541.0
+offset_bottom = 605.0
+text = "Tiana"
+
+[node name="eve_button" type="Button" parent="."]
+offset_left = 613.0
+offset_top = 524.0
+offset_right = 818.0
+offset_bottom = 607.0
+text = "Eve"
+
+[node name="nate_button" type="Button" parent="."]
+offset_left = 879.0
+offset_top = 522.0
+offset_right = 1085.0
+offset_bottom = 607.0
+text = "Nathan"
+
+[connection signal="pressed" from="ash_button" to="." method="_on_ash_button_pressed"]
+[connection signal="pressed" from="tia_button" to="." method="_on_tia_button_pressed"]
+[connection signal="pressed" from="eve_button" to="." method="_on_eve_button_pressed"]
+[connection signal="pressed" from="nate_button" to="." method="_on_nate_button_pressed"]
