@@ -1,3 +1,40 @@
-[gd_scene format=3 uid="uid://cr38yo2fdkgxv"]
+[gd_scene load_steps=4 format=3 uid="uid://cr38yo2fdkgxv"]
+
+[ext_resource type="Texture2D" uid="uid://ba3psg6umvn0m" path="res://Assets/Player Characters/Eve/eve_avatar.png" id="1_ihoy8"]
+[ext_resource type="Script" uid="uid://d2lytojdslakk" path="res://eve_avatar.gd" id="1_k2eby"]
+[ext_resource type="Script" uid="uid://b1aaigj17xljg" path="res://avatar_text.gd" id="2_ne5xb"]
 
 [node name="eve_avatar" type="Node2D"]
+script = ExtResource("1_k2eby")
+
+[node name="EveAvatar" type="Sprite2D" parent="."]
+position = Vector2(178, 372)
+scale = Vector2(10.1, 9.672)
+texture = ExtResource("1_ihoy8")
+
+[node name="eve_button" type="Button" parent="."]
+offset_left = 75.0
+offset_top = 502.0
+offset_right = 281.0
+offset_bottom = 581.0
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
+text = "Eve"
+
+[node name="PlayerText" type="RichTextLabel" parent="."]
+offset_left = 52.0
+offset_top = 72.0
+offset_right = 306.0
+offset_bottom = 221.0
+text = "A Bookworm.
+Weapon: Pocket Knife
+Special Skill: Play Dead
+HP: 25
+Strength: 6    Speed: 7
+Smarts: 10      Spirit: 4"
+horizontal_alignment = 1
+script = ExtResource("2_ne5xb")
+
+[connection signal="mouse_entered" from="eve_button" to="." method="_on_eve_button_mouse_entered"]
+[connection signal="mouse_exited" from="eve_button" to="." method="_on_eve_button_mouse_exited"]
+[connection signal="pressed" from="eve_button" to="." method="_on_eve_button_pressed"]

@@ -1,3 +1,25 @@
 [gd_scene format=3 uid="uid://ybui4u7ubh2b"]
 
 [node name="opening cutscene" type="Node2D"]
+
+[node name="temp_text" type="RichTextLabel" parent="."]
+offset_left = 224.0
+offset_top = 12.0
+offset_right = 932.0
+offset_bottom = 88.0
+theme_override_font_sizes/normal_font_size = 48
+text = "Cutscene Under construction!"
+
+[node name="temp_open_button" type="Button" parent="."]
+offset_left = 222.0
+offset_top = 266.0
+offset_right = 467.0
+offset_bottom = 403.0
+text = "Open World Test"
+
+[node name="temp_battle_button" type="Button" parent="."]
+offset_left = 672.0
+offset_top = 267.0
+offset_right = 917.0
+offset_bottom = 404.0
+text = "Battle Test"

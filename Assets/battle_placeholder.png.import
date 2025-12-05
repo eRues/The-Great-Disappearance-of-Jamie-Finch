@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2v472ogt8u6x"
-path="res://.godot/imported/ashton_avatar.png-bdbd9f653a099fad391aa3d636557a7f.ctex"
+uid="uid://kb16rvp23l3y"
+path="res://.godot/imported/battle_placeholder.png-7e22d3533dd91d27c3489369376c3b7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheets/ashton_avatar.png"
-dest_files=["res://.godot/imported/ashton_avatar.png-bdbd9f653a099fad391aa3d636557a7f.ctex"]
+source_file="res://Assets/battle_placeholder.png"
+dest_files=["res://.godot/imported/battle_placeholder.png-7e22d3533dd91d27c3489369376c3b7c.ctex"]
 
 [params]
 

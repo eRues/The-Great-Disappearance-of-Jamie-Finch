@@ -1,4 +1,4 @@
 extends RichTextLabel
 
-func ready(_delta):
+func _ready() -> void:
 	self.visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsyoinsxoa3ue"
-path="res://.godot/imported/Ashton_v2.png-e22f9abfd33ddd0c937bd42a0148a1d9.ctex"
+uid="uid://dcpaf5kd57vjl"
+path="res://.godot/imported/Eve.png-51c039b60519f363c5baa0f9ba52512e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheets/Ashton_v2.png"
-dest_files=["res://.godot/imported/Ashton_v2.png-e22f9abfd33ddd0c937bd42a0148a1d9.ctex"]
+source_file="res://Assets/Player Characters/Eve/Eve.png"
+dest_files=["res://.godot/imported/Eve.png-51c039b60519f363c5baa0f9ba52512e.ctex"]
 
 [params]
 

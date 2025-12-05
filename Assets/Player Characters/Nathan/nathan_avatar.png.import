@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dncj6a50584ya"
-path="res://.godot/imported/Nathan.png-ca25350273a58fdc6334b8cda4fb6c2e.ctex"
+uid="uid://6pvfdefm0u64"
+path="res://.godot/imported/nathan_avatar.png-83e5a575e4dd8a9fadef1e541d6dce2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheets/Nathan.png"
-dest_files=["res://.godot/imported/Nathan.png-ca25350273a58fdc6334b8cda4fb6c2e.ctex"]
+source_file="res://Assets/Player Characters/Nathan/nathan_avatar.png"
+dest_files=["res://.godot/imported/nathan_avatar.png-83e5a575e4dd8a9fadef1e541d6dce2f.ctex"]
 
 [params]
 

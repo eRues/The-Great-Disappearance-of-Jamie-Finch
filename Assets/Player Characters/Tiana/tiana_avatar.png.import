@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcpaf5kd57vjl"
-path="res://.godot/imported/Eve.png-b1f79c6e2f43b022abfc0de74a13d8f3.ctex"
+uid="uid://c1u74ejr5u70y"
+path="res://.godot/imported/tiana_avatar.png-c66644c18fb63b1f01f21fc7e188fcd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheets/Eve.png"
-dest_files=["res://.godot/imported/Eve.png-b1f79c6e2f43b022abfc0de74a13d8f3.ctex"]
+source_file="res://Assets/Player Characters/Tiana/tiana_avatar.png"
+dest_files=["res://.godot/imported/tiana_avatar.png-c66644c18fb63b1f01f21fc7e188fcd1.ctex"]
 
 [params]
 

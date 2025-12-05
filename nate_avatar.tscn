@@ -1,3 +1,40 @@
-[gd_scene format=3 uid="uid://mfomhv5g46nd"]
+[gd_scene load_steps=4 format=3 uid="uid://mfomhv5g46nd"]
+
+[ext_resource type="Script" uid="uid://ds78nmibs3t8t" path="res://nate_avatar.gd" id="1_el8hm"]
+[ext_resource type="Texture2D" uid="uid://6pvfdefm0u64" path="res://Assets/Player Characters/Nathan/nathan_avatar.png" id="1_of446"]
+[ext_resource type="Script" uid="uid://b1aaigj17xljg" path="res://avatar_text.gd" id="2_el8hm"]
 
 [node name="nate_avatar" type="Node2D"]
+script = ExtResource("1_el8hm")
+
+[node name="NathanAvatar" type="Sprite2D" parent="."]
+position = Vector2(178, 372)
+scale = Vector2(10.1, 9.625)
+texture = ExtResource("1_of446")
+
+[node name="nate_button" type="Button" parent="."]
+offset_left = 75.0
+offset_top = 502.0
+offset_right = 281.0
+offset_bottom = 581.0
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
+text = "Nathan"
+
+[node name="PlayerText" type="RichTextLabel" parent="."]
+offset_left = 52.0
+offset_top = 72.0
+offset_right = 306.0
+offset_bottom = 221.0
+text = "A Thespian.
+Weapon: Flashlight
+Special Skill: Light Stun
+HP: 26
+Strength: 4    Speed: 6
+Smarts: 8      Spirit: 10"
+horizontal_alignment = 1
+script = ExtResource("2_el8hm")
+
+[connection signal="mouse_entered" from="nate_button" to="." method="_on_nate_button_mouse_entered"]
+[connection signal="mouse_exited" from="nate_button" to="." method="_on_nate_button_mouse_exited"]
+[connection signal="pressed" from="nate_button" to="." method="_on_nate_button_pressed"]

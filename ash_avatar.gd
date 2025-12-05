@@ -1,1 +1,1 @@
-extends "avatar.gd"
+extends Node2D
