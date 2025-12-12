@@ -1,5 +1,6 @@
 extends Node2D
 var enemy
+var defended = false
 
 func _ready() -> void:
 	enemy = Battle_Enemy.new("rabbit_dee")
@@ -12,3 +13,12 @@ func _on_skill_button_pressed() -> void:
 
 func _on_inventory_button_pressed() -> void:
 	Global.battle_type.check_inventory()
+
+func _on_defend_button_pressed() -> void:
+	Global.battle_type.defend()
+	defended = true
+
+
+
+func _on_attack_button_pressed() -> void:
+	pass # Replace with function body.
