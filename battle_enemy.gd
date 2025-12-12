@@ -4,8 +4,6 @@ var confused = false
 
 func _init(new_name : String) -> void:
 	enemy_name = new_name
-
-func _ready() -> void:
 	if(enemy_name == "rabbit_dee"):
 		health = 10
 		strength = 2
@@ -13,8 +11,13 @@ func _ready() -> void:
 		smarts = 5
 		spirit = 7
 
-func attack(enemy_dodge : int, dmg : int) -> int:
-	if(health <= health/2):
+func _ready() -> void:
+	pass
+
+func attack(enemy_dodge : int) -> int:
+	var dmg = 0
+	@warning_ignore("integer_division")
+	if(health <= (health/2)):
 		if(enemy_dodge <= ((randi() + 1)*100)):
 			dmg = get_damage()
 		

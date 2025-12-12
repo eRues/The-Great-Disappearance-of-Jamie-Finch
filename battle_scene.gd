@@ -18,7 +18,8 @@ func _on_defend_button_pressed() -> void:
 	Global.battle_type.defend()
 	defended = true
 
-
-
 func _on_attack_button_pressed() -> void:
-	pass # Replace with function body.
+	var damage = Global.battle_type.attack(enemy.get_dodge())
+	enemy.health -= damage
+	print("Player did " + str(damage) + " damage. This is the enemy's remaining health: ")
+	print(enemy.health)
