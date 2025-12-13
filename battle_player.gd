@@ -10,7 +10,8 @@ var skill_cooldown = 0
 
 @abstract func use_skill(my_enemy : Battle_Enemy)
 
-func attack(enemy_dodge : int, dmg : int) -> int: 
+func attack(enemy_dodge : int) -> int: 
+	var dmg = 0
 	if(enemy_dodge <= ((randi() + 1)*100)):
 		dmg = get_damage()
 		

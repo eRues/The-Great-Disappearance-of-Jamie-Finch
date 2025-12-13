@@ -1,25 +1,22 @@
-class_name Battle_Ash extends Battle_Player
+class_name Battle_Nate extends Battle_Player
 var defend_mod = 0
 var base_health
 var can_use_skill = true
 
 func _init() -> void:
-	health = 30
+	health = 26
 	base_health = health
-	strength = 10
-	speed = 8
-	spirit = 5
-	smarts = 4
-	hp_increase = 80
-	str_increase = 80
-	spe_increase = 50
-	spi_increase = 40
-	sma_increase = 35
+	strength = 4
+	speed = 6
+	spirit = 10
+	smarts = 8
+	hp_increase = 70
+	str_increase = 30
+	spe_increase = 40
+	spi_increase = 70
+	sma_increase = 55
 	level = 1
 	experience = 0
-
-func _process(_delta) -> void:
-	pass
 
 func defend():
 	if(speed - 5 <= 1):
