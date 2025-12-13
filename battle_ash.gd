@@ -18,6 +18,9 @@ func _ready() -> void:
 	level = 1
 	experience = 0
 
+func _process(_delta) -> void:
+	pass
+
 func defend():
 	if(speed - 5 <= 1):
 		defend_mod = 1

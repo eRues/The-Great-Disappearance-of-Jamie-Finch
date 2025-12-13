@@ -6,7 +6,7 @@ var str_increase
 var spe_increase
 var sma_increase
 var spi_increase
-var rnd = RandomNumberGenerator.new()
+var skill_cooldown = 0
 
 @abstract func use_skill(my_enemy : Battle_Enemy)
 
