@@ -10,6 +10,7 @@ func _init(new_name : String) -> void:
 		speed = 9
 		smarts = 5
 		spirit = 7
+		experience = 10
 
 func _ready() -> void:
 	pass

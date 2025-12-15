@@ -5,6 +5,6 @@ var ash_chosen = false
 var tia_chosen = false
 var eve_chosen = false
 var nate_chosen = false
-var battle_type
+var battle_type = Battle_Ash.new()
 var dont_run = false
 var current_enemy = ""

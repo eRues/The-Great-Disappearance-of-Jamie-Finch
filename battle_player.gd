@@ -6,7 +6,9 @@ var str_increase
 var spe_increase
 var sma_increase
 var spi_increase
+var exp_to_next_level = 10
 var skill_cooldown = 0
+var leveled_up = false
 
 @abstract func use_skill(my_enemy : Battle_Enemy)
 
@@ -23,17 +25,21 @@ func check_inventory() -> void:
 	print("inventory checked")
 
 func add_level() -> void:
-	if(((randi() + 1) * 100) <= hp_increase):
+	leveled_up = true
+	if(((randf()*100) + 1) <= hp_increase):
 		health += 1
-	if(((randi() + 1) * 100) <= str_increase):
+	if(((randf()*100) + 1) <= str_increase):
 		strength += 1
-	if(((randi() + 1) * 100) <= spe_increase):
+	if(((randf()*100) + 1) <= spe_increase):
 		speed += 1
-	if(((randi() + 1) * 100) <= sma_increase):
+	if(((randf()*100) + 1) <= sma_increase):
 		smarts += 1
-	if(((randi() + 1) * 100) <= spi_increase):
+	if(((randf()*100) + 1) <= spi_increase):
 		spirit += 1
 	level += 1
+	experience = experience % exp_to_next_level
+	exp_to_next_level += 10
+	leveled_up = false
 
 func add_exp(enemy_exp : int) -> void:
 	experience += enemy_exp

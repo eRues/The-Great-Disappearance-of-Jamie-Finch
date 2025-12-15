@@ -5,9 +5,13 @@ var player_turn = true
 var skill_used = false
 var turns_since_skill = 5
 var defeated = false
+var exp_added = false
+@onready var sprite = get_node("placeholder_sprite")
+@onready var text = get_node("end_battle")
 
 func _ready() -> void:
 	enemy = Battle_Enemy.new("rabbit_dee")
+	exp_added = false
 
 func _process(_delta) -> void:
 	if(defeated):
@@ -19,18 +23,34 @@ func _process(_delta) -> void:
 			if(enemy.confused):
 				print("enemy is confused, cannot attack")
 				player_turn = true
-				enemy.confused = false
 			else:
 				var damage = enemy.attack(Global.battle_type.get_dodge())
 				Global.battle_type.health -= damage
 				print("enemy attacked!")
 				print("enemy does " + str(damage) + " damage. You have " + str(Global.battle_type.health) + " health points remaining.")
 				player_turn = true
+			if(turns_since_skill == 1):
+					enemy.confused = false
 		if(enemy.health <= 0):
 			defeated = true
+			if(!exp_added):
+				Global.battle_type.add_exp(enemy.experience)
+				print(str(Global.battle_type.experience))
+				exp_added = false
+				print("exp_added")
+			else:
+				pass
+			if((int)(Global.battle_type.experience / Global.battle_type.exp_to_next_level) >= 1):
+				Global.battle_type.add_level()
+			
+			sprite.visible = false
+			text.visible = true
 
 func _on_run_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://opening_cutscene.tscn")
+	if(defeated):
+		pass
+	else:
+		get_tree().change_scene_to_file("res://opening_cutscene.tscn")
 
 func _on_skill_button_pressed() -> void:
 	if(defeated):
@@ -39,18 +59,15 @@ func _on_skill_button_pressed() -> void:
 		if(turns_since_skill >= 4):
 			Global.battle_type.can_use_skill = true
 			Global.battle_type.use_skill(enemy)
-			turns_since_skill = -1
+			turns_since_skill = 0
 			print("you used your skill, the enemy is now confused.")
 			skill_used = true
 		elif(turns_since_skill >= 0 && turns_since_skill <=4):
 			Global.battle_type.use_skill(enemy)
-			turns_since_skill += 1
 		else:
 			Global.battle_type.use_skill(enemy)
-			print(str(Global.battle_type.smarts))
 			player_turn = false
 			Global.battle_type.can_use_skill = false
-			turns_since_skill +=1
 
 func _on_inventory_button_pressed() -> void:
 	if(defeated):
@@ -72,6 +89,8 @@ func _on_defend_button_pressed() -> void:
 			skill_used = false
 		defended = true
 		player_turn = false
+	
+	turns_since_skill += 1
 
 func _on_attack_button_pressed() -> void:
 	if(defeated):
@@ -87,6 +106,9 @@ func _on_attack_button_pressed() -> void:
 			Global.battle_type.smarts -= 2
 			skill_used = false
 		player_turn = false
-		print(str(Global.battle_type.smarts))
 		print("you attacked!")
-		print("you do " + str(damage) + " damage. Enemy has " + str(enemy.health) + " health points remaining.")
+		if(enemy.health >= 0):
+			print("you do " + str(damage) + " damage. Enemy has " + str(enemy.health) + " health points remaining.")
+		else:
+			print("you do " + str(damage) + " damage. Enemy has 0 health points remaining.")
+	turns_since_skill += 1
