@@ -28,5 +28,6 @@ func use_skill(my_enemy : Battle_Enemy):
 		print("enemy is confused")
 		smarts += temp_smarts
 		print(smarts)
+		can_use_skill = false
 	else:
 		print("wait for cooldown")

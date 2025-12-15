@@ -2,8 +2,6 @@ class_name Battle_Tia extends Battle_Player
 var defended = false
 var base_health
 var can_use_skill = true
-var temp_speed = 5
-var temp_strength = 5
 
 func _init() -> void:
 	health = 28
@@ -25,7 +23,9 @@ func defend():
 
 func use_skill(_my_enemy : Battle_Enemy):
 	if(can_use_skill):
-		speed += temp_speed
-		strength += temp_strength
+		speed += 5
+		strength += 5
+		print(str(speed))
+		print(str(strength))
 	else:
 		print("wait for cooldown")
