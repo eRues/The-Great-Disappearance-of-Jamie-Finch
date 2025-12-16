@@ -1,6 +1,5 @@
 class_name Battle_Ash extends Battle_Player
 var defend_mod = 0
-var base_health
 var can_use_skill = true
 
 func _init() -> void:

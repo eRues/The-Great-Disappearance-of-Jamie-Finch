@@ -1,16 +1,19 @@
 class_name Battle_Enemy extends Battle_Character
 var enemy_name = "rabbit_dee"
 var confused = false
+var is_boss = false
 
 func _init(new_name : String) -> void:
 	enemy_name = new_name
 	if(enemy_name == "rabbit_dee"):
-		health = 10
-		strength = 2
-		speed = 9
-		smarts = 5
-		spirit = 7
-		experience = 10
+		is_boss = false
+		agitation = Global.base_agitation
+		health = (int)(10 * Global.base_agitation)
+		strength = (int)(2 * Global.base_agitation)
+		speed = (int)(9 * Global.base_agitation)
+		smarts = (int)(5 * Global.base_agitation)
+		spirit = (int)(7 * Global.base_agitation)
+		experience = (int)(10 * Global.base_agitation)
 
 func _ready() -> void:
 	pass

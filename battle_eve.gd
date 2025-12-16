@@ -1,6 +1,5 @@
 class_name Battle_Eve extends Battle_Player
 var defended = false
-var base_health
 var can_use_skill = true
 var temp_smarts = 2
 

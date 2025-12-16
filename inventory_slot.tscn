@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://caycdonobnheh"]
+
+[ext_resource type="Script" uid="uid://vyf6n3bk370v" path="res://inventory_slot.gd" id="1_bfyh4"]
+[ext_resource type="Texture2D" uid="uid://c2k150hrdwila" path="res://Assets/not_selected.png" id="2_75pi0"]
+[ext_resource type="Texture2D" uid="uid://bi3xcnbtj73ij" path="res://Assets/selected.png" id="3_rhcms"]
+
+[node name="inventory_slot" type="Node2D"]
+script = ExtResource("1_bfyh4")
+
+[node name="select" type="Button" parent="."]
+offset_left = 293.0
+offset_top = 185.0
+offset_right = 363.0
+offset_bottom = 254.0
+
+[node name="Selected" type="Sprite2D" parent="."]
+position = Vector2(328, 219.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_rhcms")
+
+[node name="NotSelected" type="Sprite2D" parent="."]
+position = Vector2(328, 219)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_75pi0")
+
+[connection signal="mouse_entered" from="select" to="." method="_on_select_mouse_entered"]
+[connection signal="mouse_exited" from="select" to="." method="_on_select_mouse_exited"]
+[connection signal="pressed" from="select" to="." method="_on_select_pressed"]
