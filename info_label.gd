@@ -10,7 +10,7 @@ func _on_visibility_changed() -> void:
 	self.newline()
 	self.add_text("Experience: " + str(Global.battle_type.experience) + " / " + str(Global.battle_type.exp_to_next_level))
 	self.newline()
-	self.add_text("Health = " + str(Global.battle_type.health))
+	self.add_text("Health = " + str(Global.battle_type.health) + " / " + str(Global.battle_type.base_health))
 	self.newline()
 	self.add_text("Strength = " + str(Global.battle_type.strength))
 	self.newline()

@@ -6,12 +6,14 @@ var skill_used = false
 var turns_since_skill = 5
 var defeated = false
 var exp_added = false
+var damage_done = 0
 @onready var sprite = get_node("placeholder_sprite")
 @onready var text = get_node("end_battle")
 
 func _ready() -> void:
 	enemy = Battle_Enemy.new("rabbit_dee")
 	exp_added = false
+	damage_done = 0
 
 func _process(_delta) -> void:
 	if(defeated):
@@ -25,6 +27,7 @@ func _process(_delta) -> void:
 				player_turn = true
 			else:
 				var damage = enemy.attack(Global.battle_type.get_dodge())
+				damage_done += damage
 				Global.battle_type.health -= damage
 				print("enemy attacked!")
 				print("enemy does " + str(damage) + " damage. You have " + str(Global.battle_type.health) + " health points remaining.")
@@ -42,9 +45,13 @@ func _process(_delta) -> void:
 				pass
 			if((int)(Global.battle_type.experience / Global.battle_type.exp_to_next_level) >= 1):
 				Global.battle_type.add_level()
-			
 			sprite.visible = false
 			text.visible = true
+			if(enemy.is_boss == false):
+				Global.base_agitation += 0.5
+			else:
+				Global.base_agitation = 1
+			print(str(Global.base_agitation))
 
 func _on_run_button_pressed() -> void:
 	if(defeated):

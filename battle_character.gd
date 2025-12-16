@@ -4,6 +4,7 @@ class_name Battle_Character extends Character
 @abstract func attack(enemy_dodge : int) -> int
 @abstract func defend()
 
+#returns the amount of damage a character does in battle
 func get_damage() -> int:
 	@warning_ignore("integer_division")
 	return (int)(strength/2)

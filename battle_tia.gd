@@ -1,6 +1,5 @@
 class_name Battle_Tia extends Battle_Player
 var defended = false
-var base_health
 var can_use_skill = true
 
 func _init() -> void:
