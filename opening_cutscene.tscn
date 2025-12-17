@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ybui4u7ubh2b"]
+[gd_scene load_steps=3 format=3 uid="uid://ybui4u7ubh2b"]
 
 [ext_resource type="Script" uid="uid://bo104vcqokqms" path="res://opening_cutscene.gd" id="1_acnil"]
+[ext_resource type="PackedScene" uid="uid://bkhx06o5x33dw" path="res://text_box.tscn" id="2_e8074"]
 
 [node name="opening cutscene" type="Node2D"]
 script = ExtResource("1_acnil")
@@ -26,5 +27,11 @@ offset_top = 267.0
 offset_right = 917.0
 offset_bottom = 404.0
 text = "Battle Test"
+
+[node name="text_box" parent="." instance=ExtResource("2_e8074")]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 7.0
+offset_bottom = 7.0
 
 [connection signal="pressed" from="temp_battle_button" to="." method="_on_temp_battle_button_pressed"]
