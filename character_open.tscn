@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkk4ktwgy2gp3"]
+[gd_scene load_steps=5 format=3 uid="uid://dkk4ktwgy2gp3"]
 
 [ext_resource type="PackedScene" uid="uid://csqh2fdm350yi" path="res://ash_open.tscn" id="1_6so4b"]
 [ext_resource type="PackedScene" uid="uid://d0tirwpydxxk2" path="res://tia_open.tscn" id="2_17gy8"]
 [ext_resource type="PackedScene" uid="uid://br0lffedi4y13" path="res://eve_open.tscn" id="3_dfaot"]
+[ext_resource type="PackedScene" uid="uid://ccn3surclscyf" path="res://nathan_open.tscn" id="4_cmeqg"]
 
 [node name="character_open" type="Node2D"]
 
@@ -12,3 +13,5 @@ position = Vector2(-0.9867096, -0.16405106)
 [node name="tia_open" parent="." instance=ExtResource("2_17gy8")]
 
 [node name="eve_open" parent="." instance=ExtResource("3_dfaot")]
+
+[node name="nathan_open" parent="." instance=ExtResource("4_cmeqg")]
