@@ -7,10 +7,10 @@ var dialogue = []
 var current_dialogue_id = 0
 
 func _ready():
-	$NinePatchRect.visible = false
+	self.visible = false
 
 func start():
-	$NinePatchRect.visible = true
+	self.visible = true
 	dialogue = load_dialogue()
 	current_dialogue_id = -1
 	next_script()
@@ -42,6 +42,7 @@ func next_script():
 	if current_dialogue_id >= len(dialogue):
 		$NinePatchRect.visible = false
 		emit_signal("dialogue_finished")
+		return
 
 	$NinePatchRect/Name.text = dialogue[current_dialogue_id]['name']
 	$NinePatchRect/Text.text = dialogue[current_dialogue_id]['text']
