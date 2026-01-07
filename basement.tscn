@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://2ufa0qv0narx"]
+[gd_scene load_steps=2 format=3 uid="uid://2ufa0qv0narx"]
+
+[ext_resource type="PackedScene" uid="uid://c27fxtj7rcng3" path="res://Maps/basement_map.tscn" id="1_uyr1m"]
 
 [node name="basement" type="Node2D"]
 
-[node name="basement_map" type="TileMap" parent="."]
-format = 2
+[node name="basement_map" parent="." instance=ExtResource("1_uyr1m")]
