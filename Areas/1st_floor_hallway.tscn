@@ -32,6 +32,7 @@ texture = SubResource("GradientTexture1D_oe33b")
 polygon = PackedVector2Array(0, 16, 1, 176, 1759, 175, 1759, 201, 1809, 201, 1808, 175, 1824, 175, 1824, 15, 1, 16, 60, -56, 505, -33, 616, -27, 686, -29, 1999, -33, 1997, 359, 1680, 534, -300, 320, -76, -80)
 
 [node name="rock_texture" type="TextureRect" parent="."]
+visible = false
 offset_top = 38.0
 offset_right = 117.0
 offset_bottom = 176.0
