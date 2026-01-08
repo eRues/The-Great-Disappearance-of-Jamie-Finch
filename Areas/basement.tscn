@@ -5,3 +5,15 @@
 [node name="basement" type="Node2D"]
 
 [node name="basement_map" parent="." instance=ExtResource("1_uyr1m")]
+
+[node name="dark" type="ColorRect" parent="."]
+offset_left = 576.0
+offset_right = 1152.0
+offset_bottom = 304.0
+color = Color(0, 0, 0, 0.5764706)
+
+[node name="dark2" type="ColorRect" parent="."]
+offset_top = 32.0
+offset_right = 576.0
+offset_bottom = 256.0
+color = Color(0, 0, 0, 0.5764706)
