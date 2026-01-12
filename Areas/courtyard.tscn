@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://r1jc06ey0aul"]
+
+[ext_resource type="PackedScene" uid="uid://ucnmkofo2at5" path="res://Maps/courtyard_map.tscn" id="1_h6p8g"]
+
+[node name="courtyard" type="Node2D"]
+
+[node name="courtyard_map" parent="." instance=ExtResource("1_h6p8g")]
