@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://0qqui53eq7lh"]
+[gd_scene load_steps=6 format=3 uid="uid://0qqui53eq7lh"]
 
 [ext_resource type="PackedScene" uid="uid://dbsi5g6n05p3v" path="res://Maps/hallway_map.tscn" id="1_6cnaf"]
 [ext_resource type="Texture2D" uid="uid://73d6h7mux6gy" path="res://Assets/Map Assets/rock.png" id="2_oe33b"]
+[ext_resource type="PackedScene" uid="uid://dkk4ktwgy2gp3" path="res://character_open.tscn" id="3_4entq"]
 
 [sub_resource type="Gradient" id="Gradient_6cnaf"]
 offsets = PackedFloat32Array(0.40449437, 0.8820225)
@@ -37,3 +38,6 @@ offset_top = 38.0
 offset_right = 117.0
 offset_bottom = 176.0
 texture = ExtResource("2_oe33b")
+
+[node name="character_open" parent="." instance=ExtResource("3_4entq")]
+position = Vector2(25, 148)

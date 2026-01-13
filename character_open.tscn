@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkk4ktwgy2gp3"]
+[gd_scene load_steps=6 format=3 uid="uid://dkk4ktwgy2gp3"]
 
+[ext_resource type="Script" uid="uid://cbrl0skqjkvkm" path="res://character_open.gd" id="1_4uwka"]
 [ext_resource type="PackedScene" uid="uid://csqh2fdm350yi" path="res://ash_open.tscn" id="1_6so4b"]
 [ext_resource type="PackedScene" uid="uid://d0tirwpydxxk2" path="res://tia_open.tscn" id="2_17gy8"]
 [ext_resource type="PackedScene" uid="uid://br0lffedi4y13" path="res://eve_open.tscn" id="3_dfaot"]
 [ext_resource type="PackedScene" uid="uid://ccn3surclscyf" path="res://nathan_open.tscn" id="4_cmeqg"]
 
 [node name="character_open" type="Node2D"]
+script = ExtResource("1_4uwka")
 
 [node name="ash_open" parent="." instance=ExtResource("1_6so4b")]
 position = Vector2(-0.9867096, -0.16405106)
