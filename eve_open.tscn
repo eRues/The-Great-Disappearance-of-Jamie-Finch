@@ -1,26 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://br0lffedi4y13"]
+[gd_scene load_steps=11 format=3 uid="uid://br0lffedi4y13"]
 
 [ext_resource type="Texture2D" uid="uid://cqgkmhkyteeaw" path="res://Assets/Player Characters/Eve/Eve_V2.png" id="1_qriyl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qriyl"]
 radius = 6.0
-
-[sub_resource type="Animation" id="Animation_qriyl"]
-resource_name = "idle_down"
-length = 0.28
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_oswt1"]
 length = 0.001
@@ -37,8 +20,8 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_qtvtn"]
-resource_name = "idle_left"
+[sub_resource type="Animation" id="Animation_qriyl"]
+resource_name = "idle_down"
 length = 0.28
 loop_mode = 1
 tracks/0/type = "value"
@@ -51,24 +34,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [3]
-}
-
-[sub_resource type="Animation" id="Animation_uf3um"]
-resource_name = "idle_right"
-length = 0.28
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [6]
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_jjnkm"]
@@ -105,40 +71,6 @@ tracks/0/keys = {
 "values": [1, 0, 2, 0]
 }
 
-[sub_resource type="Animation" id="Animation_dsimh"]
-resource_name = "walk_left"
-length = 1.07
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666665, 0.53333336, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [4, 3, 5, 3]
-}
-
-[sub_resource type="Animation" id="Animation_gf1sp"]
-resource_name = "walk_right"
-length = 1.07
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666665, 0.53333336, 0.79999995),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [7, 6, 8, 6]
-}
-
 [sub_resource type="Animation" id="Animation_msyjw"]
 resource_name = "walk_up"
 length = 1.07
@@ -156,16 +88,48 @@ tracks/0/keys = {
 "values": [9, 10, 9, 11]
 }
 
+[sub_resource type="Animation" id="Animation_uf3um"]
+resource_name = "idle_side"
+length = 0.28
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_gf1sp"]
+resource_name = "walk_side"
+length = 1.07
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666665, 0.53333336, 0.79999995),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 6, 8, 6]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jjnkm"]
 _data = {
 &"RESET": SubResource("Animation_oswt1"),
 &"idle_down": SubResource("Animation_qriyl"),
-&"idle_left": SubResource("Animation_qtvtn"),
-&"idle_right": SubResource("Animation_uf3um"),
+&"idle_side": SubResource("Animation_uf3um"),
 &"idle_up": SubResource("Animation_jjnkm"),
 &"walk_down": SubResource("Animation_skefd"),
-&"walk_left": SubResource("Animation_dsimh"),
-&"walk_right": SubResource("Animation_gf1sp"),
+&"walk_side": SubResource("Animation_gf1sp"),
 &"walk_up": SubResource("Animation_msyjw")
 }
 
