@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var interact_ui = $InteractUI
+
 func _ready() -> void:
 	$ash_open.visible = false
 	$tia_open.visible = false

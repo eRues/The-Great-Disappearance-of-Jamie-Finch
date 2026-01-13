@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://br0lffedi4y13" path="res://eve_open.tscn" id="3_dfaot"]
 [ext_resource type="PackedScene" uid="uid://ccn3surclscyf" path="res://nathan_open.tscn" id="4_cmeqg"]
 
-[node name="character_open" type="Node2D"]
+[node name="character_open" type="Node2D" groups=["player"]]
 script = ExtResource("1_4uwka")
 
 [node name="ash_open" parent="." instance=ExtResource("1_6so4b")]
@@ -17,3 +17,20 @@ position = Vector2(-0.9867096, -0.16405106)
 [node name="eve_open" parent="." instance=ExtResource("3_dfaot")]
 
 [node name="nathan_open" parent="." instance=ExtResource("4_cmeqg")]
+
+[node name="InteractUI" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="InteractUI"]
+offset_left = -23.0
+offset_top = -26.0
+offset_right = 24.0
+offset_bottom = -14.0
+color = Color(0.080783345, 0.080783345, 0.080783345, 0.2784314)
+
+[node name="Label" type="Label" parent="InteractUI"]
+offset_left = -23.0
+offset_top = -29.0
+offset_right = 23.0
+offset_bottom = -6.0
+theme_override_font_sizes/font_size = 12
+text = "Interact"

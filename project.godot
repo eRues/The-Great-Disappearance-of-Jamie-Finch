@@ -23,6 +23,7 @@ InventoryAutoload="*res://inventory_autoload.gd"
 [global_group]
 
 items=""
+player=""
 
 [input]
 
