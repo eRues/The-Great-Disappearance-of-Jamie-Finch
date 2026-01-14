@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkk4ktwgy2gp3"]
+[gd_scene load_steps=11 format=3 uid="uid://dkk4ktwgy2gp3"]
 
 [ext_resource type="Script" uid="uid://cbrl0skqjkvkm" path="res://character_open.gd" id="1_4uwka"]
 [ext_resource type="PackedScene" uid="uid://csqh2fdm350yi" path="res://ash_open.tscn" id="1_6so4b"]
@@ -9,8 +9,10 @@
 [ext_resource type="Script" uid="uid://g1os6mm6615c" path="res://tia_open.gd" id="5_t4vui"]
 [ext_resource type="Script" uid="uid://v1yapt2w4p7c" path="res://eve_open.gd" id="7_am563"]
 [ext_resource type="Script" uid="uid://cp3qrn1cm3ftg" path="res://nathan_open.gd" id="9_0kwr6"]
+[ext_resource type="PackedScene" uid="uid://b3drsh4yrp34h" path="res://inventory_ui.tscn" id="10_26enf"]
 
 [node name="character_open" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_4uwka")
 
 [node name="ash_open" parent="." instance=ExtResource("1_6so4b")]
@@ -25,3 +27,48 @@ script = ExtResource("7_am563")
 
 [node name="nathan_open" parent="." instance=ExtResource("4_cmeqg")]
 script = ExtResource("9_0kwr6")
+
+[node name="InteractUI" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="InteractUI"]
+offset_left = -20.0
+offset_top = -17.0
+offset_right = 19.0
+offset_bottom = -6.0
+color = Color(0.19793725, 0.19793725, 0.19793719, 0.29411766)
+
+[node name="Label" type="Label" parent="InteractUI"]
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 19.0
+offset_bottom = 4.0
+theme_override_font_sizes/font_size = 10
+text = "Interact"
+
+[node name="InventoryUI" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="InventoryUI" instance=ExtResource("10_26enf")]
+offset_left = -4.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = -11.0
+
+[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+
+[node name="Label" type="Label" parent="InventoryUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.5
+offset_top = 50.0
+offset_right = 74.5
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Inventory"

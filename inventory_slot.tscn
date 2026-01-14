@@ -1,28 +1,95 @@
 [gd_scene load_steps=4 format=3 uid="uid://caycdonobnheh"]
 
-[ext_resource type="Script" uid="uid://vyf6n3bk370v" path="res://inventory_slot.gd" id="1_bfyh4"]
-[ext_resource type="Texture2D" uid="uid://c2k150hrdwila" path="res://Assets/not_selected.png" id="2_75pi0"]
-[ext_resource type="Texture2D" uid="uid://bi3xcnbtj73ij" path="res://Assets/selected.png" id="3_rhcms"]
+[ext_resource type="Script" uid="uid://vyf6n3bk370v" path="res://inventory_slot.gd" id="1_42eed"]
+[ext_resource type="Texture2D" uid="uid://imaincasmpw5" path="res://Assets/ash_bat.png" id="2_f5bh6"]
 
-[node name="inventory_slot" type="Node2D"]
-script = ExtResource("1_bfyh4")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfyh4"]
 
-[node name="select" type="Button" parent="."]
-offset_left = 293.0
-offset_top = 185.0
-offset_right = 363.0
-offset_bottom = 254.0
+[node name="inventory_slot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -992.0
+offset_bottom = -488.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_42eed")
 
-[node name="Selected" type="Sprite2D" parent="."]
-position = Vector2(328, 219.00003)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("3_rhcms")
+[node name="outer_border" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.98039216, 1, 1, 0.7411765)
 
-[node name="NotSelected" type="Sprite2D" parent="."]
-position = Vector2(328, 219)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_75pi0")
+[node name="inner_border" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 5.0
+offset_right = 70.0
+offset_bottom = 145.0
+grow_horizontal = 2
 
-[connection signal="mouse_entered" from="select" to="." method="_on_select_mouse_entered"]
-[connection signal="mouse_exited" from="select" to="." method="_on_select_mouse_exited"]
-[connection signal="pressed" from="select" to="." method="_on_select_pressed"]
+[node name="item_icon" type="Sprite2D" parent="inner_border"]
+position = Vector2(69.99999, 69.99999)
+scale = Vector2(5, 5)
+texture = ExtResource("2_f5bh6")
+
+[node name="item_quantity" type="Label" parent="inner_border"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 117.0
+offset_right = 48.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="item_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bfyh4")
+
+[node name="details_panel" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -126.0
+offset_right = 279.0
+offset_bottom = -2.0
+color = Color(0.39308554, 0.3930855, 0.39308548, 1)
+
+[node name="item_name" type="Label" parent="details_panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 84.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 28
+text = "Name"
+
+[node name="item_description" type="Label" parent="details_panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 36.0
+offset_right = 275.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 14
+text = "Description"
+
+[node name="item_effects" type="Label" parent="details_panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 94.0
+offset_right = 271.0
+offset_bottom = 117.0
+text = "Effects"
