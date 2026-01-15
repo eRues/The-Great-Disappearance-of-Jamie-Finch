@@ -4,6 +4,7 @@ var inventory = []
 var player_node: Node = null
 
 signal inventory_updated
+@onready var inventory_slot_scene = preload("res://inventory_slot.tscn")
 
 func _ready() -> void:
 	inventory.resize(15)
