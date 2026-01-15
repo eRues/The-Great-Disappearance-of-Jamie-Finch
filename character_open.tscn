@@ -46,6 +46,7 @@ theme_override_font_sizes/font_size = 10
 text = "Interact"
 
 [node name="InventoryUI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Inventory_UI" parent="InventoryUI" instance=ExtResource("10_26enf")]
 offset_left = -4.0
