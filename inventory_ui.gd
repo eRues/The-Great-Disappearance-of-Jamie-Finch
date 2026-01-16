@@ -1,6 +1,7 @@
 extends Control
 
 @onready var grid_container = $GridContainer
+
 var scene_path: String = "res://inventory_item.tscn"
 var special_weapon = {
 		"quantity": 1,
@@ -12,8 +13,6 @@ var special_weapon = {
 		"scene_path": scene_path}
 
 func _ready() -> void:
-	InventoryAutoload.inventory_updated.connect(_on_inventory_updated)
-	_on_inventory_updated()
 	if(Global.ash_chosen):
 		special_weapon = {
 		"quantity": 1,
@@ -54,9 +53,13 @@ func _ready() -> void:
 		"item_effects": "Attack: + 15, Crit: + 5",
 		"scene_path": scene_path
 		}
+	
+	InventoryAutoload.inventory_updated.connect(_on_inventory_updated)
+	_on_inventory_updated()
 
 func _on_inventory_updated():
 	clear_grid_container()
+	InventoryAutoload.inventory.set(0, special_weapon)
 	for item in InventoryAutoload.inventory:
 		var slot = InventoryAutoload.inventory_slot_scene.instantiate()
 		grid_container.add_child(slot)
@@ -64,6 +67,7 @@ func _on_inventory_updated():
 			slot.set_item(item)
 		else:
 			slot.set_empty()
+	InventoryAutoload.inventory.get(0).equipped = true
 
 func clear_grid_container():
 	while grid_container.get_child_count() > 0:

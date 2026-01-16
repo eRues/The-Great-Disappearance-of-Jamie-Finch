@@ -9,6 +9,7 @@ var exp_added = false
 var damage_done = 0
 @onready var sprite = get_node("placeholder_sprite")
 @onready var text = get_node("end_battle")
+@onready var inventory_ui = $CanvasLayer
 
 func _ready() -> void:
 	enemy = Battle_Enemy.new("rabbit_dee")
@@ -80,7 +81,7 @@ func _on_inventory_button_pressed() -> void:
 	if(defeated):
 		pass
 	else:
-		Global.battle_type.check_inventory()
+		inventory_ui.visible = !inventory_ui.visible
 
 func _on_defend_button_pressed() -> void:
 	if(defeated):
@@ -119,3 +120,6 @@ func _on_attack_button_pressed() -> void:
 		else:
 			print("you do " + str(damage) + " damage. Enemy has 0 health points remaining.")
 	turns_since_skill += 1
+
+func _on_exit_pressed() -> void:
+	inventory_ui.visible = false

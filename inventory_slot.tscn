@@ -69,7 +69,7 @@ visible = false
 layout_mode = 0
 offset_left = -1.0
 offset_top = -126.0
-offset_right = 279.0
+offset_right = 379.0
 offset_bottom = -2.0
 color = Color(0.39308554, 0.3930855, 0.39308548, 1)
 
@@ -85,27 +85,28 @@ text = "Name"
 layout_mode = 0
 offset_left = 4.0
 offset_top = 36.0
-offset_right = 275.0
+offset_right = 378.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(1, 1, 1, 0.7372549)
 theme_override_font_sizes/font_size = 14
 text = "Description"
+autowrap_mode = 3
 
 [node name="item_effects" type="Label" parent="details_panel"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 94.0
-offset_right = 271.0
-offset_bottom = 117.0
+offset_left = 4.0
+offset_top = 103.0
+offset_right = 269.0
+offset_bottom = 126.0
 theme_override_colors/font_color = Color(1, 1, 1, 0.6901961)
 text = "Effects"
 
 [node name="use_panel" type="ColorRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 127.0
+offset_left = 105.0
 offset_top = -14.0
-offset_right = 262.0
+offset_right = 240.0
 offset_bottom = 54.0
 color = Color(0.8776157, 0.8776158, 0.8776157, 1)
 
