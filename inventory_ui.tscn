@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bchkro2gs1e7g" path="res://inventory_ui.gd" id="1_5v8q7"]
 
 [node name="Inventory_UI" type="Control"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,11 +17,15 @@ grow_vertical = 2
 script = ExtResource("1_5v8q7")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+top_level = true
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 0
-offset_left = 43.0
-offset_top = 50.0
-offset_right = 1113.0
-offset_bottom = 567.0
+offset_left = 42.0
+offset_top = 106.0
+offset_right = 1112.0
+offset_bottom = 623.0
+focus_mode = 3
+focus_behavior_recursive = 1
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 5

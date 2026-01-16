@@ -24,7 +24,6 @@ func _on_item_button_mouse_exited() -> void:
 func set_empty():
 	icon.texture = null
 	quantity_label.text = ""
-	print("I ran!")
 
 func set_item(new_item):
 	item = new_item
