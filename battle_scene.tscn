@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://sjdwk2o044hb"]
+[gd_scene load_steps=4 format=3 uid="uid://sjdwk2o044hb"]
 
 [ext_resource type="Script" uid="uid://dwcg1y17glmcm" path="res://battle_scene.gd" id="1_fw8re"]
-[ext_resource type="Texture2D" uid="uid://kb16rvp23l3y" path="res://Assets/battle_placeholder.png" id="2_r5l0u"]
 [ext_resource type="PackedScene" uid="uid://b74x4qvml78om" path="res://end_of_battle.tscn" id="3_5g7vw"]
 [ext_resource type="PackedScene" uid="uid://b3drsh4yrp34h" path="res://inventory_ui.tscn" id="4_5joda"]
 
@@ -45,11 +44,10 @@ text = "Run"
 
 [node name="placeholder_sprite" type="Sprite2D" parent="."]
 position = Vector2(565, 258)
-scale = Vector2(19.045456, 15.444445)
-texture = ExtResource("2_r5l0u")
+scale = Vector2(15, 12.164)
 
 [node name="end_battle" parent="." instance=ExtResource("3_5g7vw")]
-position = Vector2(-21, -44)
+position = Vector2(-6, -99)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6u11qe7nj40r"
-path="res://.godot/imported/Dee_the_Rabbit.png-cee4a04acc6be67b1d51b30f5b720015.ctex"
+uid="uid://nmrbidmpg133"
+path="res://.godot/imported/phleg_sprite_one.png-8351394231edc082d2d63b89bc227371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Dee_the_Rabbit.png"
-dest_files=["res://.godot/imported/Dee_the_Rabbit.png-cee4a04acc6be67b1d51b30f5b720015.ctex"]
+source_file="res://Assets/Enemy Characters/Phlegathon/phleg_sprite_one.png"
+dest_files=["res://.godot/imported/phleg_sprite_one.png-8351394231edc082d2d63b89bc227371.ctex"]
 
 [params]
 

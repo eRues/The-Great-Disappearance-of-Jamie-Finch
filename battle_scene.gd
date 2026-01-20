@@ -7,16 +7,24 @@ var turns_since_skill = 5
 var defeated = false
 var exp_added = false
 var damage_done = 0
-@onready var sprite = get_node("placeholder_sprite")
+@onready var sprite = $placeholder_sprite
 @onready var text = get_node("end_battle")
 @onready var inventory_ui = $CanvasLayer
 
 func _ready() -> void:
-	enemy = Battle_Enemy.new("rabbit_dee")
+	if(Global.is_boss):
+		enemy = Battle_Boss.new(Global.enemy_name)
+	else:
+		enemy = Battle_Enemy.new(Global.enemy_name)
 	exp_added = false
 	damage_done = 0
 
 func _process(_delta) -> void:
+	sprite.texture = (enemy.enemy_sprite)
+	
+	if(Global.battle_type.health <= 0):
+		print("Game Over!")
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 	if(defeated):
 		pass
 	else:
@@ -48,7 +56,7 @@ func _process(_delta) -> void:
 				Global.battle_type.add_level()
 			sprite.visible = false
 			text.visible = true
-			if(enemy.is_boss == false):
+			if(Global.is_boss == false):
 				Global.base_agitation += 0.5
 			else:
 				Global.base_agitation = 1
