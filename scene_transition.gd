@@ -1,9 +1,13 @@
 extends CanvasLayer
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_player: AnimationPlayer = $Control/AnimationPlayer
 
-func change_scene(target_scene: String) -> void:
-	animation_player.play("fade")
+func fade_in() -> bool:
+	animation_player.play("fade_in")
 	await animation_player.animation_finished
-	get_tree().change_scene_to_file(target_scene)
-	animation_player.play_backwards("fade")
+	return true
+
+func fade_out() -> bool:
+	animation_player.play_backwards("fade_out")
+	await animation_player.animation_finished
+	return true

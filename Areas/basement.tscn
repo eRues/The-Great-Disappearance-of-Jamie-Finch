@@ -1,10 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://2ufa0qv0narx"]
+[gd_scene load_steps=4 format=3 uid="uid://2ufa0qv0narx"]
 
 [ext_resource type="PackedScene" uid="uid://c27fxtj7rcng3" path="res://Maps/basement_map.tscn" id="1_uyr1m"]
+[ext_resource type="PackedScene" uid="uid://dkk4ktwgy2gp3" path="res://character_open.tscn" id="2_nu60v"]
+[ext_resource type="PackedScene" uid="uid://bl70tdwxpp6gl" path="res://GRIME_break_root.tscn" id="3_hifod"]
 
 [node name="basement" type="Node2D"]
 
 [node name="basement_map" parent="." instance=ExtResource("1_uyr1m")]
+
+[node name="character_open" parent="." instance=ExtResource("2_nu60v")]
+position = Vector2(29, 215)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 32, 577, 33, 575, 0, 1155, 1, 1153, 302, 575, 302, 575, 255, -2, 256, 0, 33, -263, 466, 164, 622, 835, 523, 1343, 445, 1425, -131, 366, -308, 100, -25)
 
 [node name="dark" type="ColorRect" parent="."]
 offset_left = 576.0
@@ -17,3 +29,6 @@ offset_top = 32.0
 offset_right = 576.0
 offset_bottom = 256.0
 color = Color(0, 0, 0, 0.5764706)
+
+[node name="GRIME_break_root" parent="." instance=ExtResource("3_hifod")]
+position = Vector2(601, 191)

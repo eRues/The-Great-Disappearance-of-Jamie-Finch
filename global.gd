@@ -17,3 +17,6 @@ var current_enemy = ""
 
 #agitation of the phlegathon, added to the agitation of all non-boss enemies
 var base_agitation = 1.00
+
+#variable that determines which scene a transition want to go to
+var target_scene = ""

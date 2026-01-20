@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl70tdwxpp6gl"]
+
+[ext_resource type="Texture2D" uid="uid://b7qeqiod8g70" path="res://Assets/Map Assets/GRIME_break_v2.png" id="1_dfvfo"]
+[ext_resource type="Script" uid="uid://byjh825540hol" path="res://grime_break_root.gd" id="1_nhn2p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfvfo"]
+size = Vector2(48, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ub442"]
+size = Vector2(55, 20)
+
+[node name="GRIME_break_root" type="CharacterBody2D"]
+script = ExtResource("1_nhn2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dfvfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_dfvfo")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_ub442")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

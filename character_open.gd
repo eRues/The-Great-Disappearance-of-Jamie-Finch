@@ -27,3 +27,6 @@ func _process(_delta):
 	elif(Input.is_action_just_pressed("open")):
 		inventory_ui.visible = false
 		get_tree().paused = false
+		
+func player():
+	pass
