@@ -41,6 +41,7 @@ func add_level() -> void:
 	level += 1
 	experience = experience % exp_to_next_level
 	exp_to_next_level += 10
+	Global.battle_type.health = Global.battle_type.base_health
 	leveled_up = false
 
 func add_exp(enemy_exp : int) -> void:

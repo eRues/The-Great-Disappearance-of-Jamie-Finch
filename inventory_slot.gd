@@ -6,16 +6,22 @@ extends Control
 @onready var item_desc = $details_panel/item_description
 @onready var item_effect = $details_panel/item_effects
 @onready var use_panel = $use_panel
+@onready var button = $use_panel/use_button
+@onready var border_color = $outer_border
+
+var equipped
 
 var item = null
 
 func _on_item_button_pressed() -> void:
+	if(equipped):
+		button.text = "equipped"
+		print("changed")
 	if(item != null):
 		use_panel.visible = !use_panel.visible
 
 func _on_item_button_mouse_entered() -> void:
 	if(item != null):
-		use_panel.visible = false
 		details_panel.visible = true
 
 func _on_item_button_mouse_exited() -> void:
@@ -24,7 +30,6 @@ func _on_item_button_mouse_exited() -> void:
 func set_empty():
 	icon.texture = null
 	quantity_label.text = ""
-	print("I ran!")
 
 func set_item(new_item):
 	item = new_item
@@ -32,4 +37,4 @@ func set_item(new_item):
 	quantity_label.text = str(new_item["quantity"])
 	item_name.text = str(new_item["item_name"])
 	item_desc.text = str(new_item["item_desc"])
-	item_effect.text = str("item_effects")
+	item_effect.text = str(new_item["item_effects"])

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6u11qe7nj40r"
-path="res://.godot/imported/Dee_the_Rabbit.png-cee4a04acc6be67b1d51b30f5b720015.ctex"
+uid="uid://dp1ap2cr6j82m"
+path="res://.godot/imported/special_weapons.png-5f68db8d1db762c39b1e2d8c50cca7eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Dee_the_Rabbit.png"
-dest_files=["res://.godot/imported/Dee_the_Rabbit.png-cee4a04acc6be67b1d51b30f5b720015.ctex"]
+source_file="res://Assets/Weapons/special_weapons.png"
+dest_files=["res://.godot/imported/special_weapons.png-5f68db8d1db762c39b1e2d8c50cca7eb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp1ap2cr6j82m"
-path="res://.godot/imported/special_weapons.png-e511b729fd58bfc54b50c047af4ef24e.ctex"
+uid="uid://ddfvr6c6ixrtn"
+path="res://.godot/imported/eve_knife.png-adb60f9a3e9c249a3478b34249728e0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/special_weapons.png"
-dest_files=["res://.godot/imported/special_weapons.png-e511b729fd58bfc54b50c047af4ef24e.ctex"]
+source_file="res://Assets/Weapons/eve_knife.png"
+dest_files=["res://.godot/imported/eve_knife.png-adb60f9a3e9c249a3478b34249728e0e.ctex"]
 
 [params]
 

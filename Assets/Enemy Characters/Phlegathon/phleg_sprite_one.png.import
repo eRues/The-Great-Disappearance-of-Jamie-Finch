@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://imaincasmpw5"
-path="res://.godot/imported/ash_bat.png-2ea1b509011bbb197b0020200b5cfefd.ctex"
+uid="uid://nmrbidmpg133"
+path="res://.godot/imported/phleg_sprite_one.png-8351394231edc082d2d63b89bc227371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ash_bat.png"
-dest_files=["res://.godot/imported/ash_bat.png-2ea1b509011bbb197b0020200b5cfefd.ctex"]
+source_file="res://Assets/Enemy Characters/Phlegathon/phleg_sprite_one.png"
+dest_files=["res://.godot/imported/phleg_sprite_one.png-8351394231edc082d2d63b89bc227371.ctex"]
 
 [params]
 
