@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://dkk4ktwgy2gp3"]
 
-[ext_resource type="Script" path="res://character_open.gd" id="1_4uwka"]
+[ext_resource type="Script" uid="uid://cbrl0skqjkvkm" path="res://character_open.gd" id="1_4uwka"]
 [ext_resource type="PackedScene" uid="uid://csqh2fdm350yi" path="res://ash_open.tscn" id="1_6so4b"]
 [ext_resource type="PackedScene" uid="uid://d0tirwpydxxk2" path="res://tia_open.tscn" id="2_17gy8"]
-[ext_resource type="Script" path="res://ash_open.gd" id="3_17d8i"]
+[ext_resource type="Script" uid="uid://1cbmpl3dwdve" path="res://ash_open.gd" id="3_17d8i"]
 [ext_resource type="PackedScene" uid="uid://br0lffedi4y13" path="res://eve_open.tscn" id="3_dfaot"]
 [ext_resource type="PackedScene" uid="uid://ccn3surclscyf" path="res://nathan_open.tscn" id="4_cmeqg"]
-[ext_resource type="Script" path="res://tia_open.gd" id="5_t4vui"]
-[ext_resource type="Script" path="res://eve_open.gd" id="7_am563"]
-[ext_resource type="Script" path="res://nathan_open.gd" id="9_0kwr6"]
+[ext_resource type="Script" uid="uid://g1os6mm6615c" path="res://tia_open.gd" id="5_t4vui"]
+[ext_resource type="Script" uid="uid://v1yapt2w4p7c" path="res://eve_open.gd" id="7_am563"]
+[ext_resource type="Script" uid="uid://cp3qrn1cm3ftg" path="res://nathan_open.gd" id="9_0kwr6"]
 [ext_resource type="PackedScene" uid="uid://b3drsh4yrp34h" path="res://inventory_ui.tscn" id="10_26enf"]
 
 [node name="character_open" type="Node2D"]
@@ -48,6 +48,7 @@ text = "Interact"
 [node name="InventoryUI" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

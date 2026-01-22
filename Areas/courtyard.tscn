@@ -1,11 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://r1jc06ey0aul"]
+[gd_scene load_steps=5 format=3 uid="uid://r1jc06ey0aul"]
 
 [ext_resource type="PackedScene" uid="uid://ucnmkofo2at5" path="res://Maps/courtyard_map.tscn" id="1_h6p8g"]
+[ext_resource type="Script" uid="uid://7nvds5yt4ipc" path="res://Areas/courtyard.gd" id="1_s5rle"]
 [ext_resource type="PackedScene" uid="uid://dkk4ktwgy2gp3" path="res://character_open.tscn" id="2_uy1qx"]
+[ext_resource type="PackedScene" uid="uid://fuwp5glh5eea" path="res://Door.tscn" id="3_fwmkn"]
 
 [node name="courtyard" type="Node2D"]
+script = ExtResource("1_s5rle")
 
 [node name="courtyard_map" parent="." instance=ExtResource("1_h6p8g")]
 
 [node name="character_open" parent="." instance=ExtResource("2_uy1qx")]
-position = Vector2(802, 939)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door_S" parent="Doors" instance=ExtResource("3_fwmkn")]
+destination_scene_tag = "1st_floor_hallway"
+destination_door_tag = "N"
+
+[node name="CollisionShape2D" parent="Doors/Door_S" index="0"]
+position = Vector2(801, 1001)
+
+[node name="Spawn" parent="Doors/Door_S" index="1"]
+position = Vector2(801, 959)
+
+[editable path="Doors/Door_S"]

@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 Global="*res://global.gd"
 InventoryAutoload="*res://inventory_autoload.gd"
+NavigationManager="*res://navigation_manager.gd"
 
 [global_group]
 

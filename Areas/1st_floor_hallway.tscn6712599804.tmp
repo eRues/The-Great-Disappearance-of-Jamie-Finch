@@ -55,18 +55,9 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0"]
-position = Vector2(1088, 101)
+position = Vector2(1090, 73)
 
 [node name="Spawn" parent="Doors/Door_N" index="1"]
 position = Vector2(1089, 138)
 
-[node name="Door_SE" parent="Doors" instance=ExtResource("5_0o4e0")]
-destination_scene_tag = "basement"
-destination_door_tag = "W"
-spawn_direction = "right"
-
-[node name="CollisionShape2D" parent="Doors/Door_SE" index="0"]
-position = Vector2(1782, 200)
-
 [editable path="Doors/Door_N"]
-[editable path="Doors/Door_SE"]

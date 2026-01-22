@@ -10,8 +10,11 @@ var state : String = "idle"
 @onready var sprite : Sprite2D = $Sprite2D
 
 func _ready():
-	pass
-
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+func _on_spawn(position: Vector2, _direction: String):
+	global_position = position
+	
 func _process(_delta):
 	
 #movement input
