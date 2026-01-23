@@ -38,6 +38,8 @@ position = Vector2(601, 191)
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_W" parent="Doors" instance=ExtResource("3_2jn4a")]
+destination_scene_tag = "1st_floor_hallway"
+destination_door_tag = "SE"
 
 [node name="CollisionShape2D" parent="Doors/Door_W" index="0"]
 position = Vector2(-58, 217)
