@@ -48,7 +48,6 @@ text = "Interact"
 [node name="InventoryUI" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="InventoryUI"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

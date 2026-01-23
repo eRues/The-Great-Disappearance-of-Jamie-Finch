@@ -50,6 +50,7 @@ texture = ExtResource("2_oe33b")
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_N" parent="Doors" instance=ExtResource("5_0o4e0")]
+collision_layer = 3
 destination_scene_tag = "courtyard"
 destination_door_tag = "S"
 spawn_direction = "down"
@@ -61,6 +62,7 @@ position = Vector2(1088, 101)
 position = Vector2(1089, 138)
 
 [node name="Door_SE" parent="Doors" instance=ExtResource("5_0o4e0")]
+collision_layer = 3
 destination_scene_tag = "basement"
 destination_door_tag = "W"
 spawn_direction = "right"
