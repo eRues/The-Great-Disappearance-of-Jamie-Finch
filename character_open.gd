@@ -10,6 +10,8 @@ func _ready() -> void:
 	$nathan_open.visible = false
 	inventory_ui.visible = false
 	interact_ui.visible = false
+	
+	
 
 func _process(_delta):
 	if(Global.ash_chosen):
@@ -27,6 +29,3 @@ func _process(_delta):
 	elif(Input.is_action_just_pressed("open")):
 		inventory_ui.visible = false
 		get_tree().paused = false
-		
-func player():
-	pass

@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://csqh2fdm350yi"]
+[gd_scene load_steps=11 format=3 uid="uid://csqh2fdm350yi"]
 
 [ext_resource type="Texture2D" uid="uid://cc2lifnxwuigr" path="res://Assets/Player Characters/Ashton/Ashton_v3.png" id="1_7a2g2"]
-[ext_resource type="Script" uid="uid://byjsc78i3ovpw" path="res://camera_2d.gd" id="2_h44fk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7a2g2"]
 radius = 6.0827627
@@ -83,7 +82,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.53333336, 0.8),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [1, 0, 2, 0]
@@ -117,7 +116,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.5333334, 0.8),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [9, 10, 9, 11]
@@ -151,6 +150,3 @@ shape = SubResource("CircleShape2D_7a2g2")
 libraries = {
 &"": SubResource("AnimationLibrary_h44fk")
 }
-
-[node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("2_h44fk")
