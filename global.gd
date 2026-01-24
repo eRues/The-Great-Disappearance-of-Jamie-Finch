@@ -7,8 +7,8 @@ var eve_chosen = false
 var nate_chosen = false
 
 #enemy variables
-var enemy_name = "keeper"
-var is_boss = true
+var enemy_name = "court_bush"
+var is_boss = false
 
 #which character is used in battle, changed in character select
 var battle_type = Battle_Ash.new()

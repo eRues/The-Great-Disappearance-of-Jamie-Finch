@@ -15,6 +15,56 @@ func _init(new_name : String) -> void:
 		spirit = (int)(7 * Global.base_agitation)
 		experience = (int)(10 * Global.base_agitation)
 		enemy_sprite = load("res://Assets/battle_placeholder.png")
+	elif(Global.enemy_name == "rabbit_dum"):
+		agitation = Global.base_agitation
+		health = (int)(13 * Global.base_agitation)
+		base_health = health
+		strength = (int)(3 * Global.base_agitation)
+		speed = (int)(9 * Global.base_agitation)
+		smarts = (int)(6 * Global.base_agitation)
+		spirit = (int)(7 * Global.base_agitation)
+		experience = (int)(12 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/battle_placeholder.png")
+	elif(Global.enemy_name == "rabbit_dan"):
+		agitation = Global.base_agitation
+		health = (int)(16 * Global.base_agitation)
+		base_health = health
+		strength = (int)(3 * Global.base_agitation)
+		speed = (int)(10 * Global.base_agitation)
+		smarts = (int)(6 * Global.base_agitation)
+		spirit = (int)(7 * Global.base_agitation)
+		experience = (int)(14 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/battle_placeholder.png")
+	elif(Global.enemy_name == "rabbit_dave"):
+		agitation = Global.base_agitation
+		health = (int)(19 * Global.base_agitation)
+		base_health = health
+		strength = (int)(4 * Global.base_agitation)
+		speed = (int)(11 * Global.base_agitation)
+		smarts = (int)(6 * Global.base_agitation)
+		spirit = (int)(8 * Global.base_agitation)
+		experience = (int)(16 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/battle_placeholder.png")
+	elif(Global.enemy_name == "rabbit_bart"):
+		agitation = Global.base_agitation
+		health = (int)(21 * Global.base_agitation)
+		base_health = health
+		strength = (int)(5 * Global.base_agitation)
+		speed = (int)(11 * Global.base_agitation)
+		smarts = (int)(6 * Global.base_agitation)
+		spirit = (int)(8 * Global.base_agitation)
+		experience = (int)(18 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/battle_placeholder.png")
+	elif(Global.enemy_name == "court_bush"):
+		agitation = Global.base_agitation
+		health = (int)(7 * Global.base_agitation)
+		base_health = health
+		strength = (int)(4 * Global.base_agitation)
+		speed = (int)(2 * Global.base_agitation)
+		smarts = (int)(2 * Global.base_agitation)
+		spirit = (int)(5 * Global.base_agitation)
+		experience = (int)(10 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/battle_placeholder.png")
 
 func _ready() -> void:
 	pass
