@@ -7,7 +7,7 @@ var eve_chosen = false
 var nate_chosen = false
 
 #enemy variables
-var enemy_name = "court_bush"
+var enemy_name = "rabbit_dee"
 var is_boss = false
 
 #which character is used in battle, changed in character select
