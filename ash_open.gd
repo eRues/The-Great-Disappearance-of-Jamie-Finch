@@ -12,8 +12,8 @@ var state : String = "idle"
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
 	
-func _on_spawn(position: Vector2, _direction: String):
-	global_position = position
+func _on_spawn(my_position: Vector2, _direction: String):
+	global_position = my_position
 	
 func _process(_delta):
 	

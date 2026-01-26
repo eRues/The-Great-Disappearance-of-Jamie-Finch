@@ -6,26 +6,26 @@
 [ext_resource type="Script" uid="uid://1cbmpl3dwdve" path="res://ash_open.gd" id="3_17d8i"]
 [ext_resource type="PackedScene" uid="uid://br0lffedi4y13" path="res://eve_open.tscn" id="3_dfaot"]
 [ext_resource type="PackedScene" uid="uid://ccn3surclscyf" path="res://nathan_open.tscn" id="4_cmeqg"]
-[ext_resource type="Script" uid="uid://g1os6mm6615c" path="res://tia_open.gd" id="5_t4vui"]
-[ext_resource type="Script" uid="uid://v1yapt2w4p7c" path="res://eve_open.gd" id="7_am563"]
-[ext_resource type="Script" uid="uid://cp3qrn1cm3ftg" path="res://nathan_open.gd" id="9_0kwr6"]
+[ext_resource type="Script" path="res://tia_open.gd" id="5_t4vui"]
+[ext_resource type="Script" path="res://eve_open.gd" id="7_am563"]
+[ext_resource type="Script" path="res://nathan_open.gd" id="9_0kwr6"]
 [ext_resource type="PackedScene" uid="uid://b3drsh4yrp34h" path="res://inventory_ui.tscn" id="10_26enf"]
 
 [node name="character_open" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_4uwka")
 
-[node name="ash_open" parent="." instance=ExtResource("1_6so4b")]
+[node name="ash_open" parent="." groups=["player"] instance=ExtResource("1_6so4b")]
 position = Vector2(-0.9867096, -0.16405106)
 script = ExtResource("3_17d8i")
 
-[node name="tia_open" parent="." instance=ExtResource("2_17gy8")]
+[node name="tia_open" parent="." groups=["player"] instance=ExtResource("2_17gy8")]
 script = ExtResource("5_t4vui")
 
-[node name="eve_open" parent="." instance=ExtResource("3_dfaot")]
+[node name="eve_open" parent="." groups=["player"] instance=ExtResource("3_dfaot")]
 script = ExtResource("7_am563")
 
-[node name="nathan_open" parent="." instance=ExtResource("4_cmeqg")]
+[node name="nathan_open" parent="." groups=["player"] instance=ExtResource("4_cmeqg")]
 script = ExtResource("9_0kwr6")
 
 [node name="InteractUI" type="CanvasLayer" parent="."]
@@ -46,6 +46,7 @@ theme_override_font_sizes/font_size = 10
 text = "Interact"
 
 [node name="InventoryUI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="InventoryUI"]
 anchors_preset = 15

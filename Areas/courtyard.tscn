@@ -16,13 +16,14 @@ script = ExtResource("1_s5rle")
 
 [node name="Door_S" parent="Doors" instance=ExtResource("3_fwmkn")]
 collision_layer = 3
-destination_scene_tag = "1st_floor_hallway"
+collision_mask = 3
+destination_scene_tag = "   1st_floor_hallway"
 destination_door_tag = "S"
 
 [node name="CollisionShape2D" parent="Doors/Door_S" index="0"]
 position = Vector2(802, 984)
 
 [node name="Spawn" parent="Doors/Door_S" index="1"]
-position = Vector2(801, 944)
+position = Vector2(802, 937)
 
 [editable path="Doors/Door_S"]

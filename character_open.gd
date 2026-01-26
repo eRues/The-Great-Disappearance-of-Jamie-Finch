@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @onready var interact_ui = $InteractUI
 @onready var inventory_ui = $InventoryUI
 
