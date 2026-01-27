@@ -29,6 +29,7 @@ NavigationManager="*res://navigation_manager.gd"
 
 items=""
 player=""
+interact_item=""
 
 [input]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch4p14mggmetl"]
+
+[ext_resource type="Texture2D" uid="uid://d3np8pot2mwaa" path="res://Assets/temp_debris.png" id="1_e8eya"]
+[ext_resource type="Script" uid="uid://cpg7kbqy6pxfy" path="res://debris.gd" id="1_ov8td"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8eya"]
+radius = 15.033297
+
+[node name="debris" type="Area2D"]
+script = ExtResource("1_ov8td")
+
+[node name="TempDebris" type="Sprite2D" parent="."]
+position = Vector2(160, 116)
+texture = ExtResource("1_e8eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(159, 117)
+shape = SubResource("CircleShape2D_e8eya")

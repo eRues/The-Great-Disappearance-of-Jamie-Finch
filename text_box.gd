@@ -11,6 +11,7 @@ func _ready():
 
 func start():
 	self.visible = true
+	Global.in_chat = true
 	dialogue = load_dialogue()
 	current_dialogue_id = -1
 	next_script()
@@ -32,6 +33,23 @@ func load_dialogue():
 		var file = FileAccess.open("res://TextFiles/Opening Scenes/nathan_opening.json" , FileAccess.READ)
 		var content = JSON.parse_string(file.get_as_text())
 		return content
+	elif(Global.walkin):
+		if(Global.ash_chosen):
+			var file = FileAccess.open("res://TextFiles/Tutorial/Walking In/ash_tutorial_walkin.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.tia_chosen):
+			var file = FileAccess.open("res://TextFiles/Tutorial/Walking In/tia_tutorial_walkin.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.eve_chosen):
+			var file = FileAccess.open("res://TextFiles/Tutorial/Walking In/eve_tutorial_walkin.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.nate_chosen):
+			var file = FileAccess.open("res://TextFiles/Tutorial/Walking In/nate_tutorial_walkin.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
 	
 func _input(event):
 	if event.is_action_pressed("space"):
@@ -42,6 +60,7 @@ func next_script():
 	if current_dialogue_id >= len(dialogue):
 		$NinePatchRect.visible = false
 		emit_signal("dialogue_finished")
+		Global.in_chat = false
 		return
 
 	$NinePatchRect/Name.text = dialogue[current_dialogue_id]['name']

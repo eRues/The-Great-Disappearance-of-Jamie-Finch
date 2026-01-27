@@ -8,6 +8,7 @@ var state : String = "idle"
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite2D
+@onready var int_label = $"interact label"
 
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
@@ -31,7 +32,10 @@ func _process(_delta):
 	
 func _physics_process(_delta):
 	#moovin, groovin, and slidin
-	move_and_slide()
+	if(Global.in_chat):
+		pass
+	else:
+		move_and_slide()
 	
 func SetDirection() -> bool:
 	var new_dir : Vector2 = cardinal_direction
@@ -58,17 +62,23 @@ func SetState() -> bool:
 	return true
 	
 func UpdateAnimation() -> void:
-	animation_player.play(state + "_" + AnimDirection())
-	pass
+	if(Global.in_chat):
+		pass
+	else:
+		animation_player.play(state + "_" + AnimDirection())
+		pass
 	
 	
 func AnimDirection() -> String:
-	if cardinal_direction == Vector2.DOWN:
-		return "down"
-	elif cardinal_direction == Vector2.UP:
-		return "up"
+	if(Global.in_chat):
+		return ""
 	else:
-		return "side"
+		if cardinal_direction == Vector2.DOWN:
+			return "down"
+		elif cardinal_direction == Vector2.UP:
+			return "up"
+		else:
+			return "side"
 	
 func player():
 	pass

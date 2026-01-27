@@ -12,6 +12,7 @@ script = ExtResource("1_uwt3o")
 [node name="basement_map" parent="." instance=ExtResource("1_uyr1m")]
 
 [node name="character_open" parent="." instance=ExtResource("2_nu60v")]
+position = Vector2(41, 209)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 3
@@ -27,9 +28,9 @@ offset_bottom = 304.0
 color = Color(0, 0, 0, 0.5764706)
 
 [node name="dark2" type="ColorRect" parent="."]
-offset_top = 32.0
+offset_top = 29.0
 offset_right = 576.0
-offset_bottom = 256.0
+offset_bottom = 257.0
 color = Color(0, 0, 0, 0.5764706)
 
 [node name="GRIME_break_root" parent="." instance=ExtResource("3_hifod")]
@@ -38,6 +39,8 @@ position = Vector2(601, 191)
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_W" parent="Doors" instance=ExtResource("3_2jn4a")]
+visible = false
+position = Vector2(4, -8)
 destination_scene_tag = "1st_floor_hallway"
 destination_door_tag = "SE"
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://csqh2fdm350yi"]
+[gd_scene load_steps=12 format=3 uid="uid://csqh2fdm350yi"]
 
 [ext_resource type="Texture2D" uid="uid://cc2lifnxwuigr" path="res://Assets/Player Characters/Ashton/Ashton_v3.png" id="1_7a2g2"]
+[ext_resource type="Script" uid="uid://1cbmpl3dwdve" path="res://ash_open.gd" id="1_h44fk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7a2g2"]
 radius = 6.0827627
@@ -134,8 +135,9 @@ _data = {
 }
 
 [node name="Ash_Open" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_h44fk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7a2g2")
@@ -150,3 +152,12 @@ shape = SubResource("CircleShape2D_7a2g2")
 libraries = {
 &"": SubResource("AnimationLibrary_h44fk")
 }
+
+[node name="interact label" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 19.0
+offset_bottom = 4.0
+theme_override_font_sizes/font_size = 10
+text = "Interact"
