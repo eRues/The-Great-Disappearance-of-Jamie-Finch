@@ -60,24 +60,6 @@ enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
-[node name="InteractUI" type="Node2D" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="InteractUI"]
-offset_left = -20.0
-offset_top = -17.0
-offset_right = 19.0
-offset_bottom = -6.0
-color = Color(0.19793725, 0.19793725, 0.19793719, 0.29411766)
-
-[node name="Label" type="Label" parent="InteractUI"]
-offset_left = -20.0
-offset_top = -19.0
-offset_right = 19.0
-offset_bottom = 4.0
-theme_override_font_sizes/font_size = 10
-text = "Interact"
-
 [node name="InventoryUI" type="CanvasLayer" parent="."]
 visible = false
 

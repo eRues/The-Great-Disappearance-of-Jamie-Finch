@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bkhx06o5x33dw" path="res://text_box.tscn" id="9_cmodj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0dt61"]
-radius = 8.0
 
 [sub_resource type="Gradient" id="Gradient_6cnaf"]
 offsets = PackedFloat32Array(0.40449437, 0.8820225)
@@ -36,27 +35,39 @@ layer_1/tile_data = PackedInt32Array(131136, 1, 30, 196672, 1, 31, 262208, 1, 32
 layer_2/name = "Layer2"
 layer_2/tile_data = PackedInt32Array(196612, 4, 2, 65551, 65540, 2, 65554, 65541, 1, 458771, 65541, 805306369, 458770, 65541, 536870913, 327692, 65541, 1342177282, 65555, 65541, 536870915, 196634, 5, 1342177282, 458780, 65541, 268435459, 524316, 65541, 1, 65569, 5, 1, 262179, 65541, 0, 262180, 65541, 805306370, 327715, 65541, 1073741827, 327716, 65541, 1610612737, 131112, 5, 1610612738, 65576, 65541, 805306369, 393258, 65541, 1342177283, 393257, 65541, 1610612736, 327721, 65541, 536870913, 458794, 5, 1610612738, 131118, 65541, 2, 131119, 65541, 1342177280, 65584, 65541, 1879048192, 131120, 65541, 2, 131121, 65541, 1073741825, 196657, 65541, 1342177283, 65583, 65541, 1, 524346, 5, 1879048194, 458810, 65541, 805306369, 131135, 65541, 1610612739, 196671, 65541, 1610612736, 196672, 65541, 1610612737, 327733, 65541, 1610612736, 327734, 65541, 1610612737, 262198, 65541, 805306369, 327754, 5, 2, 327755, 65541, 268435456, 393291, 65541, 268435457, 65616, 5, 3, 65617, 65541, 3, 131153, 65541, 268435457, 524377, 5, 2, 524378, 65541, 1073741825, 196695, 65541, 1610612739, 196696, 65541, 1073741825, 131168, 65541, 2, 131169, 65541, 1879048192, 196705, 65541, 1, 262170, 65541, 1879048194, 327792, 65541, 0, 393328, 65541, 1, 393329, 65541, 1342177283, 65645, 5, 268435458, 65644, 65541, 1342177282, 131180, 65541, 1, 393317, 65541, 1879048193, 393318, 65541, 536870915, 327782, 65541, 805306369)
 
+[node name="walkin_text_box" parent="." instance=ExtResource("9_cmodj")]
+offset_left = -9.0
+offset_top = 50.0
+offset_right = -9.0
+offset_bottom = 50.0
+scale = Vector2(0.25, 0.25)
+
+[node name="debris_text" parent="." instance=ExtResource("9_cmodj")]
+offset_left = 338.0
+offset_top = 52.0
+offset_right = 1852.9999
+offset_bottom = 961.9999
+scale = Vector2(0.25, 0.25)
+
 [node name="debris" parent="." groups=["interact_item"] instance=ExtResource("7_0dt61")]
 position = Vector2(321, 34)
 collision_layer = 4
 collision_mask = 4
 
-[node name="character_open" parent="." instance=ExtResource("3_4entq")]
-position = Vector2(30, 147)
-collision_layer = 5
-collision_mask = 5
-
-[node name="interact_label" type="Label" parent="character_open"]
+[node name="interact_label" type="Label" parent="debris"]
 visible = false
-offset_left = -23.0
-offset_top = -26.0
-offset_right = 38.0
-offset_bottom = -3.0
+offset_left = 135.0
+offset_top = 90.0
+offset_right = 184.0
+offset_bottom = 107.0
 theme_override_font_sizes/font_size = 12
 text = "Interact"
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="character_open"]
-position = Vector2(-1, 6)
+[node name="character_open" parent="." instance=ExtResource("3_4entq")]
+position = Vector2(30, 147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="character_open"]
+position = Vector2(-1, 4)
 shape = SubResource("CircleShape2D_0dt61")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -110,14 +121,10 @@ position = Vector2(37, -7)
 [node name="tutorial_interact" parent="." instance=ExtResource("8_apa2f")]
 position = Vector2(350, -89)
 
-[node name="text_box" parent="." instance=ExtResource("9_cmodj")]
-offset_left = -9.0
-offset_top = 48.0
-offset_right = -9.0
-offset_bottom = 48.0
-scale = Vector2(0.25, 0.25)
-
+[connection signal="dialogue_finished" from="walkin_text_box" to="." method="_on_walkin_text_box_dialogue_finished"]
+[connection signal="dialogue_finished" from="debris_text" to="." method="_on_debris_text_dialogue_finished"]
 [connection signal="body_entered" from="debris" to="." method="_on_debris_body_entered"]
+[connection signal="body_exited" from="debris" to="." method="_on_debris_body_exited"]
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_SE"]

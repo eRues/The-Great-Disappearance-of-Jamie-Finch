@@ -1,7 +1,6 @@
 extends Node2D
 
 
-@onready var interact_ui = $InteractUI
 @onready var inventory_ui = $InventoryUI
 @onready var ash_cam = $ash_open/ash_cam
 @onready var tia_cam = $tia_open/tia_cam
@@ -14,7 +13,6 @@ func _ready() -> void:
 	$eve_open.visible = false
 	$nathan_open.visible = false
 	inventory_ui.visible = false
-	interact_ui.visible = false
 	
 	if(Global.ash_chosen):
 		$ash_open.visible = true
