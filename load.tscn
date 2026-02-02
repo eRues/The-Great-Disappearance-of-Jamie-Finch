@@ -1,3 +1,30 @@
 [gd_scene format=3 uid="uid://c0p6jbnldf37f"]
 
 [node name="load" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 652.0
+color = Color(0.35378674, 0.3910988, 0.44327527, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 134.0
+offset_right = 1041.0
+offset_bottom = 606.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 362.0
+offset_top = 24.0
+offset_right = 792.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 60
+text = "Save/Load"
+horizontal_alignment = 1
