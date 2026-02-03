@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://imaincasmpw5"
-path="res://.godot/imported/ash_bat.png-ea7c70cb1cd6eaf62f3a47cf6a3f3c98.ctex"
+uid="uid://cq7crlg0otfjm"
+path="res://.godot/imported/granola_bar.png-ab46a455be3c69203d047df4d942475c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapons/ash_bat.png"
-dest_files=["res://.godot/imported/ash_bat.png-ea7c70cb1cd6eaf62f3a47cf6a3f3c98.ctex"]
+source_file="res://Assets/Items/Consumables/granola_bar.png"
+dest_files=["res://.godot/imported/granola_bar.png-ab46a455be3c69203d047df4d942475c.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://caycdonobnheh"]
 
 [ext_resource type="Script" uid="uid://vyf6n3bk370v" path="res://inventory_slot.gd" id="1_42eed"]
-[ext_resource type="Texture2D" uid="uid://imaincasmpw5" path="res://Assets/Weapons/ash_bat.png" id="2_f5bh6"]
+[ext_resource type="Texture2D" uid="uid://imaincasmpw5" path="res://Assets/Items/Weapons/ash_bat.png" id="2_f5bh6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfyh4"]
 
@@ -121,3 +121,4 @@ text = "Use"
 [connection signal="mouse_entered" from="item_button" to="." method="_on_item_button_mouse_entered"]
 [connection signal="mouse_exited" from="item_button" to="." method="_on_item_button_mouse_exited"]
 [connection signal="pressed" from="item_button" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="use_panel/use_button" to="." method="_on_use_button_pressed"]

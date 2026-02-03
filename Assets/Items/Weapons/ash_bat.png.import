@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddfvr6c6ixrtn"
-path="res://.godot/imported/eve_knife.png-adb60f9a3e9c249a3478b34249728e0e.ctex"
+uid="uid://imaincasmpw5"
+path="res://.godot/imported/ash_bat.png-b33cf2dcabdd3e824281407c24beb403.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapons/eve_knife.png"
-dest_files=["res://.godot/imported/eve_knife.png-adb60f9a3e9c249a3478b34249728e0e.ctex"]
+source_file="res://Assets/Items/Weapons/ash_bat.png"
+dest_files=["res://.godot/imported/ash_bat.png-b33cf2dcabdd3e824281407c24beb403.ctex"]
 
 [params]
 

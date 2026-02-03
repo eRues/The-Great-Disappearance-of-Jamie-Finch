@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbxfd75hqja15"
-path="res://.godot/imported/tia_bottle.png-2904d7c14557d6edb74761012e965a91.ctex"
+uid="uid://dp1ap2cr6j82m"
+path="res://.godot/imported/special_weapons.png-5a21ebe676a3704b12db771ec2492072.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapons/tia_bottle.png"
-dest_files=["res://.godot/imported/tia_bottle.png-2904d7c14557d6edb74761012e965a91.ctex"]
+source_file="res://Assets/Items/Weapons/special_weapons.png"
+dest_files=["res://.godot/imported/special_weapons.png-5a21ebe676a3704b12db771ec2492072.ctex"]
 
 [params]
 

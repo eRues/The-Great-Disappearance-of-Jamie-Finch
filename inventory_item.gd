@@ -6,6 +6,8 @@ extends Node2D
 @export var item_texture: Texture
 @export var item_effects = ""
 var scene_path: String = "res://inventory_item.tscn"
+@onready var interact_label = $interact_label
+var equipped = false
 
 @onready var icon_sprite = $Sprite2D
 
@@ -19,7 +21,7 @@ func _process(_delta) -> void:
 	if Engine.is_editor_hint():
 		icon_sprite.texture = item_texture
 	
-	if(player_in_range and Input.is_action_pressed("space")):
+	if(player_in_range and Input.is_action_pressed("enter")):
 		item_pickup()
 
 func item_pickup():
@@ -33,17 +35,17 @@ func item_pickup():
 		"scene_path": scene_path
 	}
 	
-	if(InventoryAutoload.player_node):
+	if(InventoryAutoload.player_node != null):
 		InventoryAutoload.add_item(item)
 		self.queue_free()
 
 
 func _on_area_2d_body_entered(body) -> void:
-	if(body.is_in_group("player")):
+	if(body.is_in_group("player") && body.visible):
 		player_in_range = true
-		body.ui_interact.visible = true
+		interact_label.visible = true
 
 func _on_area_2d_body_exited(body) -> void:
 	if(body.is_in_group("player")):
 		player_in_range = false
-		body.ui_interact.visible = false
+		interact_label.visible = false

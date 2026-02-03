@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://0qqui53eq7lh"]
+[gd_scene load_steps=20 format=3 uid="uid://0qqui53eq7lh"]
 
 [ext_resource type="PackedScene" uid="uid://dbsi5g6n05p3v" path="res://Maps/hallway_map.tscn" id="1_6cnaf"]
 [ext_resource type="Script" uid="uid://fo4i2hndgbkd" path="res://Areas/1_st_floor_hallway.gd" id="1_s0xso"]
@@ -9,6 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://ch4p14mggmetl" path="res://debris.tscn" id="7_0dt61"]
 [ext_resource type="PackedScene" uid="uid://bx1bmkxmk8yei" path="res://tutorial_interact.tscn" id="8_apa2f"]
 [ext_resource type="PackedScene" uid="uid://bkhx06o5x33dw" path="res://text_box.tscn" id="9_cmodj"]
+[ext_resource type="PackedScene" uid="uid://bjv607nuyvdrg" path="res://inventory_item.tscn" id="10_cmodj"]
+[ext_resource type="Texture2D" uid="uid://cq7crlg0otfjm" path="res://Assets/Items/Consumables/granola_bar.png" id="11_p5s25"]
+[ext_resource type="PackedScene" uid="uid://dgvnusd7iitg5" path="res://Areas/tutorial_change_scene.tscn" id="12_p5s25"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cmodj"]
+radius = 14.035668
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0dt61"]
 
@@ -18,6 +24,15 @@ colors = PackedColorArray(0, 0, 0, 0.5764706, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_oe33b"]
 gradient = SubResource("Gradient_6cnaf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dt61"]
+size = Vector2(150, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5s25"]
+size = Vector2(48, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmodj"]
+size = Vector2(48, 19)
 
 [node name="1st_floor_hallway" type="Node2D"]
 script = ExtResource("1_s0xso")
@@ -49,11 +64,25 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 12
 text = "Interact"
 
+[node name="inventory_item" parent="." instance=ExtResource("10_cmodj")]
+position = Vector2(1230, 25)
+item_type = "consumable"
+item_name = "Granola Bar"
+item_desc = "A tasty granola bar that may or may not have been sitting on the ground for an unknown amount of time."
+item_texture = ExtResource("11_p5s25")
+item_effects = "Health: +5"
+
+[node name="text_area" type="Area2D" parent="inventory_item"]
+
+[node name="text_detect" type="CollisionShape2D" parent="inventory_item/text_area"]
+position = Vector2(146, 125)
+shape = SubResource("CircleShape2D_cmodj")
+
 [node name="character_open" parent="." instance=ExtResource("3_4entq")]
 position = Vector2(30, 147)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_open"]
-position = Vector2(-1, 4)
+position = Vector2(-1, 6)
 shape = SubResource("CircleShape2D_0dt61")
 
 [node name="walkin_text" parent="." instance=ExtResource("9_cmodj")]
@@ -89,7 +118,10 @@ texture = ExtResource("2_oe33b")
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_N" parent="Doors" instance=ExtResource("5_0o4e0")]
+visible = false
 collision_layer = 3
+monitoring = false
+monitorable = false
 destination_scene_tag = "courtyard"
 destination_door_tag = "S"
 spawn_direction = "down"
@@ -101,7 +133,10 @@ position = Vector2(1088, 101)
 position = Vector2(1089, 138)
 
 [node name="Door_SE" parent="Doors" instance=ExtResource("5_0o4e0")]
+visible = false
 collision_layer = 3
+monitoring = false
+monitorable = false
 destination_scene_tag = "basement"
 destination_door_tag = "W"
 spawn_direction = "right"
@@ -115,10 +150,91 @@ position = Vector2(37, -7)
 [node name="tutorial_interact" parent="." instance=ExtResource("8_apa2f")]
 position = Vector2(350, -89)
 
+[node name="tutorial_block" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial_block"]
+position = Vector2(1087, 100.5)
+shape = SubResource("RectangleShape2D_0dt61")
+
+[node name="granola_text" parent="." instance=ExtResource("9_cmodj")]
+unique_name_in_owner = true
+offset_left = 1207.0
+offset_top = 25.0
+offset_right = 1207.0
+offset_bottom = 25.0
+scale = Vector2(0.3, 0.3)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1741, 127)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(43, 49)
+shape = SubResource("RectangleShape2D_p5s25")
+
+[node name="basement_enter" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="basement_enter"]
+position = Vector2(1784, 163.5)
+shape = SubResource("RectangleShape2D_cmodj")
+
+[node name="tutorial_change_scene" parent="." instance=ExtResource("12_p5s25")]
+position = Vector2(1671, 30)
+
+[node name="confirm_area" type="ColorRect" parent="."]
+visible = false
+offset_left = 1596.0
+offset_top = 77.0
+offset_right = 1750.0
+offset_bottom = 143.0
+color = Color(0.18179765, 0.18179768, 0.18179768, 1)
+
+[node name="basement_confirm" type="Label" parent="confirm_area"]
+layout_mode = 0
+offset_right = 152.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 10
+text = "Would you like to enter the basement?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="yes_button" type="Button" parent="confirm_area"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 36.0
+offset_right = 59.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 12
+text = "Yes"
+
+[node name="no_button" type="Button" parent="confirm_area"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 36.0
+offset_right = 142.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 12
+text = "No"
+
+[node name="basement_walkin" parent="." instance=ExtResource("9_cmodj")]
+offset_left = 1491.0
+offset_top = 41.0
+offset_right = 1491.0
+offset_bottom = 41.0
+scale = Vector2(0.3, 0.3)
+
 [connection signal="body_entered" from="debris" to="." method="_on_debris_body_entered"]
 [connection signal="body_exited" from="debris" to="." method="_on_debris_body_exited"]
+[connection signal="body_entered" from="inventory_item/text_area" to="." method="_on_text_area_body_entered"]
+[connection signal="body_exited" from="inventory_item/text_area" to="." method="_on_text_area_body_exited"]
 [connection signal="dialogue_finished" from="walkin_text" to="." method="_on_walkin_text_dialogue_finished"]
 [connection signal="visibility_changed" from="walkin_text" to="." method="_on_walkin_text_visibility_changed"]
+[connection signal="dialogue_finished" from="granola_text" to="." method="_on_granola_text_dialogue_finished"]
+[connection signal="area_entered" from="basement_enter" to="." method="_on_basement_enter_area_entered"]
+[connection signal="body_entered" from="basement_enter" to="." method="_on_basement_enter_body_entered"]
+[connection signal="body_exited" from="basement_enter" to="." method="_on_basement_enter_body_exited"]
+[connection signal="pressed" from="confirm_area/yes_button" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="confirm_area/no_button" to="." method="_on_no_button_pressed"]
+[connection signal="dialogue_finished" from="basement_walkin" to="." method="_on_basement_walkin_dialogue_finished"]
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_SE"]

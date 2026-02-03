@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwwr7asrr00jj"
-path="res://.godot/imported/nathan_light.png-34cc33cd5e75daf0655fe968f529d030.ctex"
+uid="uid://ddfvr6c6ixrtn"
+path="res://.godot/imported/eve_knife.png-a1a12efa22a6d86beed7314d3d9757f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapons/nathan_light.png"
-dest_files=["res://.godot/imported/nathan_light.png-34cc33cd5e75daf0655fe968f529d030.ctex"]
+source_file="res://Assets/Items/Weapons/eve_knife.png"
+dest_files=["res://.godot/imported/eve_knife.png-a1a12efa22a6d86beed7314d3d9757f4.ctex"]
 
 [params]
 

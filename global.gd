@@ -43,6 +43,10 @@ var rabbit_three = false
 var rabbit_four = false
 var rabbit_five = false
 
+#tracks character position
+var char_position_x = 0
+var char_position_y = 0
+
 #determines if character can move during dialogue
 var in_chat = false
 

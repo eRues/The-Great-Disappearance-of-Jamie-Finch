@@ -51,8 +51,8 @@ func _process(_delta) -> void:
 		if(enemy.health > 0 && !player_turn):
 			if(enemy.confused):
 				text_box.visible = true
-				desc_text.text = "enemy is confused, cannot attack"
-				player_turn = false
+				desc_text.text = "The enemy is confused, it cannot attack"
+				player_turn = true
 			else:
 				var damage = enemy.attack(Global.battle_type.get_dodge())
 				damage_done += damage
