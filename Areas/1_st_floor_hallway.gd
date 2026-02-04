@@ -29,6 +29,7 @@ func _ready() -> void:
 		$inventory_item.queue_free()
 		$debris.queue_free()
 		$rock_texture.visible = true
+		$rock_texture/StaticBody2D/CollisionShape2D.disabled = false
 		Global.battle_type.health = Global.battle_type.base_health
 
 func _process(_delta) -> void:

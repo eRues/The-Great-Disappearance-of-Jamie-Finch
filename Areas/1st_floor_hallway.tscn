@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://0qqui53eq7lh"]
+[gd_scene load_steps=21 format=3 uid="uid://0qqui53eq7lh"]
 
 [ext_resource type="PackedScene" uid="uid://dbsi5g6n05p3v" path="res://Maps/hallway_map.tscn" id="1_6cnaf"]
 [ext_resource type="Script" uid="uid://fo4i2hndgbkd" path="res://Areas/1_st_floor_hallway.gd" id="1_s0xso"]
@@ -25,6 +25,9 @@ colors = PackedColorArray(0, 0, 0, 0.5764706, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_oe33b"]
 gradient = SubResource("Gradient_6cnaf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru8aw"]
+size = Vector2(117, 137)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dt61"]
 size = Vector2(150, 53)
@@ -116,6 +119,15 @@ offset_top = 38.0
 offset_right = 117.0
 offset_bottom = 176.0
 texture = ExtResource("2_oe33b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rock_texture"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock_texture/StaticBody2D"]
+position = Vector2(58.5, 68.5)
+shape = SubResource("RectangleShape2D_ru8aw")
+disabled = true
 
 [node name="Doors" type="Node" parent="."]
 

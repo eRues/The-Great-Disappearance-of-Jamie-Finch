@@ -59,6 +59,46 @@ func _ready() -> void:
 
 func _on_inventory_updated():
 	clear_grid_container()
+	if(Global.ash_chosen):
+		special_weapon = {
+		"quantity": 1,
+		"item_type": "weapon",
+		"item_name": "Ashton’s Splintered Bat",
+		"item_desc": "An old wooden bat you haven’t used since before you moved here. It’s almost broken, but there’s still some good swings left in it.",
+		"item_texture": load("res://Assets/Items/Weapons/ash_bat.png"),
+		"item_effects": "Attack: + 15, Crit: + 5",
+		"scene_path": scene_path
+		}
+	elif(Global.tia_chosen):
+		special_weapon = {
+		"quantity": 1,
+		"item_type": "weapon",
+		"item_name": "Tiana’s Hydroholder",
+		"item_desc": "Your trusty water bottle! Swinging it around is so fun, but you could probably give someone a concussion if you knocked them on the head with it.",
+		"item_texture": load("res://Assets/Items/Weapons/tia_bottle.png"),
+		"item_effects": "Attack: + 15, Crit: + 5",
+		"scene_path": scene_path
+		}
+	elif(Global.eve_chosen):
+		special_weapon = {
+		"quantity": 1,
+		"item_type": "weapon",
+		"item_name": "Eve’s Pocket Knife",
+		"item_desc": "The pocket knife you take with you everywhere. You can do some cool tricks with it.",
+		"item_texture": load("res://Assets/Items/Weapons/eve_knife.png"),
+		"item_effects": "Attack: + 15, Crit: + 5",
+		"scene_path": scene_path
+		}
+	elif(Global.nate_chosen):
+		special_weapon = {
+		"quantity": 1,
+		"item_type": "weapon",
+		"item_name": "Nathan’s Utility Flashlight",
+		"item_desc": "A bright beacon that will guide you until the very end! You can hit things with it too, I guess.",
+		"item_texture": load("res://Assets/Items/Weapons/nathan_light.png"),
+		"item_effects": "Attack: + 15, Crit: + 5",
+		"scene_path": scene_path
+		}
 	InventoryAutoload.inventory.set(0, special_weapon)
 	for item in InventoryAutoload.inventory:
 		var slot = InventoryAutoload.inventory_slot_scene.instantiate()

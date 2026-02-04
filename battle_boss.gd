@@ -4,9 +4,9 @@ func _init(new_name : String) -> void:
 	Global.enemy_name = new_name
 	if(Global.enemy_name == "phleg_intro"):
 		agitation = Global.base_agitation
-		health = (int)(100 * Global.base_agitation)
+		health = (int)(150 * Global.base_agitation)
 		base_health = health
-		strength = (int)(10 * Global.base_agitation)
+		strength = (int)(14 * Global.base_agitation)
 		speed = (int)(10 * Global.base_agitation)
 		smarts = (int)(10 * Global.base_agitation)
 		spirit = (int)(10 * Global.base_agitation)

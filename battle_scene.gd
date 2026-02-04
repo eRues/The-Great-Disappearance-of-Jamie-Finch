@@ -27,8 +27,14 @@ func _ready() -> void:
 
 func _process(_delta) -> void:
 	sprite.texture = (enemy.enemy_sprite)
-	$health_label_e.text = str(enemy.health)
-	$health_label_p.text = str(Global.battle_type.health)
+	if(enemy.health >= 0):
+		$health_label_e.text = str(enemy.health)
+	else:
+		$health_label_e.text = "0"
+	if(Global.battle_type.health >= 0):
+		$health_label_p.text = str(Global.battle_type.health)
+	else:
+		$health_label_p.text = "0"
 	$health_bar_e.value = enemy.health
 	$health_bar_p.value = Global.battle_type.health
 	
@@ -62,6 +68,7 @@ func _process(_delta) -> void:
 				desc_text.text = "The enemy is confused, it cannot attack"
 				defended = false
 				player_turn = true
+				enemy.confused = false
 			else:
 				var damage = enemy.attack(Global.battle_type.get_dodge())
 				damage_done += damage
@@ -70,8 +77,6 @@ func _process(_delta) -> void:
 				desc_text.text = "It attacked! It does " + str(damage) + " damage. You have " + str(Global.battle_type.health) + " health points remaining."
 				defended = false
 				player_turn = true
-			if(turns_since_skill == 1):
-				enemy.confused = false
 		if(enemy.health <= 0):
 			defeated = true
 			if(!exp_added):
@@ -108,7 +113,8 @@ func _on_skill_button_pressed() -> void:
 			desc_text.text = "You used your skill, the enemy is now confused."
 			skill_used = true
 		elif(turns_since_skill >= 0 && turns_since_skill <=4):
-			Global.battle_type.use_skill(enemy)
+			text_box.visible = true
+			desc_text.text = "You cannot use your skill right now. Wait a few turns."
 		else:
 			Global.battle_type.use_skill(enemy)
 			player_turn = false
@@ -126,8 +132,9 @@ func _on_defend_button_pressed() -> void:
 		desc_text.text = "You cannot defend right now!"
 	else:
 		Global.battle_type.defend()
+		text_box.visible = true
+		desc_text.text = "You defended! You have gained a buff to certain stats!"
 		if(skill_used && Global.tia_chosen):
-			Global.battle_type.speed -= 5
 			Global.battle_type.strength -= 5
 			skill_used = false
 		elif(skill_used && Global.eve_chosen):
@@ -145,7 +152,6 @@ func _on_attack_button_pressed() -> void:
 		var damage = Global.battle_type.attack(enemy.get_dodge())
 		enemy.health -= damage
 		if(skill_used && Global.tia_chosen):
-			Global.battle_type.speed -= 5
 			Global.battle_type.strength -= 5
 			skill_used = false
 		elif(skill_used && Global.eve_chosen):
