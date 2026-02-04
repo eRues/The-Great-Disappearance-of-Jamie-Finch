@@ -29,6 +29,8 @@ func _process(_delta) -> void:
 	sprite.texture = (enemy.enemy_sprite)
 	$health_label_e.text = str(enemy.health)
 	$health_label_p.text = str(Global.battle_type.health)
+	$health_bar_e.value = enemy.health
+	$health_bar_p.value = Global.battle_type.health
 	
 	if(Input.is_action_just_pressed("space")):
 		text_box.visible = false
@@ -41,7 +43,13 @@ func _process(_delta) -> void:
 		text_box.visible = true
 		desc_text.text = "Game Over!"
 		if(continued):
-			get_tree().change_scene_to_file("res://main_menu.tscn")
+			if(Global.tutorial_finished != true):
+				Global.tutorial_finished = true
+				Global.char_position_x = 1655
+				Global.char_position_y = 147
+				get_tree().change_scene_to_file("res://Areas/1st_floor_hallway.tscn")
+			else:
+				get_tree().change_scene_to_file("res://main_menu.tscn")
 	if(defeated):
 		pass
 	elif(continued):
@@ -52,6 +60,7 @@ func _process(_delta) -> void:
 			if(enemy.confused):
 				text_box.visible = true
 				desc_text.text = "The enemy is confused, it cannot attack"
+				defended = false
 				player_turn = true
 			else:
 				var damage = enemy.attack(Global.battle_type.get_dodge())
@@ -59,6 +68,7 @@ func _process(_delta) -> void:
 				Global.battle_type.health -= damage
 				text_box.visible = true
 				desc_text.text = "It attacked! It does " + str(damage) + " damage. You have " + str(Global.battle_type.health) + " health points remaining."
+				defended = false
 				player_turn = true
 			if(turns_since_skill == 1):
 				enemy.confused = false
@@ -75,17 +85,16 @@ func _process(_delta) -> void:
 			text.visible = true
 			text_box.visible = false
 			if(Global.is_boss == false):
-				Global.base_agitation += 0.5
+				Global.base_agitation += 0.2
 			else:
 				Global.base_agitation += 1
-		$health_bar_e.value = enemy.health
-		$health_bar_p.value = Global.battle_type.health
 
 func _on_run_button_pressed() -> void:
-	if(defeated):
-		pass
+	if(defeated || Global.dont_run):
+		text_box.visible = true
+		desc_text.text = "You cannot run from this fight."
 	else:
-		get_tree().change_scene_to_file("res://opening_cutscene.tscn")
+		get_tree().change_scene_to_file(Global.battle_target)
 
 func _on_skill_button_pressed() -> void:
 	if(defeated):
@@ -112,8 +121,9 @@ func _on_inventory_button_pressed() -> void:
 		inventory_ui.visible = !inventory_ui.visible
 
 func _on_defend_button_pressed() -> void:
-	if(defeated):
-		pass
+	if(defeated || defended):
+		text_box.visible = true
+		desc_text.text = "You cannot defend right now!"
 	else:
 		Global.battle_type.defend()
 		if(skill_used && Global.tia_chosen):
@@ -123,9 +133,8 @@ func _on_defend_button_pressed() -> void:
 		elif(skill_used && Global.eve_chosen):
 			Global.battle_type.smarts -= 2
 			skill_used = false
-		defended = true
-		player_turn = false
-	
+	defended = true
+	player_turn = false
 	turns_since_skill += 1
 
 func _on_attack_button_pressed() -> void:

@@ -14,4 +14,5 @@ func _on_level_spawn(destination_tag: String):
 func _on_temp_fight_pressed() -> void:
 	Global.is_boss = true
 	Global.enemy_name = "phleg_intro"
+	Global.dont_run = true
 	get_tree().change_scene_to_file("res://battle_scene.tscn")

@@ -11,7 +11,23 @@ func _ready() -> void:
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 	
-	current_text.start()
+	player.position.x = Global.char_position_x
+	player.position.y = Global.char_position_y
+	if(!Global.tutorial_finished):
+		current_text.start()
+	else: 
+		$walk_in.queue_free()
+		$tutorial_interact.queue_free()
+		$tutorial_block.queue_free()
+		%granola_text.queue_free()
+		$StaticBody2D2.queue_free()
+		$basement_enter.queue_free()
+		$tutorial_change_scene.queue_free()
+		$basement_walkin.queue_free()
+		$inventory_item.queue_free()
+		$debris.queue_free()
+		$rock_texture.visible = true
+		Global.battle_type.health = Global.battle_type.base_health
 
 func _process(_delta) -> void:
 	pass
@@ -32,7 +48,7 @@ func _on_debris_body_entered(_body: Node2D) -> void:
 	debris_text.name = "debris_text"
 	current_text = debris_text
 	add_child(current_text)
-	current_text.position.y = 18
+	current_text.position.y = 29
 	current_text.position.x = 300
 	current_text.scale = Vector2(0.3, 0.3)
 	can_interact = true
@@ -58,10 +74,11 @@ func _on_text_area_body_exited(_body: Node2D) -> void:
 func _on_granola_text_dialogue_finished() -> void:
 	%granola_text.queue_free()
 
-func _on_basement_enter_body_entered(_body: Node2D) -> void:
-	Global.basement_stairs = true
-	current_text = $basement_walkin
-	can_interact = true
+func _on_basement_enter_body_entered(body: Node2D) -> void:
+	if(body.is_in_group("player")):
+		Global.basement_stairs = true
+		current_text = $basement_walkin
+		can_interact = true
 
 func _on_basement_walkin_dialogue_finished() -> void:
 	$confirm_area.visible = true

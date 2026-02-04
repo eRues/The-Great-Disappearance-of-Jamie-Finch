@@ -12,7 +12,7 @@ script = ExtResource("1_uwt3o")
 
 [node name="basement_map" parent="." instance=ExtResource("1_uyr1m")]
 
-[node name="character_open" parent="." instance=ExtResource("2_nu60v")]
+[node name="character_open" parent="." groups=["player"] instance=ExtResource("2_nu60v")]
 position = Vector2(41, 209)
 
 [node name="PhlegSpriteOne" type="Sprite2D" parent="."]

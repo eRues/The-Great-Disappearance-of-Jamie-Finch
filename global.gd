@@ -44,11 +44,21 @@ var rabbit_four = false
 var rabbit_five = false
 
 #tracks character position
-var char_position_x = 0
-var char_position_y = 0
+var char_position_x = 30
+var char_position_y = 147
+
+#tracks what enemies are defeated
+var dee_defeat = false
+var dum_defeat = false
+var dan_defeat = false
+var dave_defeat = false
+var bart_defeat = false
+var rabbit_count = 0
 
 #determines if character can move during dialogue
 var in_chat = false
 
 #variable that determines which scene a transition want to go to
 var target_scene = ""
+var battle_target = ""
+var from_battle = false

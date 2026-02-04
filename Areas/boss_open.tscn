@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://wtagbrkdg3gj"]
+
+[ext_resource type="Script" uid="uid://ce63k6eele8tf" path="res://Areas/boss_open.gd" id="1_fkqn1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oo2fj"]
+radius = 19.026299
+
+[node name="boss_open" type="Node2D"]
+script = ExtResource("1_fkqn1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="interact_label" type="Label" parent="."]
+visible = false
+offset_left = -25.0
+offset_top = -36.0
+offset_right = 24.0
+offset_bottom = -19.0
+theme_override_font_sizes/font_size = 12
+text = "Interact"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_oo2fj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

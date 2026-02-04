@@ -17,6 +17,7 @@
 radius = 14.035668
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0dt61"]
+radius = 5.0990195
 
 [sub_resource type="Gradient" id="Gradient_6cnaf"]
 offsets = PackedFloat32Array(0.40449437, 0.8820225)
@@ -32,7 +33,7 @@ size = Vector2(150, 53)
 size = Vector2(48, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmodj"]
-size = Vector2(48, 19)
+size = Vector2(76, 31)
 
 [node name="1st_floor_hallway" type="Node2D"]
 script = ExtResource("1_s0xso")
@@ -75,22 +76,23 @@ item_effects = "Health: +5"
 [node name="text_area" type="Area2D" parent="inventory_item"]
 
 [node name="text_detect" type="CollisionShape2D" parent="inventory_item/text_area"]
-position = Vector2(146, 125)
+position = Vector2(145, 125)
+rotation = 3.1415927
 shape = SubResource("CircleShape2D_cmodj")
 
 [node name="character_open" parent="." instance=ExtResource("3_4entq")]
 position = Vector2(30, 147)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_open"]
-position = Vector2(-1, 6)
+position = Vector2(-1, 8)
 shape = SubResource("CircleShape2D_0dt61")
 
 [node name="walkin_text" parent="." instance=ExtResource("9_cmodj")]
 unique_name_in_owner = true
 offset_left = -11.0
-offset_top = 18.0
+offset_top = 29.000002
 offset_right = -11.0
-offset_bottom = 18.0
+offset_bottom = 29.000002
 scale = Vector2(0.3, 0.3)
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -118,10 +120,7 @@ texture = ExtResource("2_oe33b")
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_N" parent="Doors" instance=ExtResource("5_0o4e0")]
-visible = false
 collision_layer = 3
-monitoring = false
-monitorable = false
 destination_scene_tag = "courtyard"
 destination_door_tag = "S"
 spawn_direction = "down"
@@ -153,15 +152,15 @@ position = Vector2(350, -89)
 [node name="tutorial_block" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial_block"]
-position = Vector2(1087, 100.5)
+position = Vector2(1087, 103.5)
 shape = SubResource("RectangleShape2D_0dt61")
 
 [node name="granola_text" parent="." instance=ExtResource("9_cmodj")]
 unique_name_in_owner = true
-offset_left = 1207.0
-offset_top = 25.0
-offset_right = 1207.0
-offset_bottom = 25.0
+offset_left = 1198.0
+offset_top = 29.0
+offset_right = 1198.0
+offset_bottom = 29.0
 scale = Vector2(0.3, 0.3)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -174,7 +173,7 @@ shape = SubResource("RectangleShape2D_p5s25")
 [node name="basement_enter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="basement_enter"]
-position = Vector2(1784, 163.5)
+position = Vector2(1785, 160.5)
 shape = SubResource("RectangleShape2D_cmodj")
 
 [node name="tutorial_change_scene" parent="." instance=ExtResource("12_p5s25")]
@@ -182,10 +181,10 @@ position = Vector2(1671, 30)
 
 [node name="confirm_area" type="ColorRect" parent="."]
 visible = false
-offset_left = 1596.0
-offset_top = 77.0
-offset_right = 1750.0
-offset_bottom = 143.0
+offset_left = 1589.0
+offset_top = 106.0
+offset_right = 1743.0
+offset_bottom = 172.0
 color = Color(0.18179765, 0.18179768, 0.18179768, 1)
 
 [node name="basement_confirm" type="Label" parent="confirm_area"]

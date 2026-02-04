@@ -14,13 +14,13 @@ func _init(new_name : String) -> void:
 		enemy_sprite = load("res://Assets/Enemy Characters/Phlegathon/phleg_sprite_one.png")
 	elif(Global.enemy_name == "keeper"):
 		agitation = Global.base_agitation
-		health = (int)(40 * Global.base_agitation)
+		health = (int)(20 * Global.base_agitation)
 		base_health = health
-		strength = (int)(9 * Global.base_agitation)
-		speed = (int)(7 * Global.base_agitation)
-		smarts = (int)(7 * Global.base_agitation)
-		spirit = (int)(4 * Global.base_agitation)
-		experience = (int)(10 * Global.base_agitation)
+		strength = (int)(5 * Global.base_agitation)
+		speed = (int)(3 * Global.base_agitation)
+		smarts = (int)(4 * Global.base_agitation)
+		spirit = (int)(2 * Global.base_agitation)
+		experience = (int)(20 * Global.base_agitation)
 		enemy_sprite = load("res://Assets/Enemy Characters/Groundskeeper/keeper_battle.png")
 
 func attack(enemy_dodge : int) -> int:

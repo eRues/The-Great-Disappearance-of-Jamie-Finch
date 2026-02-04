@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kb16rvp23l3y"
-path="res://.godot/imported/battle_placeholder.png-7e22d3533dd91d27c3489369376c3b7c.ctex"
+uid="uid://difdt4nygold"
+path="res://.godot/imported/dan_individual.png-2cd749ea7ebef852647b418dad7fbba0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/battle_placeholder.png"
-dest_files=["res://.godot/imported/battle_placeholder.png-7e22d3533dd91d27c3489369376c3b7c.ctex"]
+source_file="res://Assets/Enemy Characters/Rabbits/dan_individual.png"
+dest_files=["res://.godot/imported/dan_individual.png-2cd749ea7ebef852647b418dad7fbba0.ctex"]
 
 [params]
 
