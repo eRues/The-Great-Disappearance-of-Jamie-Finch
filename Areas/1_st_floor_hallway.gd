@@ -8,6 +8,8 @@ var can_interact = false
 var in_chat = false
 
 func _ready() -> void:
+	if(!Global.tutorial_finished):
+		NavigationManager.spawn_door_tag = null
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 	

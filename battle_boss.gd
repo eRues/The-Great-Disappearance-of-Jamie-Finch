@@ -17,7 +17,7 @@ func _init(new_name : String) -> void:
 		health = (int)(20 * Global.base_agitation)
 		base_health = health
 		strength = (int)(5 * Global.base_agitation)
-		speed = (int)(3 * Global.base_agitation)
+		speed = (int)(4 * Global.base_agitation)
 		smarts = (int)(4 * Global.base_agitation)
 		spirit = (int)(2 * Global.base_agitation)
 		experience = (int)(20 * Global.base_agitation)
@@ -35,13 +35,13 @@ func attack(enemy_dodge : int) -> int:
 		@warning_ignore("integer_division")
 	elif(health <= (base_health*(2/3))):
 		if(enemy_dodge <= ((randi() + 1)*100)):
-			dmg = (int)(get_damage()*1.25)
+			dmg = (int)(get_damage()*1.1)
 		
 		if(((randi() + 1)*100) <= get_crit()):
 			dmg *= 2
 	else:
 		if(enemy_dodge <= ((randi() + 1)*100) + 10):
-			dmg = (int)(get_damage()*1.5)
+			dmg = (int)(get_damage()*1.25)
 		
 		if(((randi() + 1)*100) <= get_crit()):
 			dmg *= 2

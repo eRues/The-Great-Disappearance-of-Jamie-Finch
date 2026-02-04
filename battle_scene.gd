@@ -85,7 +85,7 @@ func _process(_delta) -> void:
 			text.visible = true
 			text_box.visible = false
 			if(Global.is_boss == false):
-				Global.base_agitation += 0.2
+				Global.base_agitation += 0.1
 			else:
 				Global.base_agitation += 1
 

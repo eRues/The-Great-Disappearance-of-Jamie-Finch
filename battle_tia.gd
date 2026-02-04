@@ -22,9 +22,6 @@ func defend():
 
 func use_skill(_my_enemy : Battle_Enemy):
 	if(can_use_skill):
-		speed += 5
 		strength += 5
-		print(str(speed))
-		print(str(strength))
 	else:
 		print("wait for cooldown")
