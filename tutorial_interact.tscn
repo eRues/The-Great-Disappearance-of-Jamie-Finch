@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx1bmkxmk8yei"]
+
+[ext_resource type="Texture2D" uid="uid://1bexm3nc5dyo" path="res://Assets/Keyboard Keys/enter_key.png" id="1_ryvg3"]
+
+[node name="tutorial_interact" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 113.0
+offset_top = 142.0
+offset_right = 153.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 12
+text = "Press"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 171.0
+offset_right = 179.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 12
+text = "to interact"
+
+[node name="EnterKey" type="Sprite2D" parent="."]
+position = Vector2(128, 164.99998)
+scale = Vector2(1.1785715, 1.0833334)
+texture = ExtResource("1_ryvg3")

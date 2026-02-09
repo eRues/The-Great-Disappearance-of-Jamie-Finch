@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c8mbu1wccm56t" path="res://inventory_item.gd" id="1_gmchj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmchj"]
-radius = 38.8973
+radius = 14.035668
 
 [node name="inventory_item" type="Node2D" groups=["items"]]
 script = ExtResource("1_gmchj")
@@ -16,7 +16,16 @@ shape = SubResource("CircleShape2D_gmchj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(147, 125)
-scale = Vector2(2, 2)
+scale = Vector2(0.4, 0.4)
+
+[node name="interact_label" type="Label" parent="."]
+visible = false
+offset_left = 123.0
+offset_top = 96.0
+offset_right = 172.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 12
+text = "Interact"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

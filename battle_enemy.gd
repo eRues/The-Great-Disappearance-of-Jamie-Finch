@@ -14,6 +14,56 @@ func _init(new_name : String) -> void:
 		smarts = (int)(5 * Global.base_agitation)
 		spirit = (int)(7 * Global.base_agitation)
 		experience = (int)(10 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/Enemy Characters/Rabbits/dee_individual.png")
+	elif(Global.enemy_name == "rabbit_dum"):
+		agitation = Global.base_agitation
+		health = (int)(10 * Global.base_agitation)
+		base_health = health
+		strength = (int)(2 * Global.base_agitation)
+		speed = (int)(9 * Global.base_agitation)
+		smarts = (int)(5 * Global.base_agitation)
+		spirit = (int)(7 * Global.base_agitation)
+		experience = (int)(10 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/Enemy Characters/Rabbits/dum_individual.png")
+	elif(Global.enemy_name == "rabbit_dan"):
+		agitation = Global.base_agitation
+		health = (int)(10 * Global.base_agitation)
+		base_health = health
+		strength = (int)(2 * Global.base_agitation)
+		speed = (int)(9 * Global.base_agitation)
+		smarts = (int)(5 * Global.base_agitation)
+		spirit = (int)(7 * Global.base_agitation)
+		experience = (int)(10 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/Enemy Characters/Rabbits/dan_individual.png")
+	elif(Global.enemy_name == "rabbit_dave"):
+		agitation = Global.base_agitation
+		health = (int)(10 * Global.base_agitation)
+		base_health = health
+		strength = (int)(2 * Global.base_agitation)
+		speed = (int)(9 * Global.base_agitation)
+		smarts = (int)(5 * Global.base_agitation)
+		spirit = (int)(7 * Global.base_agitation)
+		experience = (int)(10 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/Enemy Characters/Rabbits/dave_individual.png")
+	elif(Global.enemy_name == "rabbit_bart"):
+		agitation = Global.base_agitation
+		health = (int)(10 * Global.base_agitation)
+		base_health = health
+		strength = (int)(2 * Global.base_agitation)
+		speed = (int)(9 * Global.base_agitation)
+		smarts = (int)(5 * Global.base_agitation)
+		spirit = (int)(7 * Global.base_agitation)
+		experience = (int)(10 * Global.base_agitation)
+		enemy_sprite = load("res://Assets/Enemy Characters/Rabbits/bart_individual.png")
+	elif(Global.enemy_name == "court_bush"):
+		agitation = Global.base_agitation
+		health = (int)(7 * Global.base_agitation)
+		base_health = health
+		strength = (int)(4 * Global.base_agitation)
+		speed = (int)(2 * Global.base_agitation)
+		smarts = (int)(2 * Global.base_agitation)
+		spirit = (int)(5 * Global.base_agitation)
+		experience = (int)(10 * Global.base_agitation)
 		enemy_sprite = load("res://Assets/battle_placeholder.png")
 
 func _ready() -> void:

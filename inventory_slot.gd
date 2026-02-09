@@ -38,3 +38,12 @@ func set_item(new_item):
 	item_name.text = str(new_item["item_name"])
 	item_desc.text = str(new_item["item_desc"])
 	item_effect.text = str(new_item["item_effects"])
+	
+	if(item["item_type"] == "weapon"):
+		button.text = "Equipped"
+		button.disabled = true
+
+func _on_use_button_pressed() -> void:
+	if(item["item_type"] != "weapon"):
+		Global.battle_type.health += 5
+		InventoryAutoload.remove_item(item["item_type"], item["item_effects"])

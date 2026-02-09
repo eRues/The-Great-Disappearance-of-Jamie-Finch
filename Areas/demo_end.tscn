@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckkggotfnybw"]
+
+[ext_resource type="Script" uid="uid://ovk32oj7hvjg" path="res://Areas/demo_end.gd" id="1_vfplq"]
+
+[sub_resource type="Gradient" id="Gradient_e8074"]
+offsets = PackedFloat32Array(0.026666667, 1)
+colors = PackedColorArray(0.16644001, 0.06865773, 0.03865805, 1, 0.3665946, 0.3665946, 0.36659458, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cv45e"]
+gradient = SubResource("Gradient_e8074")
+fill_from = Vector2(0.46261683, 0.046728972)
+fill_to = Vector2(0.95327103, 0.19626169)
+
+[node name="demo_end" type="Node2D"]
+script = ExtResource("1_vfplq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1162.0001
+offset_top = -138.00002
+offset_right = 2608.0
+offset_bottom = 1029.0
+rotation = 1.5713016
+texture = SubResource("GradientTexture2D_cv45e")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 21.0
+offset_right = 1156.0
+offset_bottom = 445.0
+theme_override_font_sizes/normal_font_size = 31
+text = "Thank you for beta testing The Great Disappearance of Jamie Finch! We hope you had a good experience. 
+
+Please click the button below to play through it again and try a new character!
+
+Once you're finished playing, remember to give us feedback on the google form below. All feedback is appreciated!"
+horizontal_alignment = 1
+
+[node name="menu_button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = 437.0
+offset_right = 825.0
+offset_bottom = 566.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 42
+text = "Return to Title"
+
+[connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]

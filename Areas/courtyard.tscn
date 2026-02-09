@@ -1,29 +1,110 @@
-[gd_scene load_steps=5 format=3 uid="uid://r1jc06ey0aul"]
+[gd_scene load_steps=16 format=3 uid="uid://r1jc06ey0aul"]
 
 [ext_resource type="PackedScene" uid="uid://ucnmkofo2at5" path="res://Maps/courtyard_map.tscn" id="1_h6p8g"]
 [ext_resource type="Script" uid="uid://7nvds5yt4ipc" path="res://Areas/courtyard.gd" id="1_s5rle"]
 [ext_resource type="PackedScene" uid="uid://dkk4ktwgy2gp3" path="res://character_open.tscn" id="2_uy1qx"]
 [ext_resource type="PackedScene" uid="uid://fuwp5glh5eea" path="res://Door.tscn" id="3_fwmkn"]
+[ext_resource type="PackedScene" uid="uid://c0gw1re6xkuj8" path="res://Areas/enemy_open.tscn" id="5_xsn5d"]
+[ext_resource type="Texture2D" uid="uid://dml8kos6bvqjv" path="res://Assets/Enemy Characters/Rabbits/dave_individual.png" id="6_ey5at"]
+[ext_resource type="Texture2D" uid="uid://cr4m541axxkv7" path="res://Assets/Enemy Characters/Rabbits/dum_individual.png" id="7_o6ba8"]
+[ext_resource type="Texture2D" uid="uid://kb16rvp23l3y" path="res://Assets/Enemy Characters/Rabbits/dee_individual.png" id="8_ekjix"]
+[ext_resource type="Texture2D" uid="uid://td8dcwkyknct" path="res://Assets/Enemy Characters/Rabbits/bart_individual.png" id="9_nyd12"]
+[ext_resource type="Texture2D" uid="uid://csdmfobdq7gqa" path="res://Assets/Enemy Characters/Groundskeeper/groundskeeper_individual.png" id="10_ekjix"]
+[ext_resource type="Texture2D" uid="uid://difdt4nygold" path="res://Assets/Enemy Characters/Rabbits/dan_individual.png" id="10_ldf28"]
+[ext_resource type="PackedScene" uid="uid://wtagbrkdg3gj" path="res://Areas/boss_open.tscn" id="11_nyd12"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5rle"]
+size = Vector2(133, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5rle"]
+radius = 59.808025
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dbwpn"]
+radius = 56.008926
 
 [node name="courtyard" type="Node2D"]
 script = ExtResource("1_s5rle")
 
 [node name="courtyard_map" parent="." instance=ExtResource("1_h6p8g")]
 
-[node name="character_open" parent="." instance=ExtResource("2_uy1qx")]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_S" parent="Doors" instance=ExtResource("3_fwmkn")]
+visible = false
+collision_layer = 0
+collision_mask = 0
 destination_scene_tag = "1st_floor_hallway"
 destination_door_tag = "N"
 
 [node name="CollisionShape2D" parent="Doors/Door_S" index="0"]
-position = Vector2(801, 1001)
+position = Vector2(802, 984)
 
 [node name="Spawn" parent="Doors/Door_S" index="1"]
-position = Vector2(801, 959)
+position = Vector2(802, 937)
+
+[node name="temp_bound" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="temp_bound"]
+light_mask = 3
+position = Vector2(800.5, 968)
+shape = SubResource("RectangleShape2D_s5rle")
+
+[node name="tree_1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_1"]
+position = Vector2(547, 524)
+shape = SubResource("CircleShape2D_s5rle")
+
+[node name="tree_2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_2"]
+position = Vector2(1391, 699)
+shape = SubResource("CircleShape2D_dbwpn")
+
+[node name="dave" parent="." instance=ExtResource("5_xsn5d")]
+position = Vector2(1228, 550)
+enemy_name = "rabbit_dave"
+enemy_texture = ExtResource("6_ey5at")
+
+[node name="dum" parent="." instance=ExtResource("5_xsn5d")]
+position = Vector2(1296, 135)
+enemy_name = "rabbit_dum"
+enemy_texture = ExtResource("7_o6ba8")
+
+[node name="dee" parent="." instance=ExtResource("5_xsn5d")]
+position = Vector2(984, 299)
+enemy_name = "rabbit_dee"
+enemy_texture = ExtResource("8_ekjix")
+
+[node name="bart" parent="." instance=ExtResource("5_xsn5d")]
+position = Vector2(229, 742)
+enemy_name = "rabbit_bart"
+enemy_texture = ExtResource("9_nyd12")
+
+[node name="dan" parent="." instance=ExtResource("5_xsn5d")]
+position = Vector2(1197, 750)
+enemy_name = "rabbit_dan"
+enemy_texture = ExtResource("10_ldf28")
+
+[node name="keeper" parent="." instance=ExtResource("11_nyd12")]
+visible = false
+position = Vector2(802, 597)
+enemy_name = "keeper"
+enemy_texture = ExtResource("10_ekjix")
+
+[node name="character_open" parent="." groups=["player"] instance=ExtResource("2_uy1qx")]
+position = Vector2(804, 933)
+
+[node name="instruct" type="Label" parent="."]
+offset_left = 724.0
+offset_top = 821.0
+offset_right = 873.0
+offset_bottom = 844.0
+text = "Find all the rabbits!"
+
+[connection signal="body_entered" from="tree_1" to="." method="_on_tree_1_body_entered"]
+[connection signal="body_exited" from="tree_1" to="." method="_on_tree_1_body_exited"]
+[connection signal="body_entered" from="tree_2" to="." method="_on_tree_2_body_entered"]
+[connection signal="body_exited" from="tree_2" to="." method="_on_tree_2_body_exited"]
 
 [editable path="Doors/Door_S"]
