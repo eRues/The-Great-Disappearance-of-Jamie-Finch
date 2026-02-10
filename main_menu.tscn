@@ -1,24 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://4mpv3ptamsag"]
+[gd_scene format=3 uid="uid://4mpv3ptamsag"]
 
 [ext_resource type="Script" uid="uid://da1tvpdvh54kx" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://d3n2nki22fwts" path="res://Assets/GD_Title.png" id="2_7vrkn"]
 
-[node name="menu" type="Node2D"]
+[node name="menu" type="Node2D" unique_id=2032351085]
 script = ExtResource("1_06t4h")
 
-[node name="temp_back" type="ColorRect" parent="."]
+[node name="temp_back" type="ColorRect" parent="." unique_id=1191074317]
 offset_right = 1153.0
 offset_bottom = 648.0
-color = Color(0.411765, 0.411765, 0.411765, 0.737255)
+color = Color(0.1290333, 0.18698734, 0.064892456, 1)
 
-[node name="new_game_button" type="Button" parent="."]
+[node name="new_game_button" type="Button" parent="." unique_id=1304726259]
 offset_left = 434.0
 offset_top = 347.0
 offset_right = 673.0
 offset_bottom = 413.0
 text = "New Game"
 
-[node name="load_button" type="Button" parent="."]
+[node name="load_button" type="Button" parent="." unique_id=1270406003]
 visible = false
 offset_left = 434.0
 offset_top = 353.0
@@ -27,7 +27,7 @@ offset_bottom = 419.0
 disabled = true
 text = "Load Save"
 
-[node name="options_button" type="Button" parent="."]
+[node name="options_button" type="Button" parent="." unique_id=1216522886]
 visible = false
 offset_left = 433.0
 offset_top = 432.0
@@ -36,14 +36,14 @@ offset_bottom = 499.0
 disabled = true
 text = "Options"
 
-[node name="quit_button" type="Button" parent="."]
+[node name="quit_button" type="Button" parent="." unique_id=1515692400]
 offset_left = 433.0
 offset_top = 435.0
 offset_right = 672.0
 offset_bottom = 501.0
 text = "Quit"
 
-[node name="GdTitle" type="Sprite2D" parent="."]
+[node name="GdTitle" type="Sprite2D" parent="." unique_id=1212539665]
 position = Vector2(553, 169)
 scale = Vector2(4, 4)
 texture = ExtResource("2_7vrkn")
