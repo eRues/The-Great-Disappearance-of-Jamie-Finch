@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://r1jc06ey0aul"]
+[gd_scene format=3 uid="uid://r1jc06ey0aul"]
 
 [ext_resource type="PackedScene" uid="uid://ucnmkofo2at5" path="res://Maps/courtyard_map.tscn" id="1_h6p8g"]
 [ext_resource type="Script" uid="uid://7nvds5yt4ipc" path="res://Areas/courtyard.gd" id="1_s5rle"]
@@ -22,14 +22,14 @@ radius = 59.808025
 [sub_resource type="CircleShape2D" id="CircleShape2D_dbwpn"]
 radius = 56.008926
 
-[node name="courtyard" type="Node2D"]
+[node name="courtyard" type="Node2D" unique_id=1534304284]
 script = ExtResource("1_s5rle")
 
-[node name="courtyard_map" parent="." instance=ExtResource("1_h6p8g")]
+[node name="courtyard_map" parent="." unique_id=1696636877 instance=ExtResource("1_h6p8g")]
 
-[node name="Doors" type="Node" parent="."]
+[node name="Doors" type="Node" parent="." unique_id=1884087603]
 
-[node name="Door_S" parent="Doors" instance=ExtResource("3_fwmkn")]
+[node name="Door_S" parent="Doors" unique_id=1668019532 instance=ExtResource("3_fwmkn")]
 visible = false
 collision_layer = 0
 collision_mask = 0
@@ -42,60 +42,60 @@ position = Vector2(802, 984)
 [node name="Spawn" parent="Doors/Door_S" index="1"]
 position = Vector2(802, 937)
 
-[node name="temp_bound" type="StaticBody2D" parent="."]
+[node name="temp_bound" type="StaticBody2D" parent="." unique_id=1097628936]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="temp_bound"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="temp_bound" unique_id=1992837392]
 light_mask = 3
 position = Vector2(800.5, 968)
 shape = SubResource("RectangleShape2D_s5rle")
 
-[node name="tree_1" type="Area2D" parent="."]
+[node name="tree_1" type="Area2D" parent="." unique_id=840379452]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_1" unique_id=1793713238]
 position = Vector2(547, 524)
 shape = SubResource("CircleShape2D_s5rle")
 
-[node name="tree_2" type="Area2D" parent="."]
+[node name="tree_2" type="Area2D" parent="." unique_id=2083045795]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_2" unique_id=153905790]
 position = Vector2(1391, 699)
 shape = SubResource("CircleShape2D_dbwpn")
 
-[node name="dave" parent="." instance=ExtResource("5_xsn5d")]
+[node name="dave" parent="." unique_id=491120373 instance=ExtResource("5_xsn5d")]
 position = Vector2(1228, 550)
 enemy_name = "rabbit_dave"
 enemy_texture = ExtResource("6_ey5at")
 
-[node name="dum" parent="." instance=ExtResource("5_xsn5d")]
+[node name="dum" parent="." unique_id=343330120 instance=ExtResource("5_xsn5d")]
 position = Vector2(1296, 135)
 enemy_name = "rabbit_dum"
 enemy_texture = ExtResource("7_o6ba8")
 
-[node name="dee" parent="." instance=ExtResource("5_xsn5d")]
+[node name="dee" parent="." unique_id=1242674503 instance=ExtResource("5_xsn5d")]
 position = Vector2(984, 299)
 enemy_name = "rabbit_dee"
 enemy_texture = ExtResource("8_ekjix")
 
-[node name="bart" parent="." instance=ExtResource("5_xsn5d")]
+[node name="bart" parent="." unique_id=633098846 instance=ExtResource("5_xsn5d")]
 position = Vector2(229, 742)
 enemy_name = "rabbit_bart"
 enemy_texture = ExtResource("9_nyd12")
 
-[node name="dan" parent="." instance=ExtResource("5_xsn5d")]
+[node name="dan" parent="." unique_id=2071876701 instance=ExtResource("5_xsn5d")]
 position = Vector2(1197, 750)
 enemy_name = "rabbit_dan"
 enemy_texture = ExtResource("10_ldf28")
 
-[node name="keeper" parent="." instance=ExtResource("11_nyd12")]
+[node name="keeper" parent="." unique_id=274896548 instance=ExtResource("11_nyd12")]
 visible = false
 position = Vector2(802, 597)
 enemy_name = "keeper"
 enemy_texture = ExtResource("10_ekjix")
 
-[node name="character_open" parent="." groups=["player"] instance=ExtResource("2_uy1qx")]
+[node name="character_open" parent="." unique_id=239274063 groups=["player"] instance=ExtResource("2_uy1qx")]
 position = Vector2(804, 933)
 
-[node name="instruct" type="Label" parent="."]
+[node name="instruct" type="Label" parent="." unique_id=834181808]
 offset_left = 724.0
 offset_top = 821.0
 offset_right = 873.0
