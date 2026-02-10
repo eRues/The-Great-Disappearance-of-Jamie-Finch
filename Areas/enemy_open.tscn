@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0gw1re6xkuj8"]
+[gd_scene format=3 uid="uid://c0gw1re6xkuj8"]
 
 [ext_resource type="Script" uid="uid://oiw1877lu2md" path="res://enemy_open.gd" id="1_477ki"]
 [ext_resource type="Texture2D" uid="uid://kb16rvp23l3y" path="res://Assets/Enemy Characters/Rabbits/dee_individual.png" id="2_8fov3"]
