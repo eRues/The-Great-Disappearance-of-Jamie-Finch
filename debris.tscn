@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch4p14mggmetl"]
+[gd_scene format=3 uid="uid://ch4p14mggmetl"]
 
 [ext_resource type="Texture2D" uid="uid://d3np8pot2mwaa" path="res://Assets/temp_debris.png" id="1_e8eya"]
 [ext_resource type="Script" uid="uid://cpg7kbqy6pxfy" path="res://debris.gd" id="1_ov8td"]
