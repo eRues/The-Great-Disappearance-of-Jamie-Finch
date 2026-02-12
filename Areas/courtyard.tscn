@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://r1jc06ey0aul"]
+[gd_scene load_steps=14 format=3 uid="uid://r1jc06ey0aul"]
 
 [ext_resource type="PackedScene" uid="uid://ucnmkofo2at5" path="res://Maps/courtyard_map.tscn" id="1_h6p8g"]
 [ext_resource type="Script" uid="uid://7nvds5yt4ipc" path="res://Areas/courtyard.gd" id="1_s5rle"]
@@ -15,12 +15,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5rle"]
 size = Vector2(133, 20)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_s5rle"]
-radius = 59.808025
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_dbwpn"]
-radius = 56.008926
 
 [node name="courtyard" type="Node2D" unique_id=1534304284]
 script = ExtResource("1_s5rle")
@@ -48,18 +42,6 @@ position = Vector2(802, 937)
 light_mask = 3
 position = Vector2(800.5, 968)
 shape = SubResource("RectangleShape2D_s5rle")
-
-[node name="tree_1" type="Area2D" parent="." unique_id=840379452]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_1" unique_id=1793713238]
-position = Vector2(547, 524)
-shape = SubResource("CircleShape2D_s5rle")
-
-[node name="tree_2" type="Area2D" parent="." unique_id=2083045795]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_2" unique_id=153905790]
-position = Vector2(1391, 699)
-shape = SubResource("CircleShape2D_dbwpn")
 
 [node name="dave" parent="." unique_id=491120373 instance=ExtResource("5_xsn5d")]
 position = Vector2(1228, 550)
@@ -101,10 +83,5 @@ offset_top = 821.0
 offset_right = 873.0
 offset_bottom = 844.0
 text = "Find all the rabbits!"
-
-[connection signal="body_entered" from="tree_1" to="." method="_on_tree_1_body_entered"]
-[connection signal="body_exited" from="tree_1" to="." method="_on_tree_1_body_exited"]
-[connection signal="body_entered" from="tree_2" to="." method="_on_tree_2_body_entered"]
-[connection signal="body_exited" from="tree_2" to="." method="_on_tree_2_body_exited"]
 
 [editable path="Doors/Door_S"]

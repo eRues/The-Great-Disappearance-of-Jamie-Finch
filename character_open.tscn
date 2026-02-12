@@ -5,21 +5,21 @@
 [ext_resource type="PackedScene" uid="uid://d0tirwpydxxk2" path="res://tia_open.tscn" id="2_17gy8"]
 [ext_resource type="PackedScene" uid="uid://br0lffedi4y13" path="res://eve_open.tscn" id="3_dfaot"]
 [ext_resource type="PackedScene" uid="uid://ccn3surclscyf" path="res://nathan_open.tscn" id="4_cmeqg"]
-[ext_resource type="Script" path="res://tia_open.gd" id="5_t4vui"]
-[ext_resource type="Script" path="res://eve_open.gd" id="7_am563"]
-[ext_resource type="Script" path="res://nathan_open.gd" id="9_0kwr6"]
+[ext_resource type="Script" uid="uid://g1os6mm6615c" path="res://tia_open.gd" id="5_t4vui"]
+[ext_resource type="Script" uid="uid://v1yapt2w4p7c" path="res://eve_open.gd" id="7_am563"]
+[ext_resource type="Script" uid="uid://cp3qrn1cm3ftg" path="res://nathan_open.gd" id="9_0kwr6"]
 [ext_resource type="PackedScene" uid="uid://b3drsh4yrp34h" path="res://inventory_ui.tscn" id="10_26enf"]
 
-[node name="character_open" type="Node2D"]
+[node name="character_open" type="Node2D" unique_id=1271386659]
 process_mode = 3
 script = ExtResource("1_4uwka")
 
-[node name="ash_open" parent="." groups=["player"] instance=ExtResource("1_6so4b")]
+[node name="ash_open" parent="." unique_id=450151227 groups=["player"] instance=ExtResource("1_6so4b")]
 position = Vector2(-0.9867096, -0.16405106)
 collision_layer = 7
 collision_mask = 7
 
-[node name="ash_cam" type="Camera2D" parent="ash_open"]
+[node name="ash_cam" type="Camera2D" parent="ash_open" unique_id=2108694464]
 enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
@@ -27,43 +27,43 @@ limit_top = 50
 limit_right = 1825
 limit_bottom = 200
 
-[node name="tia_open" parent="." groups=["player"] instance=ExtResource("2_17gy8")]
+[node name="tia_open" parent="." unique_id=670725174 groups=["player"] instance=ExtResource("2_17gy8")]
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("5_t4vui")
 
-[node name="tia_cam" type="Camera2D" parent="tia_open"]
+[node name="tia_cam" type="Camera2D" parent="tia_open" unique_id=1344458348]
 visible = false
 enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
-[node name="eve_open" parent="." groups=["player"] instance=ExtResource("3_dfaot")]
+[node name="eve_open" parent="." unique_id=315470824 groups=["player"] instance=ExtResource("3_dfaot")]
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("7_am563")
 
-[node name="eve_cam" type="Camera2D" parent="eve_open"]
+[node name="eve_cam" type="Camera2D" parent="eve_open" unique_id=1634905833]
 visible = false
 enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
-[node name="nathan_open" parent="." groups=["player"] instance=ExtResource("4_cmeqg")]
+[node name="nathan_open" parent="." unique_id=1014285702 groups=["player"] instance=ExtResource("4_cmeqg")]
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("9_0kwr6")
 
-[node name="nate_cam" type="Camera2D" parent="nathan_open"]
+[node name="nate_cam" type="Camera2D" parent="nathan_open" unique_id=985717189]
 visible = false
 enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
-[node name="InventoryUI" type="CanvasLayer" parent="."]
+[node name="InventoryUI" type="CanvasLayer" parent="." unique_id=182319890]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+[node name="ColorRect" type="ColorRect" parent="InventoryUI" unique_id=688213025]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -71,7 +71,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.3328807, 0.33288068, 0.33288068, 1)
 
-[node name="Label" type="Label" parent="InventoryUI"]
+[node name="Label" type="Label" parent="InventoryUI" unique_id=322121796]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -83,7 +83,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 text = "Inventory"
 
-[node name="Inventory_UI" parent="InventoryUI" instance=ExtResource("10_26enf")]
+[node name="Inventory_UI" parent="InventoryUI" unique_id=1434726000 instance=ExtResource("10_26enf")]
 custom_minimum_size = Vector2(100, 100)
 offset_left = -4.0
 offset_top = 1.0
