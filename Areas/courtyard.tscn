@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://r1jc06ey0aul"]
+[gd_scene format=3 uid="uid://r1jc06ey0aul"]
 
 [ext_resource type="PackedScene" uid="uid://ucnmkofo2at5" path="res://Maps/courtyard_map.tscn" id="1_h6p8g"]
 [ext_resource type="Script" uid="uid://7nvds5yt4ipc" path="res://Areas/courtyard.gd" id="1_s5rle"]
@@ -44,7 +44,7 @@ position = Vector2(800.5, 968)
 shape = SubResource("RectangleShape2D_s5rle")
 
 [node name="dave" parent="." unique_id=491120373 instance=ExtResource("5_xsn5d")]
-position = Vector2(1228, 550)
+position = Vector2(1228, 555)
 enemy_name = "rabbit_dave"
 enemy_texture = ExtResource("6_ey5at")
 
