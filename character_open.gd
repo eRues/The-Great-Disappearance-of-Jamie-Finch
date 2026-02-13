@@ -17,15 +17,27 @@ func _ready() -> void:
 	if(Global.ash_chosen):
 		$ash_open.visible = true
 		$ash_open/ash_cam.enabled = true
+		$tia_open.queue_free()
+		$eve_open.queue_free()
+		$nathan_open.queue_free()
 	elif(Global.tia_chosen):
 		$tia_open.visible = true
 		$tia_open/tia_cam.enabled = true
+		$ash_open.queue_free()
+		$eve_open.queue_free()
+		$nathan_open.queue_free()
 	elif(Global.eve_chosen):
 		$eve_open.visible = true
 		$eve_open/eve_cam.enabled = true
+		$ash_open.queue_free()
+		$tia_open.queue_free()
+		$nathan_open.queue_free()
 	elif(Global.nate_chosen):
 		$nathan_open.visible = true
 		$nathan_open/nate_cam.enabled = true
+		$ash_open.queue_free()
+		$tia_open.queue_free()
+		$eve_open.queue_free()
 	
 	if(get_tree().current_scene.name == "1st_floor_hallway"):
 		if(Global.ash_chosen):
