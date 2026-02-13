@@ -29,6 +29,11 @@ Global="*res://global.gd"
 InventoryAutoload="*res://inventory_autoload.gd"
 NavigationManager="*res://navigation_manager.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [global_group]
 
 items=""
