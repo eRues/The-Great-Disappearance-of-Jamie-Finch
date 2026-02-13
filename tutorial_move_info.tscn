@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://vc7hpqnias0s"]
+[gd_scene format=3 uid="uid://vc7hpqnias0s"]
 
 [ext_resource type="Texture2D" uid="uid://v1o5r1nfq8g8" path="res://Assets/Keyboard Keys/key_w.png" id="1_ggdcr"]
 [ext_resource type="Texture2D" uid="uid://dmsaexcd2j5vo" path="res://Assets/Keyboard Keys/key_a.png" id="2_quqxu"]

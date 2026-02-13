@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckkggotfnybw"]
+[gd_scene format=3 uid="uid://ckkggotfnybw"]
 
 [ext_resource type="Script" uid="uid://ovk32oj7hvjg" path="res://Areas/demo_end.gd" id="1_vfplq"]
 

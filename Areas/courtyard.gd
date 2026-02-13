@@ -55,18 +55,18 @@ func _on_level_spawn(destination_tag: String):
 	var door = get_node(door_path) as Door
 	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
 
-func _on_tree_1_body_entered(body: Node2D) -> void:
-	if(body.is_in_group("player")):
-		$courtyard_map.tree_layer.modulate.a = 0.5
+#func _on_tree_1_body_entered(body: Node2D) -> void:
+#	if(body.is_in_group("player")):
+#		$courtyard_map.tree_layer.modulate.a = 0.5
 
-func _on_tree_1_body_exited(body: Node2D) -> void:
-	if(body.is_in_group("player")):
-		$courtyard_map.tree_layer.modulate.a = 1
+#func _on_tree_1_body_exited(body: Node2D) -> void:
+#	if(body.is_in_group("player")):
+#		$courtyard_map.tree_layer.modulate.a = 1
 
-func _on_tree_2_body_entered(body: Node2D) -> void:
-	if(body.is_in_group("player")):
-		$courtyard_map.tree_layer.modulate.a = 0.5
+#func _on_tree_2_body_entered(body: Node2D) -> void:
+#	if(body.is_in_group("player")):
+#		$courtyard_map.tree_layer.modulate.a = 0.5
 
-func _on_tree_2_body_exited(body: Node2D) -> void:
-	if(body.is_in_group("player")):
-		$courtyard_map.tree_layer.modulate.a = 1
+#func _on_tree_2_body_exited(body: Node2D) -> void:
+#	if(body.is_in_group("player")):
+#		$courtyard_map.tree_layer.modulate.a = 1

@@ -1,3 +1,3 @@
 extends TileMap
 
-@onready var tree_layer = $Layer3
+@onready var tree_layer = $Layer5
