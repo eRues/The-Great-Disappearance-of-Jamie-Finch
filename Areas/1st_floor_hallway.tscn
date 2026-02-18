@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://vc7hpqnias0s" path="res://tutorial_move_info.tscn" id="6_oloq3"]
 [ext_resource type="PackedScene" uid="uid://ch4p14mggmetl" path="res://debris.tscn" id="7_0dt61"]
 [ext_resource type="PackedScene" uid="uid://bx1bmkxmk8yei" path="res://tutorial_interact.tscn" id="8_apa2f"]
-[ext_resource type="PackedScene" uid="uid://bkhx06o5x33dw" path="res://text_box.tscn" id="9_cmodj"]
 [ext_resource type="PackedScene" uid="uid://bjv607nuyvdrg" path="res://inventory_item.tscn" id="10_cmodj"]
 [ext_resource type="Texture2D" uid="uid://cq7crlg0otfjm" path="res://Assets/Items/Consumables/granola_bar.png" id="11_p5s25"]
 [ext_resource type="PackedScene" uid="uid://dgvnusd7iitg5" path="res://Areas/tutorial_change_scene.tscn" id="12_p5s25"]
@@ -90,14 +89,6 @@ position = Vector2(30, 147)
 position = Vector2(-1, 8)
 shape = SubResource("CircleShape2D_0dt61")
 
-[node name="walkin_text" parent="." unique_id=1683016583 instance=ExtResource("9_cmodj")]
-unique_name_in_owner = true
-offset_left = -11.0
-offset_top = 29.000002
-offset_right = -11.0
-offset_bottom = 29.000002
-scale = Vector2(0.3, 0.3)
-
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1332316053]
 offset_left = 1751.0
 offset_top = 352.0
@@ -167,14 +158,6 @@ position = Vector2(350, -89)
 position = Vector2(1087, 103.5)
 shape = SubResource("RectangleShape2D_0dt61")
 
-[node name="granola_text" parent="." unique_id=1758025974 instance=ExtResource("9_cmodj")]
-unique_name_in_owner = true
-offset_left = 1198.0
-offset_top = 29.0
-offset_right = 1198.0
-offset_bottom = 29.0
-scale = Vector2(0.3, 0.3)
-
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2104664599]
 position = Vector2(1741, 127)
 
@@ -226,26 +209,15 @@ offset_bottom = 61.0
 theme_override_font_sizes/font_size = 12
 text = "No"
 
-[node name="basement_walkin" parent="." unique_id=146528146 instance=ExtResource("9_cmodj")]
-offset_left = 1491.0
-offset_top = 41.0
-offset_right = 1491.0
-offset_bottom = 41.0
-scale = Vector2(0.3, 0.3)
-
 [connection signal="body_entered" from="debris" to="." method="_on_debris_body_entered"]
 [connection signal="body_exited" from="debris" to="." method="_on_debris_body_exited"]
 [connection signal="body_entered" from="inventory_item/text_area" to="." method="_on_text_area_body_entered"]
 [connection signal="body_exited" from="inventory_item/text_area" to="." method="_on_text_area_body_exited"]
-[connection signal="dialogue_finished" from="walkin_text" to="." method="_on_walkin_text_dialogue_finished"]
-[connection signal="visibility_changed" from="walkin_text" to="." method="_on_walkin_text_visibility_changed"]
-[connection signal="dialogue_finished" from="granola_text" to="." method="_on_granola_text_dialogue_finished"]
 [connection signal="area_entered" from="basement_enter" to="." method="_on_basement_enter_area_entered"]
 [connection signal="body_entered" from="basement_enter" to="." method="_on_basement_enter_body_entered"]
 [connection signal="body_exited" from="basement_enter" to="." method="_on_basement_enter_body_exited"]
 [connection signal="pressed" from="confirm_area/yes_button" to="." method="_on_yes_button_pressed"]
 [connection signal="pressed" from="confirm_area/no_button" to="." method="_on_no_button_pressed"]
-[connection signal="dialogue_finished" from="basement_walkin" to="." method="_on_basement_walkin_dialogue_finished"]
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_SE"]
