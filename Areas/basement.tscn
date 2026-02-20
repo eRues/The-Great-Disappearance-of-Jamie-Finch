@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://fuwp5glh5eea" path="res://Door.tscn" id="3_2jn4a"]
 [ext_resource type="Texture2D" uid="uid://nmrbidmpg133" path="res://Assets/Enemy Characters/Phlegathon/phleg_sprite_one.png" id="4_5idrl"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwt3o"]
+size = Vector2(34, 78)
+
 [node name="basement" type="Node2D" unique_id=539380209]
 script = ExtResource("1_uwt3o")
 
@@ -62,6 +65,13 @@ offset_bottom = 126.0
 theme_override_font_sizes/font_size = 12
 text = "Press here to fight the Phlegathon!"
 
+[node name="cutscene_start" type="Area2D" parent="." unique_id=282826202]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cutscene_start" unique_id=2014296113]
+position = Vector2(556, 216)
+shape = SubResource("RectangleShape2D_uwt3o")
+
 [connection signal="pressed" from="temp_fight" to="." method="_on_temp_fight_pressed"]
+[connection signal="body_entered" from="cutscene_start" to="." method="_on_cutscene_start_body_entered"]
 
 [editable path="Doors/Door_W"]

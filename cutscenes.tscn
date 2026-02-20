@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bap33p2al01ra"]
+
+[ext_resource type="Texture2D" uid="uid://cc2lifnxwuigr" path="res://Assets/Player Characters/Ashton/Ashton_v3.png" id="1_ao1cf"]
+[ext_resource type="Texture2D" uid="uid://cxfp0xknl5u4r" path="res://Assets/ChatBackgroundPlayground.png" id="1_isgx5"]
+[ext_resource type="Texture2D" uid="uid://bl2jp3y0aa2a2" path="res://Assets/Player Characters/Tiana/Tiana_V4.png" id="2_dlob8"]
+[ext_resource type="Texture2D" uid="uid://cqgkmhkyteeaw" path="res://Assets/Player Characters/Eve/Eve_V2.png" id="3_ol2b0"]
+[ext_resource type="Texture2D" uid="uid://dncj6a50584ya" path="res://Assets/Player Characters/Nathan/Nathan.png" id="4_isgx5"]
+[ext_resource type="PackedScene" uid="uid://c27fxtj7rcng3" path="res://Maps/basement_map.tscn" id="5_ol2b0"]
+
+[sub_resource type="Animation" id="Animation_ao1cf"]
+resource_name = "basement_cutscene_Ash"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3mh18"]
+_data = {
+&"basement_cutscene_Ash": SubResource("Animation_ao1cf")
+}
+
+[node name="Cutscenes" type="Node2D" unique_id=252055204]
+
+[node name="Dialogue_box" type="TextureRect" parent="." unique_id=827314926]
+z_index = 2
+offset_left = 475.0
+offset_top = 101.0
+offset_right = 704.0
+offset_bottom = 175.0
+texture = ExtResource("1_isgx5")
+
+[node name="Label" type="Label" parent="Dialogue_box" unique_id=1072754250]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 2.0
+offset_right = 207.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 28
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue_box" unique_id=2108326217]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 25.0
+offset_right = 221.0
+offset_bottom = 67.0
+theme_override_font_sizes/normal_font_size = 24
+scroll_active = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=986752125]
+libraries/ = SubResource("AnimationLibrary_3mh18")
+
+[node name="Characters" type="Node2D" parent="." unique_id=1629481583]
+
+[node name="Ash" type="Sprite2D" parent="Characters" unique_id=1288512973]
+z_index = 1
+position = Vector2(-67, 27)
+texture = ExtResource("1_ao1cf")
+hframes = 5
+vframes = 3
+
+[node name="Tia" type="Sprite2D" parent="Characters" unique_id=405803014]
+z_index = 1
+position = Vector2(-60, 103)
+texture = ExtResource("2_dlob8")
+hframes = 5
+vframes = 3
+
+[node name="Eve" type="Sprite2D" parent="Characters" unique_id=1930850264]
+z_index = 1
+position = Vector2(-27, 20)
+texture = ExtResource("3_ol2b0")
+hframes = 5
+vframes = 3
+
+[node name="Nate" type="Sprite2D" parent="Characters" unique_id=309640447]
+z_index = 1
+position = Vector2(-58, 55)
+texture = ExtResource("4_isgx5")
+hframes = 5
+vframes = 3
+
+[node name="Maps" type="Node2D" parent="." unique_id=1650806530]
+
+[node name="basement_map" parent="Maps" unique_id=2083467548 instance=ExtResource("5_ol2b0")]
+
+[node name="Dark" type="ColorRect" parent="Maps/basement_map" unique_id=2035476557]
+z_index = 1
+offset_top = 32.0
+offset_right = 576.0
+offset_bottom = 256.0
+color = Color(0, 0, 0, 0.5764706)
+
+[node name="Dark2" type="ColorRect" parent="Maps/basement_map" unique_id=941657650]
+z_index = 1
+offset_left = 576.0
+offset_right = 1153.0
+offset_bottom = 304.0
+color = Color(0, 0, 0, 0.5764706)

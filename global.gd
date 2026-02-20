@@ -62,3 +62,6 @@ var in_chat = false
 var target_scene = ""
 var battle_target = ""
 var from_battle = false
+
+#variable to prevent the character from moving for cutscenes
+var can_move = true
