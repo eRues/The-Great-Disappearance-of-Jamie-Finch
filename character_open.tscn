@@ -114,3 +114,5 @@ offset_left = -4.0
 offset_top = 1.0
 offset_right = 1.0
 offset_bottom = -11.0
+
+[connection signal="dialogue_finished" from="ash_open/ash_text" to="." method="_on_ash_text_dialogue_finished"]

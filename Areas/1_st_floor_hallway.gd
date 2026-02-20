@@ -3,7 +3,6 @@ extends Node2D
 @onready var int_label = $debris/interact_label
 @onready var player = $character_open
 
-var can_interact = false
 var in_chat = false
 
 func _ready() -> void:
@@ -36,25 +35,25 @@ func _on_level_spawn(destination_tag: String):
 func _on_debris_body_entered(_body: Node2D) -> void:
 	Global.debris_interact = true
 	int_label.visible = true
-	can_interact = true
+	Global.can_interact = true
 
 func _on_debris_body_exited(_body: Node2D) -> void:
 	int_label.visible = false
 	Global.debris_interact = false
-	can_interact = false
+	Global.can_interact = false
 
 func _on_text_area_body_entered(_body: Node2D) -> void:
 	Global.granola_interact = true
-	can_interact = true
+	Global.can_interact = true
 
 func _on_text_area_body_exited(_body: Node2D) -> void:
 	Global.granola_interact = false
-	can_interact = false
+	Global.can_interact = false
 
 func _on_basement_enter_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("player")):
 		Global.basement_stairs = true
-		can_interact = true
+		Global.can_interact = true
 
 func _on_yes_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Areas/basement.tscn")
