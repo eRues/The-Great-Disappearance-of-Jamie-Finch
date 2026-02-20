@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cbrl0skqjkvkm" path="res://character_open.gd" id="1_4uwka"]
 [ext_resource type="PackedScene" uid="uid://csqh2fdm350yi" path="res://ash_open.tscn" id="1_6so4b"]
 [ext_resource type="PackedScene" uid="uid://d0tirwpydxxk2" path="res://tia_open.tscn" id="2_17gy8"]
+[ext_resource type="PackedScene" uid="uid://bkhx06o5x33dw" path="res://text_box.tscn" id="3_26enf"]
 [ext_resource type="PackedScene" uid="uid://br0lffedi4y13" path="res://eve_open.tscn" id="3_dfaot"]
 [ext_resource type="PackedScene" uid="uid://ccn3surclscyf" path="res://nathan_open.tscn" id="4_cmeqg"]
 [ext_resource type="Script" uid="uid://g1os6mm6615c" path="res://tia_open.gd" id="5_t4vui"]
@@ -20,12 +21,27 @@ collision_layer = 7
 collision_mask = 7
 
 [node name="ash_cam" type="Camera2D" parent="ash_open" unique_id=2108694464]
+visible = false
 enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
 limit_top = 50
 limit_right = 1825
 limit_bottom = 200
+
+[node name="ash_text" parent="ash_open" unique_id=1494190177 instance=ExtResource("3_26enf")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -175.01329
+offset_top = -111.83586
+offset_right = -175.01329
+offset_bottom = -111.83586
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="tia_open" parent="." unique_id=670725174 groups=["player"] instance=ExtResource("2_17gy8")]
 collision_layer = 5
@@ -38,7 +54,11 @@ enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
+[node name="tia_text" parent="tia_open" unique_id=636530113 instance=ExtResource("3_26enf")]
+visible = false
+
 [node name="eve_open" parent="." unique_id=315470824 groups=["player"] instance=ExtResource("3_dfaot")]
+visible = false
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("7_am563")
@@ -48,6 +68,8 @@ visible = false
 enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
+
+[node name="eve_text" parent="eve_open" unique_id=584399097 instance=ExtResource("3_26enf")]
 
 [node name="nathan_open" parent="." unique_id=1014285702 groups=["player"] instance=ExtResource("4_cmeqg")]
 collision_layer = 5
@@ -59,6 +81,9 @@ visible = false
 enabled = false
 zoom = Vector2(3.5, 3.5)
 limit_left = 0
+
+[node name="nate_text" parent="nathan_open" unique_id=526096299 instance=ExtResource("3_26enf")]
+visible = false
 
 [node name="InventoryUI" type="CanvasLayer" parent="." unique_id=182319890]
 visible = false

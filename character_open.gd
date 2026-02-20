@@ -111,7 +111,6 @@ func _ready() -> void:
 			nate_cam.limit_right = 1600 
 			nate_cam.zoom = Vector2(2, 2)
 
-
 func _process(_delta):
 	if(Input.is_action_just_pressed("open") and inventory_ui.visible == false):
 		inventory_ui.visible = true
@@ -119,3 +118,6 @@ func _process(_delta):
 	elif(Input.is_action_just_pressed("open")):
 		inventory_ui.visible = false
 		get_tree().paused = false
+	
+	if(Input.is_action_just_pressed("enter")):
+		$ash_open/ash_text.start()
