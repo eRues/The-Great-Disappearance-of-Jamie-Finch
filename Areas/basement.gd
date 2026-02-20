@@ -16,3 +16,6 @@ func _on_temp_fight_pressed() -> void:
 	Global.enemy_name = "phleg_intro"
 	Global.dont_run = true
 	get_tree().change_scene_to_file("res://battle_scene.tscn")
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
