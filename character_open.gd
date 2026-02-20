@@ -6,6 +6,7 @@ extends Node2D
 @onready var tia_cam = $tia_open/tia_cam
 @onready var eve_cam = $eve_open/eve_cam
 @onready var nate_cam = $nathan_open/nate_cam
+@onready var char_text = $ash_open/ash_text
 
 func _ready() -> void:
 	$ash_open.visible = false
@@ -119,5 +120,5 @@ func _process(_delta):
 		inventory_ui.visible = false
 		get_tree().paused = false
 	
-	if(Input.is_action_just_pressed("enter")):
+	if(Input.is_action_just_pressed("enter") && Global.can_interact):
 		$ash_open/ash_text.start()

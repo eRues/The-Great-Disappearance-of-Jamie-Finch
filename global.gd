@@ -57,6 +57,7 @@ var rabbit_count = 0
 
 #determines if character can move during dialogue
 var in_chat = false
+var can_interact = false
 
 #variable that determines which scene a transition want to go to
 var target_scene = ""
