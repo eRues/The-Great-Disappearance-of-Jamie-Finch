@@ -11,6 +11,9 @@ func _ready() -> void:
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 	
+	if(Global.walkin):
+		player.char_text.start()
+	
 	player.position.x = Global.char_position_x
 	player.position.y = Global.char_position_y
 	
@@ -55,11 +58,6 @@ func _on_basement_enter_body_entered(body: Node2D) -> void:
 		Global.basement_stairs = true
 		Global.can_interact = true
 
-func _on_yes_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Areas/basement.tscn")
-
-func _on_no_button_pressed() -> void:
-	$confirm_area.visible = false
-
 func _on_basement_enter_body_exited(_body: Node2D) -> void:
 	Global.basement_stairs = false
+	Global.can_interact = false

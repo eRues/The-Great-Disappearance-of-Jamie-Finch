@@ -8,12 +8,14 @@ extends Node2D
 @onready var nate_cam = $nathan_open/nate_cam
 @onready var char_text = $ash_open/ash_text
 
+
 func _ready() -> void:
 	$ash_open.visible = false
 	$tia_open.visible = false
 	$eve_open.visible = false
 	$nathan_open.visible = false
 	inventory_ui.visible = false
+	char_text.dialogue_finished.connect(_on_char_text_dialogue_finished())
 	
 	if(Global.ash_chosen):
 		$ash_open.visible = true
@@ -122,3 +124,15 @@ func _process(_delta):
 	
 	if(Input.is_action_just_pressed("enter") && Global.can_interact):
 		$ash_open/ash_text.start()
+
+func _on_yes_button_pressed() -> void:
+	if(get_tree().current_scene.name == "1st_floor_hallway.tscn"):
+		if(Global.basement_stairs):
+			get_tree().change_scene_to_file("res://Areas/basement.tscn")
+
+func _on_char_text_dialogue_finished():
+	if(Global.basement_stairs):
+		$confirm_area.visible = true
+
+func _on_no_button_pressed() -> void:
+	self.visible = true

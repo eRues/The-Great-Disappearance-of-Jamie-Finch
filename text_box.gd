@@ -9,9 +9,14 @@ var finished = false
 
 func _ready():
 	self.visible = false
+	if(Global.walkin):
+		self.position.x = -37
 
 func start():
 	finished = false
+	if(Global.basement_stairs):
+		if(self.global_position.x >= 1425):
+			self.global_position.x = 1487
 	if(!finished):
 		self.visible = true
 		Global.in_chat = true
@@ -112,7 +117,7 @@ func load_dialogue():
 			return content
 
 func _input(event):
-	if(event.is_action_pressed("space") && !finished && self.visible):
+	if(event.is_action_pressed("space") && self.visible):
 		next_script()
 
 func next_script():
@@ -121,6 +126,7 @@ func next_script():
 		self.visible = false
 		emit_signal("dialogue_finished")
 		Global.in_chat = false
+		self.position.x = -175
 		finished = true
 		return
 	$NinePatchRect/Name.text = dialogue[current_dialogue_id]['name']

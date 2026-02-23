@@ -26,7 +26,7 @@ var base_agitation = 1.00
 var tutorial_finished = false
 
 #determines what dialogue will be played
-var walkin = true
+var walkin = false
 var debris_interact = false
 var granola_interact = false
 var basement_stairs = false
