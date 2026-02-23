@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bap33p2al01ra"]
 
+[ext_resource type="Script" uid="uid://d08tnirh6ci7s" path="res://cutscenes.gd" id="1_8p21d"]
 [ext_resource type="Texture2D" uid="uid://cc2lifnxwuigr" path="res://Assets/Player Characters/Ashton/Ashton_v3.png" id="1_ao1cf"]
 [ext_resource type="Texture2D" uid="uid://cxfp0xknl5u4r" path="res://Assets/ChatBackgroundPlayground.png" id="1_isgx5"]
 [ext_resource type="Texture2D" uid="uid://bl2jp3y0aa2a2" path="res://Assets/Player Characters/Tiana/Tiana_V4.png" id="2_dlob8"]
@@ -16,13 +17,14 @@ _data = {
 }
 
 [node name="Cutscenes" type="Node2D" unique_id=252055204]
+script = ExtResource("1_8p21d")
 
 [node name="Dialogue_box" type="TextureRect" parent="." unique_id=827314926]
 z_index = 2
 offset_left = 475.0
 offset_top = 101.0
-offset_right = 704.0
-offset_bottom = 175.0
+offset_right = 709.0
+offset_bottom = 195.0
 texture = ExtResource("1_isgx5")
 
 [node name="Label" type="Label" parent="Dialogue_box" unique_id=1072754250]
@@ -49,7 +51,7 @@ libraries/ = SubResource("AnimationLibrary_3mh18")
 
 [node name="Ash" type="Sprite2D" parent="Characters" unique_id=1288512973]
 z_index = 1
-position = Vector2(-67, 27)
+position = Vector2(544, 215)
 texture = ExtResource("1_ao1cf")
 hframes = 5
 vframes = 3
@@ -63,7 +65,7 @@ vframes = 3
 
 [node name="Eve" type="Sprite2D" parent="Characters" unique_id=1930850264]
 z_index = 1
-position = Vector2(-27, 20)
+position = Vector2(-29, 25)
 texture = ExtResource("3_ol2b0")
 hframes = 5
 vframes = 3
@@ -92,3 +94,5 @@ offset_left = 576.0
 offset_right = 1153.0
 offset_bottom = 304.0
 color = Color(0, 0, 0, 0.5764706)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2007196762]
