@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqgkmhkyteeaw" path="res://Assets/Player Characters/Eve/Eve_V2.png" id="3_ol2b0"]
 [ext_resource type="Texture2D" uid="uid://dncj6a50584ya" path="res://Assets/Player Characters/Nathan/Nathan.png" id="4_isgx5"]
 [ext_resource type="PackedScene" uid="uid://c27fxtj7rcng3" path="res://Maps/basement_map.tscn" id="5_ol2b0"]
+[ext_resource type="Texture2D" uid="uid://djhrmhb3q7udk" path="res://Assets/Enemy Characters/Phlegathon/Phlegethon.png" id="7_yn0p0"]
 
 [sub_resource type="Animation" id="Animation_8p21d"]
 length = 0.001
@@ -130,10 +131,46 @@ tracks/9/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Dialogue_box/RichTextLabel:theme_override_font_sizes/normal_font_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Characters/Phleg:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Characters/Phleg:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_ao1cf"]
 resource_name = "basement_cutscene_Ash"
-length = 30.0
+length = 120.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -165,10 +202,10 @@ tracks/2/path = NodePath("Dialogue_box:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.5, 5, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 3.5, 5, 12, 50, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false, true]
+"values": [false, true, false, true, false, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -189,10 +226,10 @@ tracks/4/path = NodePath("Dialogue_box/RichTextLabel:visible_ratio")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.533334, 15.566668, 15.866668, 17.166668, 17.2, 17.466667, 19.333334, 21.233334, 21.566668, 23, 25.3, 26.400034),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.8, 15.833333, 16.133331, 18.766666, 18.8, 19.066666, 21.333334, 23.3333, 23.566668, 25.333334, 26.966633, 28.066668, 28.966667, 29, 29.2, 30.566668, 30.6, 30.8, 32.633335, 32.66667, 32.86667, 34.466667, 34.5, 34.7, 36.633335, 36.666668, 36.86667, 38.266666, 38.3, 38.5, 40.466667, 40.5, 40.7, 42.966667, 43, 43.2, 44.466667, 44.5, 44.9, 45.966667, 46, 47.133335, 47.766666, 47.8, 48.9, 60, 60.3, 61.966667, 62, 62.3, 63.466667, 63.5, 63.8, 64.96667, 65, 65.5, 66.666664, 66.7, 67, 68.166664, 68.2, 68.5, 70.46667, 70.5, 70.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -201,10 +238,10 @@ tracks/5/path = NodePath("Maps/BLACK:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 50, 51),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false]
+"values": [false, true, false]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -213,10 +250,10 @@ tracks/6/path = NodePath("Dialogue_box/Label:text")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(3.5, 12, 15.5667, 17.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(3.5, 12, 15.833365, 18.8, 29, 30.6, 32.66667, 34.5, 38.3, 40.5, 65, 66.7, 70.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Ashton", "", "Ashton", ""]
+"values": ["Ashton", "", "Ashton", "", "Ashton", "", "Ashton", "", "Ashton", "", "???", "", "..."]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -225,8 +262,8 @@ tracks/7/path = NodePath("Dialogue_box/RichTextLabel:text")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(3.5, 12, 14, 15.666668, 17.300001, 21.333334, 25.300034),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.5, 12, 14, 15.933333, 18.9, 23.333334, 26.966667, 29, 30.6, 32.66667, 34.5, 36.666668, 38.3, 40.5, 43, 44.5, 46, 60, 62, 63.5, 65, 66.7, 68.2, 70.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["It’s so dark down here…", "[You stare out in front of you at the pool.]", " [It’s full of algae and god only knows what else.]
 ", "They didn’t even drain the pool? This place is kinda spooky, but not that spooky.
@@ -237,6 +274,37 @@ tracks/7/keys = {
 
 ", " I t ' s  p i t c h  b l a c k.
 
+", "M-Maybe that’s just the lighting. I hope it’s not some kind of mold.
+
+", " [You look further into the water and notice that this wasn’t just a stray patch.]
+
+", "Woah...
+
+", "[The black goo stretches into the pool in a straight line, connecting to other lines that go out to other spots on the edge.]
+
+", "[In the middle of all of them, there was some kind of black mass.]
+
+", "That’s... weird...
+
+", " [You take out your phone to take a picture, but once you focus your camera, you notice something.]
+
+", " [The blob is getting bigger.]
+
+", " [And Bigger.]
+
+", " [And Bigger.]
+
+", " [You stand frozen in place for a moment, unable to form a thought on what to do.]
+
+", " [The blob crests the water and you begin to see its face.]
+
+", " [Well, it could probably be considered a face.]
+
+", "Ruhhh…
+
+", " [It grumbled and continued to grow bigger. More heads and faces popped out from its sides.]
+", " [You continue to hold your phone in your now trembling hand, still trying to take a picture.]
+", " ...
 "]
 }
 tracks/8/type = "value"
@@ -258,10 +326,46 @@ tracks/9/path = NodePath("Dialogue_box/RichTextLabel:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(3.4, 19.333334, 20.9, 22.989109, 25.200033),
+"times": PackedFloat32Array(3.4, 21.333334, 23.3333, 25.322443, 26.9667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [true, false, true, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Dialogue_box/RichTextLabel:theme_override_font_sizes/normal_font_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 44.5, 46, 47.8, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 11, 8]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Characters/Phleg:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Characters/Phleg:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(51, 51.9, 52.833332, 53.766666, 54.7, 55.633335, 56.533333, 57.433334, 58.333332, 59.233334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3mh18"]
@@ -278,8 +382,8 @@ visible = false
 z_index = 2
 offset_left = 452.0
 offset_top = 228.0
-offset_right = 766.00446
-offset_bottom = 270.0168
+offset_right = 766.0055
+offset_bottom = 270.04663
 texture = ExtResource("1_isgx5")
 
 [node name="Label" type="Label" parent="Dialogue_box" unique_id=1072754250]
@@ -300,7 +404,6 @@ offset_right = 304.0
 offset_bottom = 38.0
 theme_override_font_sizes/normal_font_size = 7
 text = "It’s so dark down here…"
-scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -337,6 +440,14 @@ position = Vector2(-58, 55)
 texture = ExtResource("4_isgx5")
 hframes = 5
 vframes = 3
+
+[node name="Phleg" type="Sprite2D" parent="Characters" unique_id=713747898]
+visible = false
+z_index = 1
+position = Vector2(883, 177)
+scale = Vector2(3, 3)
+texture = ExtResource("7_yn0p0")
+vframes = 2
 
 [node name="Maps" type="Node2D" parent="." unique_id=1650806530]
 
