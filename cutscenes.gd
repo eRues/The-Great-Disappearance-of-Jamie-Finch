@@ -1,4 +1,6 @@
 extends Node2D
 
+@onready var anim = $AnimationPlayer
+
 func _ready() -> void:
-	print($Dialogue_box.size)
+	anim.play("basement_cutscene_Ash")

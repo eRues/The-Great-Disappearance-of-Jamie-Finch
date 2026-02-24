@@ -8,11 +8,265 @@
 [ext_resource type="Texture2D" uid="uid://dncj6a50584ya" path="res://Assets/Player Characters/Nathan/Nathan.png" id="4_isgx5"]
 [ext_resource type="PackedScene" uid="uid://c27fxtj7rcng3" path="res://Maps/basement_map.tscn" id="5_ol2b0"]
 
+[sub_resource type="Animation" id="Animation_8p21d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Ash:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Characters/Ash:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(544, 215)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dialogue_box:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(590, 165)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Dialogue_box/RichTextLabel:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Maps/BLACK:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Dialogue_box/Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ashton"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Dialogue_box/RichTextLabel:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["It’s so dark down here…"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Dialogue_box:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(452, 228)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Dialogue_box/RichTextLabel:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_ao1cf"]
 resource_name = "basement_cutscene_Ash"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Ash:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6666667, 1, 1.3666667, 1.7, 2.0666666, 2.4, 2.7333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 6, 8, 6, 7, 6, 8, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Characters/Ash:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(544, 215), Vector2(607, 206)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dialogue_box:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5, 5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(590, 165), Vector2(590, 165), Vector2(800, 165)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Dialogue_box/RichTextLabel:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.533334, 15.566668, 15.866668, 17.166668, 17.2, 17.466667, 19.333334, 21.233334, 21.566668, 23, 25.3, 26.400034),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Maps/BLACK:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Dialogue_box/Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.5, 12, 15.5667, 17.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Ashton", "", "Ashton", ""]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Dialogue_box/RichTextLabel:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3.5, 12, 14, 15.666668, 17.300001, 21.333334, 25.300034),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["It’s so dark down here…", "[You stare out in front of you at the pool.]", " [It’s full of algae and god only knows what else.]
+", "They didn’t even drain the pool? This place is kinda spooky, but not that spooky.
+
+", "[You walk around the pool and examine it carefully, trying not to touch anything growing at the sides.]
+
+", "[You feel something wet and slimy under your foot. You take a step back and try to stamp it off.]
+
+", " I t ' s  p i t c h  b l a c k.
+
+"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Dialogue_box:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 5, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(452, 228), Vector2(452, 228), Vector2(655, 267)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Dialogue_box/RichTextLabel:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3.4, 19.333334, 20.9, 22.989109, 25.200033),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3mh18"]
 _data = {
+&"RESET": SubResource("Animation_8p21d"),
 &"basement_cutscene_Ash": SubResource("Animation_ao1cf")
 }
 
@@ -20,29 +274,35 @@ _data = {
 script = ExtResource("1_8p21d")
 
 [node name="Dialogue_box" type="TextureRect" parent="." unique_id=827314926]
+visible = false
 z_index = 2
-offset_left = 475.0
-offset_top = 101.0
-offset_right = 709.0
-offset_bottom = 195.0
+offset_left = 452.0
+offset_top = 228.0
+offset_right = 766.00446
+offset_bottom = 270.0168
 texture = ExtResource("1_isgx5")
 
 [node name="Label" type="Label" parent="Dialogue_box" unique_id=1072754250]
 layout_mode = 0
-offset_left = 19.0
+offset_left = 20.0
 offset_top = 2.0
-offset_right = 207.0
-offset_bottom = 25.0
-theme_override_font_sizes/font_size = 28
+offset_right = 295.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 9
+text = "Ashton"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Dialogue_box" unique_id=2108326217]
+visible = false
 layout_mode = 0
-offset_left = 7.0
-offset_top = 25.0
-offset_right = 221.0
-offset_bottom = 67.0
-theme_override_font_sizes/normal_font_size = 24
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 304.0
+offset_bottom = 38.0
+theme_override_font_sizes/normal_font_size = 7
+text = "It’s so dark down here…"
 scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=986752125]
 libraries/ = SubResource("AnimationLibrary_3mh18")
@@ -55,6 +315,7 @@ position = Vector2(544, 215)
 texture = ExtResource("1_ao1cf")
 hframes = 5
 vframes = 3
+frame = 6
 
 [node name="Tia" type="Sprite2D" parent="Characters" unique_id=405803014]
 z_index = 1
@@ -95,4 +356,15 @@ offset_right = 1153.0
 offset_bottom = 304.0
 color = Color(0, 0, 0, 0.5764706)
 
+[node name="BLACK" type="ColorRect" parent="Maps" unique_id=600788644]
+visible = false
+z_index = 2
+offset_left = 3.0
+offset_top = -242.0
+offset_right = 1220.0
+offset_bottom = 487.0
+color = Color(0, 0, 0, 1)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2007196762]
+position = Vector2(590, 165)
+zoom = Vector2(2, 2)

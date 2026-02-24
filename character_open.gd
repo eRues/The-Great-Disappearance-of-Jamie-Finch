@@ -15,7 +15,7 @@ func _ready() -> void:
 	$eve_open.visible = false
 	$nathan_open.visible = false
 	inventory_ui.visible = false
-	char_text.dialogue_finished.connect(_on_char_text_dialogue_finished())
+#	char_text.dialogue_finished.connect(_on_char_text_dialogue_finished())
 	
 	if(Global.ash_chosen):
 		$ash_open.visible = true
