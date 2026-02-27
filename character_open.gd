@@ -6,7 +6,7 @@ extends Node2D
 @onready var tia_cam = $tia_open/tia_cam
 @onready var eve_cam = $eve_open/eve_cam
 @onready var nate_cam = $nathan_open/nate_cam
-@onready var char_text = $ash_open/ash_text
+var char_text
 
 
 func _ready() -> void:
@@ -15,29 +15,32 @@ func _ready() -> void:
 	$eve_open.visible = false
 	$nathan_open.visible = false
 	inventory_ui.visible = false
-#	char_text.dialogue_finished.connect(_on_char_text_dialogue_finished())
 	
 	if(Global.ash_chosen):
 		$ash_open.visible = true
 		$ash_open/ash_cam.enabled = true
+		char_text = $ash_open/ash_text
 		$tia_open.queue_free()
 		$eve_open.queue_free()
 		$nathan_open.queue_free()
 	elif(Global.tia_chosen):
 		$tia_open.visible = true
 		$tia_open/tia_cam.enabled = true
+		char_text = $tia_open/tia_text
 		$ash_open.queue_free()
 		$eve_open.queue_free()
 		$nathan_open.queue_free()
 	elif(Global.eve_chosen):
 		$eve_open.visible = true
 		$eve_open/eve_cam.enabled = true
+		char_text = $eve_open/eve_text
 		$ash_open.queue_free()
 		$tia_open.queue_free()
 		$nathan_open.queue_free()
 	elif(Global.nate_chosen):
 		$nathan_open.visible = true
 		$nathan_open/nate_cam.enabled = true
+		char_text = $nathan_open/nate_text
 		$ash_open.queue_free()
 		$tia_open.queue_free()
 		$eve_open.queue_free()
@@ -123,16 +126,20 @@ func _process(_delta):
 		get_tree().paused = false
 	
 	if(Input.is_action_just_pressed("enter") && Global.can_interact):
-		$ash_open/ash_text.start()
+		char_text.start()
 
-func _on_yes_button_pressed() -> void:
-	if(get_tree().current_scene.name == "1st_floor_hallway.tscn"):
-		if(Global.basement_stairs):
-			get_tree().change_scene_to_file("res://Areas/basement.tscn")
-
-func _on_char_text_dialogue_finished():
+func _on_ash_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
-		$confirm_area.visible = true
+		get_tree().change_scene_to_file("res://Areas/basement.tscn")
 
-func _on_no_button_pressed() -> void:
-	self.visible = true
+func _on_tia_text_dialogue_finished() -> void:
+	if(Global.basement_stairs):
+		get_tree().change_scene_to_file("res://Areas/basement.tscn")
+
+func _on_eve_text_dialogue_finished() -> void:
+	if(Global.basement_stairs):
+		get_tree().change_scene_to_file("res://Areas/basement.tscn")
+
+func _on_nate_text_dialogue_finished() -> void:
+	if(Global.basement_stairs):
+		get_tree().change_scene_to_file("res://Areas/basement.tscn")
