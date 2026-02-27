@@ -15,41 +15,6 @@
 process_mode = 3
 script = ExtResource("1_4uwka")
 
-[node name="confirm_area" type="ColorRect" parent="." unique_id=510140161]
-visible = false
-offset_left = -65.0
-offset_top = -79.199905
-offset_right = 66.70001
-offset_bottom = -13.199905
-color = Color(0.18179765, 0.18179768, 0.18179768, 1)
-
-[node name="area_text" type="Label" parent="confirm_area" unique_id=291788504]
-layout_mode = 0
-offset_right = 130.0
-offset_bottom = 34.0
-theme_override_font_sizes/font_size = 10
-text = "Would you like to enter the basement?"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="yes_button" type="Button" parent="confirm_area" unique_id=1050106591]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 35.199905
-offset_right = 52.0
-offset_bottom = 60.199905
-theme_override_font_sizes/font_size = 12
-text = "Yes"
-
-[node name="no_button" type="Button" parent="confirm_area" unique_id=1492932653]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 35.199905
-offset_right = 126.0
-offset_bottom = 60.199905
-theme_override_font_sizes/font_size = 12
-text = "No"
-
 [node name="ash_open" parent="." unique_id=450151227 groups=["player"] instance=ExtResource("1_6so4b")]
 position = Vector2(-0.9867096, -0.16405106)
 collision_layer = 7
@@ -90,10 +55,8 @@ zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
 [node name="tia_text" parent="tia_open" unique_id=636530113 instance=ExtResource("3_26enf")]
-visible = false
 
 [node name="eve_open" parent="." unique_id=315470824 groups=["player"] instance=ExtResource("3_dfaot")]
-visible = false
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("7_am563")
@@ -118,7 +81,6 @@ zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
 [node name="nate_text" parent="nathan_open" unique_id=526096299 instance=ExtResource("3_26enf")]
-visible = false
 
 [node name="InventoryUI" type="CanvasLayer" parent="." unique_id=182319890]
 visible = false
@@ -150,6 +112,7 @@ offset_top = 1.0
 offset_right = 1.0
 offset_bottom = -11.0
 
-[connection signal="pressed" from="confirm_area/yes_button" to="." method="_on_yes_button_pressed"]
-[connection signal="pressed" from="confirm_area/no_button" to="." method="_on_no_button_pressed"]
 [connection signal="dialogue_finished" from="ash_open/ash_text" to="." method="_on_ash_text_dialogue_finished"]
+[connection signal="dialogue_finished" from="tia_open/tia_text" to="." method="_on_tia_text_dialogue_finished"]
+[connection signal="dialogue_finished" from="eve_open/eve_text" to="." method="_on_eve_text_dialogue_finished"]
+[connection signal="dialogue_finished" from="nathan_open/nate_text" to="." method="_on_nate_text_dialogue_finished"]
