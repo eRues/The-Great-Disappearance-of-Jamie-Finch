@@ -28,21 +28,27 @@ func _process(_delta):
 	
 func _physics_process(_delta):
 	#moovin, groovin, and slidin
-	move_and_slide()
+	if(Global.in_chat):
+		pass
+	else:
+		move_and_slide()
 	
 func SetDirection() -> bool:
 	var new_dir : Vector2 = cardinal_direction
-	if direction == Vector2.ZERO:
-		return false
+	if(Global.in_chat):
+		pass
+	else:
+		if direction == Vector2.ZERO:
+			return false
 		
-	if direction.y == 0:
-		new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
-	elif direction.x == 0:
-		new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN
-		
-	if new_dir == cardinal_direction:
-		return false
-		
+		if direction.y == 0:
+			new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
+		elif direction.x == 0:
+			new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN
+			
+		if new_dir == cardinal_direction:
+			return false
+			
 	cardinal_direction = new_dir
 	sprite.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
 	return true
@@ -55,8 +61,11 @@ func SetState() -> bool:
 	return true
 	
 func UpdateAnimation() -> void:
-	animation_player.play(state + "_" + AnimDirection())
-	pass
+	if(Global.in_chat):
+		pass
+	else:
+		animation_player.play(state + "_" + AnimDirection())
+		pass
 	
 	
 func AnimDirection() -> String:

@@ -55,6 +55,11 @@ zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
 [node name="tia_text" parent="tia_open" unique_id=636530113 instance=ExtResource("3_26enf")]
+offset_left = -176.0
+offset_top = -119.0
+offset_right = -176.0
+offset_bottom = -119.0
+scale = Vector2(0.3, 0.3)
 
 [node name="eve_open" parent="." unique_id=315470824 groups=["player"] instance=ExtResource("3_dfaot")]
 collision_layer = 5
@@ -68,6 +73,11 @@ zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
 [node name="eve_text" parent="eve_open" unique_id=584399097 instance=ExtResource("3_26enf")]
+offset_left = -175.0
+offset_top = -120.0
+offset_right = -175.0
+offset_bottom = -120.0
+scale = Vector2(0.3, 0.3)
 
 [node name="nathan_open" parent="." unique_id=1014285702 groups=["player"] instance=ExtResource("4_cmeqg")]
 collision_layer = 5
@@ -81,6 +91,11 @@ zoom = Vector2(3.5, 3.5)
 limit_left = 0
 
 [node name="nate_text" parent="nathan_open" unique_id=526096299 instance=ExtResource("3_26enf")]
+offset_left = -176.0
+offset_top = -120.0
+offset_right = -176.0
+offset_bottom = -120.0
+scale = Vector2(0.3, 0.3)
 
 [node name="InventoryUI" type="CanvasLayer" parent="." unique_id=182319890]
 visible = false
