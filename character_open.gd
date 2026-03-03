@@ -47,7 +47,7 @@ func _ready() -> void:
 	
 	if(get_tree().current_scene.name == "1st_floor_hallway"):
 		if(Global.ash_chosen):
-			ash_cam.limit_bottom = 300
+			ash_cam.limit_bottom = 200
 			ash_cam.limit_top = 50
 			ash_cam.limit_left = 0
 			ash_cam.limit_right = 1825

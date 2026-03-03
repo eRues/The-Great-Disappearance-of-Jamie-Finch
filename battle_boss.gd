@@ -3,6 +3,7 @@ class_name Battle_Boss extends Battle_Enemy
 func _init(new_name : String) -> void:
 	Global.enemy_name = new_name
 	if(Global.enemy_name == "phleg_intro"):
+		Global.post_tutorial = true
 		agitation = Global.base_agitation
 		health = (int)(150 * Global.base_agitation)
 		base_health = health
