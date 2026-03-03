@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dy043gcgs3lsl" path="res://Assets/Map Assets/GRIME.png" id="5_mtj8p"]
 [ext_resource type="Texture2D" uid="uid://e0lmebq1xcia" path="res://Assets/Map Assets/GRIME_V2.png" id="6_toe6v"]
 [ext_resource type="Texture2D" uid="uid://crk5n3grwnoqa" path="res://Assets/Void.png" id="7_b0bg0"]
+[ext_resource type="Texture2D" uid="uid://be5jbnq4hrlvj" path="res://Assets/Sign_Court.png" id="8_dpo3t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_76p1a"]
 texture = ExtResource("1_73c4y")
@@ -2834,6 +2835,10 @@ texture = ExtResource("7_b0bg0")
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbati"]
+texture = ExtResource("8_dpo3t")
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_u8bmo"]
 physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 3
@@ -2844,6 +2849,7 @@ sources/3 = SubResource("TileSetAtlasSource_e5b3t")
 sources/4 = SubResource("TileSetAtlasSource_toe6v")
 sources/5 = SubResource("TileSetAtlasSource_b0bg0")
 sources/6 = SubResource("TileSetAtlasSource_dpo3t")
+sources/7 = SubResource("TileSetAtlasSource_hbati")
 
 [node name="hallway_map" type="TileMap" unique_id=92292443]
 tile_set = SubResource("TileSet_u8bmo")

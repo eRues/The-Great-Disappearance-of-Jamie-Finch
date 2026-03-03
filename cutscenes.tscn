@@ -239,6 +239,18 @@ tracks/18/keys = {
 "update": 0,
 "values": [Vector2(-58, 55)]
 }
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Characters/Tia:frame")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
 
 [sub_resource type="Animation" id="Animation_ao1cf"]
 resource_name = "basement_cutscene_Ash"
@@ -471,7 +483,7 @@ tracks/14/keys = {
 
 [sub_resource type="Animation" id="Animation_yn0p0"]
 resource_name = "basement_cutscene_Eve"
-length = 103.0
+length = 94.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -479,7 +491,7 @@ tracks/0/path = NodePath("Dialogue_box:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.5, 5, 12, 50, 60),
+"times": PackedFloat32Array(0, 3.5, 5, 12, 47.0667, 56.0667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, true, false, true]
@@ -503,10 +515,10 @@ tracks/2/path = NodePath("Dialogue_box/RichTextLabel:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.8, 15.833333, 16.133331, 18.766666, 18.8, 19.066666, 21.333334, 23.3333, 23.566668, 25.333334, 26.966633, 28.066668, 28.966667, 29, 29.2, 30.566668, 30.6, 30.8, 32.633335, 32.66667, 32.86667, 34.466667, 34.5, 34.7, 36.633335, 36.666668, 36.86667, 38.266666, 38.3, 38.5, 40.466667, 40.5, 40.7, 42.966667, 43, 43.2, 44.466667, 44.5, 44.9, 45.966667, 46, 47.133335, 47.766666, 47.8, 48.9, 60, 60.3, 61.966667, 62, 62.3, 64, 64.03333, 64.33333, 66.96667, 67, 67.5, 68.666664, 68.7, 69, 71.56666, 71.59999, 71.899994, 73.86666, 73.899994, 74.2, 75.63333, 75.666664, 76.06666, 78.33333, 78.36666, 78.76666, 80.33333, 80.36666, 81.56666, 83.033325, 83.06666, 83.36666, 85.83333, 85.86666, 86.26666, 87.43333, 87.46666, 87.86666, 89.9, 89.933334, 90.23333, 92.1, 92.13333, 92.933334, 94.299995, 94.33333, 95.13333, 96.4, 96.433334, 97.83333, 99.9, 99.933334, 100.433334, 101.4, 101.433334, 102.433334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.8, 15.833333, 16.133331, 18.766666, 18.8, 19.066666, 21.333334, 23.3333, 23.566668, 25.333334, 26.966633, 28.066668, 28.966667, 29, 29.2, 30.566668, 30.6, 30.8, 33.366665, 33.4, 33.6, 35.199997, 35.23333, 35.43333, 37.366665, 37.399998, 37.6, 38.999996, 39.033333, 40.533333, 40.566666, 40.966667, 42.033333, 42.066666, 43.2, 43.833332, 43.866665, 44.966667, 56.066666, 56.366665, 58.033333, 58.066666, 58.366665, 60.066666, 60.1, 60.399994, 63.033333, 63.066666, 63.566666, 64.73333, 64.9, 65.200005, 66.63334, 66.66667, 67.066666, 69.333336, 69.36667, 69.76667, 71.333336, 71.36667, 72.566666, 74.03333, 74.066666, 76.13333, 76.833336, 76.86667, 77.26667, 78.433334, 78.46667, 78.86667, 80.90001, 80.93334, 81.23334, 83.100006, 83.13334, 83.93334, 85.3, 85.333336, 86.13334, 87.40001, 87.43334, 88.833336, 90.90001, 90.93334, 91.43334, 92.40001, 92.43334, 93.86667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -515,7 +527,7 @@ tracks/3/path = NodePath("Maps/BLACK:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 50, 51),
+"times": PackedFloat32Array(0, 46.066666, 47.066666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -527,12 +539,12 @@ tracks/4/path = NodePath("Dialogue_box/Label:text")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(3.5, 12, 15.8334, 18.8, 29, 30.6, 32.66667, 34.5, 38.3, 40.5, 67, 68.7, 73.899994, 78.36666, 80.36666, 83.06666, 85.86666, 87.46666, 89.933334, 92.13333, 101.433334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.5, 12, 15.8334, 18.8, 29, 30.6, 33.4, 35.23333, 37.4, 63.066666, 64.9, 69.36667, 71.36667, 74.066666, 76.86667, 78.46667, 80.93334, 83.13334, 92.43334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Eve", "", "Eve", "", "Ashton", "", "Ashton", "", "Ashton", "", "???", "", "???", "Ashton", "???", "", "Ashton
+"values": ["Eve", "", "Eve", "", "Eve", "", "", "Eve", "", "???", "???", "Eve", "", "???", "Eve
 ", "
-", "Ashton
+", "Eve
 ", "???
 ", "The Phlegathon
 "]
@@ -544,50 +556,42 @@ tracks/5/path = NodePath("Dialogue_box/RichTextLabel:text")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(3.5, 12, 14, 15.9333, 18.9, 23.3333, 26.966667, 29, 30.6, 32.6667, 34.5, 36.6667, 38.3, 40.5, 43, 44.5, 46, 60, 62, 64.03333, 66.99997, 68.7, 71.59999, 73.899994, 75.666664, 78.36666, 80.36666, 83.06666, 85.86666, 87.4667, 89.933334, 92.13333, 94.33333, 96.433334, 99.933334, 101.433334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.5, 12, 14, 15.9333, 18.9, 23.3333, 26.966667, 29, 30.6, 33.40003, 35.23333, 37.40003, 40.566666, 42.066666, 56.066666, 58.066666, 60.1, 63.066635, 64.9, 66.66667, 69.36667, 71.36667, 74.066666, 76.86667, 78.466705, 80.93334, 83.13334, 85.333336, 87.43334, 90.93334, 92.43334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [" Yeah, this is spooky…", " [You stare out in front of you at the pool.]", " [It’s full of algae and god only knows what else.]
+"values": [" Yeah, this is spooky.", " [You stare out in front of you at the pool.]", " [It’s full of algae and god only knows what else.]
 ", "Ugh, still water... gross but... cool.
 
-", " [You cringe a bit before pulling up your foot to look at the goo on your shoe.]
+", " [You begin to circle the pool, trying to avoid any of the weird stuff growing on the sides.]
 
 ", "[You cringe a bit before pulling up your foot to look at the goo on your shoe.]
 
 ", " I t ' s  p i t c h  b l a c k.
 
-", " M-Maybe that’s just the lighting. I hope it’s not some kind of mold.
+", " Ew! Not cool! Just gross!
 
-", " [You look further into the water and notice that this wasn’t just a stray patch.]
+", " [You try to trace the source of the mysterious goo, and see that it goes down into the pool.]
 
-", " Woah...
+", " [What they all connected to in the middle of the pool was a shiny black film on the bottom of the pool.]
 
-", " [The black goo stretches into the pool in a straight line, connecting to other lines that go out to other spots on the edge.]
+", " Oh yeah! I’ve gotta get…
 
-", " [In the middle of all of them, there was some kind of black mass.]
-
-", " That’s... weird...
-
-", " [You take out your phone to take a picture, but once you focus your camera, you notice something.]
-
-", " [The blob is getting bigger.]
+", " [Your thoughts trail off as you notice the film starts to grow bigger.]
 
 ", " [And Bigger.]
 
 ", " [And Bigger.]
 
-", " [You stand frozen in place for a moment, unable to form a thought on what to do.]
+", " [You go silent as you try to comprehend this…thing.]
 
-", " [The blob crests the water and you begin to see its face.]
+", " [As it emerges from the water you notice the several heads protruding from the immense form before you.]
 
-", " [Well, it could probably be considered a face.]
+", " [Each looks like it's reaching out to you, somehow pleading, enraged, and desperately afraid all at once.]
 
 ", " Ruhhh…
 
-", " [It grumbled and continued to grow bigger. More heads and faces popped out from its sides.]
-", " [You continue to hold your phone in your now trembling hand, still trying to take a picture.]
 ", " ...
-", " Step…You step…", " I- I- uuuhh....", " H u m a n . . .", " [It’s voice is uncanny. It booms from wall to wall like a haunting echo.]", " Look, I didn’t mean to- I-I’ll just go-", " [A tentacle-like stream of ooze whips past your face, leaving some goo on your cheek.]", " W- what do you want, a fight? You’re a big pile of goop! I’d beat you easy!", " F i g h t . . . ? ", " F i g h t .", " Another baleful visage for the red river...", " For...", " The Phlegathon."]
+", " Step…You step…", " I-I’m really sorry! It’s just so dark down here I-I didn’t see you!", " [It tilts its frontmost head to the side. It feels like you’re being examined.]", "I g n o r a n t  h u m a n .", " …ignorant? I’m not ignorant! I’m-!", " [A tentacle-like stream of ooze whips past your face, leaving some goo on your cheek.]", " Look, I don’t want to fight. How about I just get a picture of you, and I get out of here? ", " F i g h t . . . ? ", " F i g h t .", " Another baleful visage for the red river...", " For...", " T h e  P h le g a t h o n ."]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -620,7 +624,7 @@ tracks/8/path = NodePath("Dialogue_box/RichTextLabel:theme_override_font_sizes/n
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 44.5, 46, 47.8, 60),
+"times": PackedFloat32Array(0, 40.566666, 42.066666, 43.866665, 56.066666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [11, 13, 15, 18, 11]
@@ -632,7 +636,7 @@ tracks/9/path = NodePath("Characters/Phleg:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 51),
+"times": PackedFloat32Array(0, 47.066666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -644,10 +648,10 @@ tracks/10/path = NodePath("Characters/Phleg:frame")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(51, 51.9, 52.833332, 53.766666, 54.7, 55.633335, 56.533333, 57.433334, 58.333332, 59.233334, 60.133335, 61.033337, 61.966667, 62.9, 63.83334, 64.76667, 65.666664, 66.56667, 67.46667, 68.36666, 69.26667, 70.16667, 71.100006, 72.03334, 72.966675, 73.90001, 74.8, 75.700005, 76.600006, 77.5, 78.36667, 79.26667, 80.2, 81.13333, 82.066666, 83, 83.9, 84.8, 85.7, 86.600006, 87.5, 88.40001, 89.333336, 90.26667, 91.20001, 92.13334, 93.03333, 93.93334, 94.833336, 95.73333, 96.63334, 97.53334, 98.466675, 99.40001, 100.33334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(47.066666, 47.966667, 48.899998, 49.833332, 50.766666, 51.7, 52.6, 53.5, 54.399998, 55.3, 56.2, 57.100002, 58.033333, 58.966667, 59.9, 60.833336, 61.73333, 62.63334, 63.533333, 64.43333, 65.333336, 66.23334, 67.16667, 68.100006, 69.03334, 69.966675, 70.86667, 71.76667, 72.66667, 73.566666, 74.433334, 75.333336, 76.26666, 77.2, 78.13333, 79.066666, 79.96667, 80.86667, 81.76666, 82.66667, 83.566666, 84.466675, 85.4, 86.333336, 87.26668, 88.200005, 89.1, 90.00001, 90.9, 91.799995, 92.700005, 93.600006),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -969,116 +973,93 @@ length = 103.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Characters/Ash:frame")
+tracks/0/path = NodePath("Dialogue_box:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.33333334, 0.6666667, 1, 1.3666667, 1.7, 2.0666666, 2.4, 2.7333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [6, 7, 6, 8, 6, 7, 6, 8, 6]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Characters/Ash:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(544, 215), Vector2(607, 206)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Dialogue_box:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 3.5, 5, 12, 50, 60),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, true, false, true]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Maps/basement_map/Camera2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Maps/basement_map/Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 5, 10),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(590, 165), Vector2(590, 165), Vector2(800, 165)]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Dialogue_box/RichTextLabel:visible_ratio")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dialogue_box/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.8, 15.833333, 16.133331, 18.766666, 18.8, 19.066666, 21.333334, 23.3333, 23.566668, 25.333334, 26.966633, 28.066668, 28.966667, 29, 29.2, 30.566668, 30.6, 30.8, 32.633335, 32.66667, 32.86667, 34.466667, 34.5, 34.7, 36.633335, 36.666668, 36.86667, 38.266666, 38.3, 38.5, 40.466667, 40.5, 40.7, 42.966667, 43, 43.2, 44.466667, 44.5, 44.9, 45.966667, 46, 47.133335, 47.766666, 47.8, 48.9, 60, 60.3, 61.966667, 62, 62.3, 64, 64.03333, 64.33333, 66.96667, 67, 67.5, 68.666664, 68.7, 69, 71.56666, 71.59999, 71.899994, 73.86666, 73.899994, 74.2, 75.63333, 75.666664, 76.06666, 78.33333, 78.36666, 78.76666, 80.33333, 80.36666, 81.56666, 83.033325, 83.06666, 83.36666, 85.83333, 85.86666, 86.26666, 87.43333, 87.46666, 87.86666, 89.9, 89.933334, 90.23333, 92.1, 92.13333, 92.933334, 94.299995, 94.33333, 95.13333, 96.4, 96.433334, 97.83333, 99.9, 99.933334, 100.433334, 101.4, 101.433334, 102.433334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Maps/BLACK:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Maps/BLACK:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 50, 51),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Dialogue_box/Label:text")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(3.5, 12, 15.833365, 18.8, 29, 30.6, 32.66667, 34.5, 38.3, 40.5, 67, 68.7, 73.899994, 78.36666, 80.36666, 83.06666, 85.86666, 87.46666, 89.933334, 92.13333, 101.433334),
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Dialogue_box/Label:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.5, 12, 15.9333, 18.9, 29, 30.6, 32.66667, 34.5, 38.3, 40.5, 67, 68.7, 73.899994, 78.36666, 80.36666, 83.06666, 85.86666, 87.46666, 89.933334, 92.13333, 101.433334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Ashton", "", "Ashton", "", "Ashton", "", "Ashton", "", "Ashton", "", "???", "", "???", "Ashton", "???", "", "Ashton
+"values": ["Tiana", "", "Tia", "", "Tiana", "", "", "", "Ashton", "", "???", "", "???", "Ashton", "???", "", "Ashton
 ", "
 ", "Ashton
 ", "???
 ", "The Phlegathon
 "]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Dialogue_box/RichTextLabel:text")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Dialogue_box/RichTextLabel:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(3.5, 12, 14, 15.9333, 18.9, 23.3333, 26.966667, 29, 30.6, 32.6667, 34.5, 36.6667, 38.3, 40.5, 43, 44.5, 46, 60, 62, 64.03333, 66.99997, 68.7, 71.59999, 73.899994, 75.666664, 78.36666, 80.36666, 83.06666, 85.86666, 87.4667, 89.933334, 92.13333, 94.33333, 96.433334, 99.933334, 101.433334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [" It’s so dark down here…", " [You stare out in front of you at the pool.]", " [It’s full of algae and god only knows what else.]
-", " They didn’t even drain the pool? This place is kinda spooky, but not that spooky.
+"values": ["I can barely see…", " [You stare out in front of you at the pool.]
+", " [The water is green and full of weird fuzzy stuff.]
+", " This is the saddest thing I’ve seen here. A pool that no one can swim in…
 
-", " [You walk around the pool and examine it carefully, trying not to touch anything growing at the sides.]
+", " [You walk carefully around the pool, trying hard not to touch anything.]
 
-", " [You feel something wet and slimy under your foot. You take a step back and try to stamp it off.]
+", " [You feel something wet and slimy under your foot. You take a step back and try to shake it off.]
 
 ", " I t ' s  p i t c h  b l a c k.
 
-", " M-Maybe that’s just the lighting. I hope it’s not some kind of mold.
+", " That doesn’t look very safe…I should probably leave soon.
 
-", " [You look further into the water and notice that this wasn’t just a stray patch.]
+", " [You couldn’t help but let your eye wander into the water.]
 
-", " Woah...
+", " [The black goo looked like it was connected in a straight line to other lines of goo.]
 
 ", " [The black goo stretches into the pool in a straight line, connecting to other lines that go out to other spots on the edge.]
 
@@ -1107,89 +1088,149 @@ tracks/7/keys = {
 ", " ...
 ", " Step…You step…", " I- I- uuuhh....", " H u m a n . . .", " [It’s voice is uncanny. It booms from wall to wall like a haunting echo.]", " Look, I didn’t mean to- I-I’ll just go-", " [A tentacle-like stream of ooze whips past your face, leaving some goo on your cheek.]", " W- what do you want, a fight? You’re a big pile of goop! I’d beat you easy!", " F i g h t . . . ? ", " F i g h t .", " Another baleful visage for the red river...", " For...", " The Phlegathon."]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Dialogue_box:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Dialogue_box:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0, 5, 12),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(313, 249), Vector2(313, 249), Vector2(524, 262)]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Dialogue_box/RichTextLabel:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Dialogue_box/RichTextLabel:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(3.4, 21.333334, 23.3333, 25.322443, 26.9667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [true, false, true, false, true]
 }
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Dialogue_box/RichTextLabel:theme_override_font_sizes/normal_font_size")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Dialogue_box/RichTextLabel:theme_override_font_sizes/normal_font_size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
 "times": PackedFloat32Array(0, 44.5, 46, 47.8, 60),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [11, 13, 15, 18, 11]
 }
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Characters/Phleg:visible")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Characters/Phleg:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
 "times": PackedFloat32Array(0, 51),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("Characters/Phleg:frame")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Characters/Phleg:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
 "times": PackedFloat32Array(51, 51.9, 52.833332, 53.766666, 54.7, 55.633335, 56.533333, 57.433334, 58.333332, 59.233334, 60.133335, 61.033337, 61.966667, 62.9, 63.83334, 64.76667, 65.666664, 66.56667, 67.46667, 68.36666, 69.26667, 70.16667, 71.100006, 72.03334, 72.966675, 73.90001, 74.8, 75.700005, 76.600006, 77.5, 78.36667, 79.26667, 80.2, 81.13333, 82.066666, 83, 83.9, 84.8, 85.7, 86.600006, 87.5, 88.40001, 89.333336, 90.26667, 91.20001, 92.13334, 93.03333, 93.93334, 94.833336, 95.73333, 96.63334, 97.53334, 98.466675, 99.40001, 100.33334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
 }
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Dialogue_box/RichTextLabel:scroll_active")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Dialogue_box/RichTextLabel:scroll_active")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Dialogue_box/Label:theme_override_font_sizes/font_size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Characters/Tia:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(544, 215), Vector2(608, 207)]
+}
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Dialogue_box/Label:theme_override_font_sizes/font_size")
+tracks/14/path = NodePath("Characters/Ash:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-50, 215)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Characters/Eve:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-70, 207)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Characters/Nate:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-58, 55)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Characters/Tia:frame")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.73333335, 1.1, 1.4333333, 1.8, 2.1666667, 2.5333333, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [14]
+"values": [6, 7, 6, 8, 6, 7, 6, 8, 6]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3mh18"]
@@ -1209,8 +1250,8 @@ visible = false
 z_index = 2
 offset_left = 452.0
 offset_top = 228.0
-offset_right = 1005.03125
-offset_bottom = 286.9835
+offset_right = 1005.10095
+offset_bottom = 286.9532
 texture = ExtResource("1_isgx5")
 
 [node name="Label" type="Label" parent="Dialogue_box" unique_id=1072754250]
@@ -1254,6 +1295,7 @@ position = Vector2(-60, 103)
 texture = ExtResource("2_dlob8")
 hframes = 5
 vframes = 3
+frame = 6
 
 [node name="Eve" type="Sprite2D" parent="Characters" unique_id=1930850264]
 z_index = 1
@@ -1280,6 +1322,15 @@ vframes = 2
 
 [node name="Maps" type="Node2D" parent="." unique_id=1650806530]
 
+[node name="BLACK" type="ColorRect" parent="Maps" unique_id=600788644]
+visible = false
+z_index = 2
+offset_left = 3.0
+offset_top = -242.0
+offset_right = 1220.0
+offset_bottom = 487.0
+color = Color(0, 0, 0, 1)
+
 [node name="basement_map" parent="Maps" unique_id=2083467548 instance=ExtResource("5_ol2b0")]
 
 [node name="Camera2D" type="Camera2D" parent="Maps/basement_map" unique_id=2007196762]
@@ -1299,12 +1350,3 @@ offset_left = 576.0
 offset_right = 1153.0
 offset_bottom = 304.0
 color = Color(0, 0, 0, 0.5764706)
-
-[node name="BLACK" type="ColorRect" parent="Maps" unique_id=600788644]
-visible = false
-z_index = 2
-offset_left = 3.0
-offset_top = -242.0
-offset_right = 1220.0
-offset_bottom = 487.0
-color = Color(0, 0, 0, 1)
