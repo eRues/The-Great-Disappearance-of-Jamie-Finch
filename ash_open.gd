@@ -33,14 +33,14 @@ func _process(_delta):
 func _physics_process(_delta):
 	#moovin, groovin, and slidin
 	if(Global.in_chat):
-		pass
+		animation_player.stop()
 	else:
 		move_and_slide()
 	
 func SetDirection() -> bool:
 	var new_dir : Vector2 = cardinal_direction
 	if(Global.in_chat):
-		pass
+		animation_player.stop()
 	else:
 		if direction == Vector2.ZERO:
 			return false
@@ -66,7 +66,7 @@ func SetState() -> bool:
 	
 func UpdateAnimation() -> void:
 	if(Global.in_chat):
-		pass
+		animation_player.stop()
 	else:
 		animation_player.play(state + "_" + AnimDirection())
 		pass

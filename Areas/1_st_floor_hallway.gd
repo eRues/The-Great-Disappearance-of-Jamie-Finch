@@ -18,6 +18,7 @@ func _ready() -> void:
 	player.position.y = Global.char_position_y
 	
 	if(Global.tutorial_finished): 
+		$walk_in.queue_free()
 		$tutorial_interact.queue_free()
 		$tutorial_block.queue_free()
 		$StaticBody2D2.queue_free()

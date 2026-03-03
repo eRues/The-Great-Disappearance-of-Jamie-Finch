@@ -116,6 +116,23 @@ func load_dialogue():
 			var file = FileAccess.open("res://TextFiles/Tutorial/Door Interact/nate_tutorial_doorint.json" , FileAccess.READ)
 			var content = JSON.parse_string(file.get_as_text())
 			return content
+	elif(Global.post_tutorial):
+		if(Global.ash_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Coming From Basement/ash_post_tut_cometo.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.tia_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Coming From Basement/tia_post_tut_cometo.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.eve_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Coming From Basement/eve_post_tut_cometo.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.nate_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Coming From Basement/nate_post_tut_cometo.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
 
 func _input(event):
 	if(event.is_action_pressed("space") && self.visible):

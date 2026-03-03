@@ -16,7 +16,7 @@ process_mode = 3
 script = ExtResource("1_4uwka")
 
 [node name="ash_open" parent="." unique_id=450151227 groups=["player"] instance=ExtResource("1_6so4b")]
-position = Vector2(-0.9867096, -0.16405106)
+position = Vector2(-0.9867096, 0.83594894)
 collision_layer = 7
 collision_mask = 7
 
@@ -34,9 +34,9 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = -175.01329
-offset_top = -111.83586
+offset_top = -119.83572
 offset_right = -175.01329
-offset_bottom = -111.83586
+offset_bottom = -119.83572
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(0.3, 0.3)
