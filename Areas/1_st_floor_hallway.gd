@@ -68,8 +68,10 @@ func _on_rock_interact_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("player")):
 		Global.rock_interact = true
 		Global.can_interact = true
+		$rock_texture/rock_interact/interact_rock.visible = true
 
 func _on_rock_interact_body_exited(body: Node2D) -> void:
 	if(body.is_in_group("player")):
 		Global.rock_interact = false
 		Global.can_interact = false
+		$rock_texture/rock_interact/interact_rock.visible = false

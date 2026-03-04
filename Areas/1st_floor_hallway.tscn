@@ -130,6 +130,15 @@ position = Vector2(129, 111)
 shape = SubResource("RectangleShape2D_j1bvn")
 disabled = true
 
+[node name="interact_rock" type="Label" parent="rock_texture/rock_interact" unique_id=1803918415]
+visible = false
+offset_left = 109.0
+offset_top = 68.0
+offset_right = 150.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 10
+text = "Interact"
+
 [node name="Doors" type="Node" parent="." unique_id=21361972]
 
 [node name="Door_N" parent="Doors" unique_id=1844416901 instance=ExtResource("5_0o4e0")]
