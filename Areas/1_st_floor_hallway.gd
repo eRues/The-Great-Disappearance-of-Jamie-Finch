@@ -11,7 +11,7 @@ func _ready() -> void:
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 	
-	if(Global.walkin):
+	if(Global.walkin or Global.post_tutorial):
 		player.char_text.start()
 	
 	player.position.x = Global.char_position_x
@@ -28,6 +28,7 @@ func _ready() -> void:
 		$debris.queue_free()
 		$rock_texture.visible = true
 		$rock_texture/StaticBody2D/CollisionShape2D.disabled = false
+		$rock_texture/rock_interact/CollisionShape2D.disabled = false
 		Global.battle_type.health = Global.battle_type.base_health
 
 
@@ -62,3 +63,13 @@ func _on_basement_enter_body_entered(body: Node2D) -> void:
 func _on_basement_enter_body_exited(_body: Node2D) -> void:
 	Global.basement_stairs = false
 	Global.can_interact = false
+
+func _on_rock_interact_body_entered(body: Node2D) -> void:
+	if(body.is_in_group("player")):
+		Global.rock_interact = true
+		Global.can_interact = true
+
+func _on_rock_interact_body_exited(body: Node2D) -> void:
+	if(body.is_in_group("player")):
+		Global.rock_interact = false
+		Global.can_interact = false

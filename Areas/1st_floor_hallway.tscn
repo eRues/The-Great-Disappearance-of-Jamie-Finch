@@ -28,6 +28,9 @@ gradient = SubResource("Gradient_6cnaf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ru8aw"]
 size = Vector2(117, 137)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1bvn"]
+size = Vector2(24, 44)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dt61"]
 size = Vector2(150, 53)
 
@@ -118,6 +121,13 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rock_texture/StaticBody2D" unique_id=632997796]
 position = Vector2(58.5, 68.5)
 shape = SubResource("RectangleShape2D_ru8aw")
+disabled = true
+
+[node name="rock_interact" type="Area2D" parent="rock_texture" unique_id=1171664915]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock_texture/rock_interact" unique_id=1879909886]
+position = Vector2(129, 111)
+shape = SubResource("RectangleShape2D_j1bvn")
 disabled = true
 
 [node name="Doors" type="Node" parent="." unique_id=21361972]
@@ -213,6 +223,8 @@ text = "No"
 [connection signal="body_exited" from="debris" to="." method="_on_debris_body_exited"]
 [connection signal="body_entered" from="inventory_item/text_area" to="." method="_on_text_area_body_entered"]
 [connection signal="body_exited" from="inventory_item/text_area" to="." method="_on_text_area_body_exited"]
+[connection signal="body_entered" from="rock_texture/rock_interact" to="." method="_on_rock_interact_body_entered"]
+[connection signal="body_exited" from="rock_texture/rock_interact" to="." method="_on_rock_interact_body_exited"]
 [connection signal="area_entered" from="basement_enter" to="." method="_on_basement_enter_area_entered"]
 [connection signal="body_entered" from="basement_enter" to="." method="_on_basement_enter_body_entered"]
 [connection signal="body_exited" from="basement_enter" to="." method="_on_basement_enter_body_exited"]

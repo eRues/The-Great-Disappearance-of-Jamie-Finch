@@ -131,15 +131,23 @@ func _process(_delta):
 func _on_ash_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
+	if(Global.post_tutorial):
+		Global.post_tutorial = false
 
 func _on_tia_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
+	if(Global.post_tutorial):
+		Global.post_tutorial = false
 
 func _on_eve_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
+	if(Global.post_tutorial):
+		Global.post_tutorial = false
 
 func _on_nate_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
+	if(Global.post_tutorial):
+		Global.post_tutorial = false
