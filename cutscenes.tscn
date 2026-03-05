@@ -251,6 +251,18 @@ tracks/19/keys = {
 "update": 1,
 "values": [6]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Dialogue_box/Label:visible_ratio")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_ao1cf"]
 resource_name = "basement_cutscene_Ash"
@@ -969,7 +981,7 @@ tracks/14/keys = {
 
 [sub_resource type="Animation" id="Animation_we7wr"]
 resource_name = "basement_cutscene_Tia"
-length = 103.0
+length = 112.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1001,10 +1013,10 @@ tracks/2/path = NodePath("Dialogue_box/RichTextLabel:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.8, 15.833333, 16.133331, 18.766666, 18.8, 19.066666, 21.333334, 23.3333, 23.566668, 25.333334, 26.966633, 28.066668, 28.966667, 29, 29.2, 30.566668, 30.6, 30.8, 32.633335, 32.66667, 32.86667, 34.466667, 34.5, 34.7, 36.633335, 36.666668, 36.86667, 38.266666, 38.3, 38.5, 40.466667, 40.5, 40.7, 42.966667, 43, 43.2, 44.466667, 44.5, 44.9, 45.966667, 46, 47.133335, 47.766666, 47.8, 48.9, 60, 60.3, 61.966667, 62, 62.3, 64, 64.03333, 64.33333, 66.96667, 67, 67.5, 68.666664, 68.7, 69, 71.56666, 71.59999, 71.899994, 73.86666, 73.899994, 74.2, 75.63333, 75.666664, 76.06666, 78.33333, 78.36666, 78.76666, 80.33333, 80.36666, 81.56666, 83.033325, 83.06666, 83.36666, 85.83333, 85.86666, 86.26666, 87.43333, 87.46666, 87.86666, 89.9, 89.933334, 90.23333, 92.1, 92.13333, 92.933334, 94.299995, 94.33333, 95.13333, 96.4, 96.433334, 97.83333, 99.9, 99.933334, 100.433334, 101.4, 101.433334, 102.433334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.4, 3.7, 5, 11.9, 12.1, 13.833333, 13.9, 14.133333, 15.8, 15.833333, 16.133331, 18.766666, 18.8, 19.066666, 21.333334, 23.3333, 23.566668, 25.333334, 26.966633, 28.066668, 28.966667, 29, 29.2, 30.566668, 30.6, 30.8, 32.633335, 32.66667, 32.86667, 34.466667, 34.5, 34.7, 36.633335, 36.666668, 36.86667, 38.266666, 38.3, 38.5, 40.466667, 40.5, 40.7, 42.966667, 43, 43.2, 44.466667, 44.5, 44.9, 45.966667, 46, 47.133335, 47.766666, 47.8, 48.9, 60, 60.3, 61.966667, 62, 62.3, 64, 64.03333, 64.33333, 66.96667, 67, 67.5, 68.666664, 68.7, 69, 71.56666, 71.59999, 71.899994, 73.86666, 73.899994, 74.2, 75.63333, 75.666664, 76.06666, 78.33333, 78.36666, 78.76666, 80.33333, 80.36666, 81.56666, 83.033325, 83.06666, 83.36666, 85.83333, 85.86666, 86.26666, 87.43333, 87.46666, 87.86666, 90.96667, 91, 91.299995, 93.166664, 93.2, 94, 94.63333, 94.666664, 95.6, 97.2, 97.23334, 97.96667, 99.26667, 99.3, 99.96667, 101.333336, 101.36303, 102.7, 103.46667, 103.5, 104.333336, 105.5, 105.56668, 106.73333, 107.90001, 107.93334, 108.000015, 109.40001, 109.43334, 111.5, 112.63333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1025,12 +1037,14 @@ tracks/4/path = NodePath("Dialogue_box/Label:text")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(3.5, 12, 15.9333, 18.9, 29, 30.6, 32.66667, 34.5, 38.3, 40.5, 67, 68.7, 73.899994, 78.36666, 80.36666, 83.06666, 85.86666, 87.46666, 89.933334, 92.13333, 101.433334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.5, 12, 15.9333, 18.9, 29, 30.6, 32.66667, 34.5, 38.3, 40.5, 60, 67, 68.7, 73.899994, 78.36666, 80.36666, 83.06666, 85.86666, 91, 93.2, 94.6667, 97.2333, 99.3, 101.36303, 109.4333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Tiana", "", "Tia", "", "Tiana", "", "", "", "Ashton", "", "???", "", "???", "Ashton", "???", "", "Ashton
+"values": ["Tiana", "", "Tiana", "", "Tiana", "", "", "", "Tiana", "", "Tiana", "???", "", "???", "Tiana", "???", "Tiana", "
+", "Tiana", "???
+", "Tiana
 ", "
-", "Ashton
+", "Tiana
 ", "???
 ", "The Phlegathon
 "]
@@ -1042,8 +1056,8 @@ tracks/5/path = NodePath("Dialogue_box/RichTextLabel:text")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(3.5, 12, 14, 15.9333, 18.9, 23.3333, 26.966667, 29, 30.6, 32.6667, 34.5, 36.6667, 38.3, 40.5, 43, 44.5, 46, 60, 62, 64.03333, 66.99997, 68.7, 71.59999, 73.899994, 75.666664, 78.36666, 80.36666, 83.06666, 85.86666, 87.4667, 89.933334, 92.13333, 94.33333, 96.433334, 99.933334, 101.433334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.5, 12, 14, 15.9333, 18.9, 23.3333, 26.966667, 29, 30.6, 32.6667, 34.5, 36.6667, 38.3, 40.5, 43, 44.5, 46, 60, 62, 64.03333, 66.99997, 68.7, 71.59999, 73.899994, 75.666664, 78.36666, 80.36666, 83.06666, 85.86666, 87.4667, 91, 93.2, 94.666664, 97.2333, 99.3, 101.36303, 103.5, 105.56668, 107.93334, 109.43334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["I can barely see…", " [You stare out in front of you at the pool.]
 ", " [The water is green and full of weird fuzzy stuff.]
@@ -1061,32 +1075,32 @@ tracks/5/keys = {
 
 ", " [The black goo looked like it was connected in a straight line to other lines of goo.]
 
-", " [The black goo stretches into the pool in a straight line, connecting to other lines that go out to other spots on the edge.]
+", " [And in the middle of all of them?]
 
-", " [In the middle of all of them, there was some kind of black mass.]
+", " [A black blanket over the bottom of the pool.]
 
-", " That’s... weird...
+", " That’s not…
 
-", " [You take out your phone to take a picture, but once you focus your camera, you notice something.]
+", " [You look towards the door, but when you look back, the blob is... moving.]
 
-", " [The blob is getting bigger.]
-
-", " [And Bigger.]
+", " [And it is getting bigger.]
 
 ", " [And Bigger.]
 
-", " [You stand frozen in place for a moment, unable to form a thought on what to do.]
+", " [And Bigger.]
 
-", " [The blob crests the water and you begin to see its face.]
+", " Okay! Okay! I really need to go!
 
-", " [Well, it could probably be considered a face.]
+", " [You tried to move, but your legs were frozen in place.]
+
+", " [All you could do was watch as this gross thing crested to the surface of the pool.]
 
 ", " Ruhhh…
 
-", " [It grumbled and continued to grow bigger. More heads and faces popped out from its sides.]
-", " [You continue to hold your phone in your now trembling hand, still trying to take a picture.]
+", " [It had a head and a face, and another head and another face.]
+", " [You have to stop counting faces before you get a headache.]
 ", " ...
-", " Step…You step…", " I- I- uuuhh....", " H u m a n . . .", " [It’s voice is uncanny. It booms from wall to wall like a haunting echo.]", " Look, I didn’t mean to- I-I’ll just go-", " [A tentacle-like stream of ooze whips past your face, leaving some goo on your cheek.]", " W- what do you want, a fight? You’re a big pile of goop! I’d beat you easy!", " F i g h t . . . ? ", " F i g h t .", " Another baleful visage for the red river...", " For...", " The Phlegathon."]
+", " Step…You step…", " I’m sorry mister monster…thing…", " L i t t l e  H u m a n .", " I didn’t mean to step on you! I-I was actually just leaving-!", " [You can't tell if it's smiling or boiling.]", " [You tried to run away, but the blob… monster shot a thing of goo at you, leaving some of the disgusting residue on your cheek.]", " Are…are you gonna kill me?", "...", " Well, my momma always told me never to go down without a fight!", " [You frantically search for your bag and pull out your water bottle.]", " Yeah! You’re gonna let me go or I’m gonna hit you with this! You hear me?", "F i g h t . . . ?", " F i g h t .", " Another baleful visage for the red river...", " For...", " The Phlegathon."]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -1143,10 +1157,10 @@ tracks/10/path = NodePath("Characters/Phleg:frame")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(51, 51.9, 52.833332, 53.766666, 54.7, 55.633335, 56.533333, 57.433334, 58.333332, 59.233334, 60.133335, 61.033337, 61.966667, 62.9, 63.83334, 64.76667, 65.666664, 66.56667, 67.46667, 68.36666, 69.26667, 70.16667, 71.100006, 72.03334, 72.966675, 73.90001, 74.8, 75.700005, 76.600006, 77.5, 78.36667, 79.26667, 80.2, 81.13333, 82.066666, 83, 83.9, 84.8, 85.7, 86.600006, 87.5, 88.40001, 89.333336, 90.26667, 91.20001, 92.13334, 93.03333, 93.93334, 94.833336, 95.73333, 96.63334, 97.53334, 98.466675, 99.40001, 100.33334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(51, 51.9, 52.833332, 53.766666, 54.7, 55.633335, 56.533333, 57.433334, 58.333332, 59.233334, 60.133335, 61.033337, 61.966667, 62.9, 63.83334, 64.76667, 65.666664, 66.56667, 67.46667, 68.36666, 69.26667, 70.16667, 71.100006, 72.03334, 72.966675, 73.90001, 74.8, 75.700005, 76.600006, 77.5, 78.36667, 79.26667, 80.2, 81.13333, 82.066666, 83, 83.9, 84.8, 85.7, 86.600006, 87.5, 88.40001, 89.333336, 90.26667, 91.20001, 92.13334, 93.03333, 93.93334, 94.833336, 95.73333, 96.63334, 97.53334, 98.466675, 99.40001, 100.33334, 101.3, 102.23334, 103.16667, 104.100006, 105.03334, 105.933334, 106.833336, 107.73334, 108.63333, 109.53334, 110.433334, 111.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -1232,6 +1246,18 @@ tracks/17/keys = {
 "update": 1,
 "values": [6, 7, 6, 8, 6, 7, 6, 8, 6]
 }
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Dialogue_box/Label:visible_ratio")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(109.4333, 111.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3mh18"]
 _data = {
@@ -1250,8 +1276,8 @@ visible = false
 z_index = 2
 offset_left = 452.0
 offset_top = 228.0
-offset_right = 1005.10095
-offset_bottom = 286.9532
+offset_right = 1005.1384
+offset_bottom = 286.93658
 texture = ExtResource("1_isgx5")
 
 [node name="Label" type="Label" parent="Dialogue_box" unique_id=1072754250]
@@ -1262,6 +1288,8 @@ offset_right = 298.0
 offset_bottom = 25.0
 theme_override_font_sizes/font_size = 11
 text = "Ashton"
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Dialogue_box" unique_id=2108326217]
 visible = false
