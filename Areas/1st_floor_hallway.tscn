@@ -142,16 +142,27 @@ text = "Interact"
 [node name="Doors" type="Node" parent="." unique_id=21361972]
 
 [node name="Door_N" parent="Doors" unique_id=1844416901 instance=ExtResource("5_0o4e0")]
+position = Vector2(-1, 12)
 collision_layer = 3
 destination_scene_tag = "courtyard"
 destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0"]
-position = Vector2(1088, 101)
+position = Vector2(1089.5, 101)
+disabled = true
 
 [node name="Spawn" parent="Doors/Door_N" index="1"]
 position = Vector2(1089, 138)
+
+[node name="court_interact" type="Label" parent="Doors/Door_N" unique_id=2018367640]
+visible = false
+offset_left = 1071.0
+offset_top = 58.0
+offset_right = 1109.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 12
+text = "Enter?"
 
 [node name="Door_SE" parent="Doors" unique_id=1582021498 instance=ExtResource("5_0o4e0")]
 visible = false
@@ -171,10 +182,10 @@ position = Vector2(37, -7)
 [node name="tutorial_interact" parent="." unique_id=112353040 instance=ExtResource("8_apa2f")]
 position = Vector2(350, -89)
 
-[node name="tutorial_block" type="StaticBody2D" parent="." unique_id=1604777400]
+[node name="door_block" type="StaticBody2D" parent="." unique_id=1604777400]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial_block" unique_id=1628353019]
-position = Vector2(1087, 103.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door_block" unique_id=1628353019]
+position = Vector2(1087, 101.5)
 shape = SubResource("RectangleShape2D_0dt61")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2104664599]
@@ -189,6 +200,15 @@ shape = SubResource("RectangleShape2D_p5s25")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="basement_enter" unique_id=1974708612]
 position = Vector2(1785, 160.5)
 shape = SubResource("RectangleShape2D_cmodj")
+
+[node name="basement_interact" type="Label" parent="basement_enter" unique_id=614398066]
+visible = false
+offset_left = 1765.0
+offset_top = 173.0
+offset_right = 1803.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 12
+text = "Enter?"
 
 [node name="tutorial_change_scene" parent="." unique_id=751159298 instance=ExtResource("12_p5s25")]
 position = Vector2(1671, 30)
@@ -234,6 +254,8 @@ text = "No"
 [connection signal="body_exited" from="inventory_item/text_area" to="." method="_on_text_area_body_exited"]
 [connection signal="body_entered" from="rock_texture/rock_interact" to="." method="_on_rock_interact_body_entered"]
 [connection signal="body_exited" from="rock_texture/rock_interact" to="." method="_on_rock_interact_body_exited"]
+[connection signal="body_entered" from="Doors/Door_N" to="." method="_on_door_n_body_entered"]
+[connection signal="body_exited" from="Doors/Door_N" to="." method="_on_door_n_body_exited"]
 [connection signal="area_entered" from="basement_enter" to="." method="_on_basement_enter_area_entered"]
 [connection signal="body_entered" from="basement_enter" to="." method="_on_basement_enter_body_entered"]
 [connection signal="body_exited" from="basement_enter" to="." method="_on_basement_enter_body_exited"]

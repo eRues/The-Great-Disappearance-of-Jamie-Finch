@@ -2,14 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://1bexm3nc5dyo" path="res://Assets/Keyboard Keys/enter_key.png" id="1_h1cck"]
 
-[node name="tutorial_change_scene" type="Node2D"]
+[node name="tutorial_change_scene" type="Node2D" unique_id=1014060390]
 
-[node name="EnterKey" type="Sprite2D" parent="."]
+[node name="EnterKey" type="Sprite2D" parent="." unique_id=1500846035]
 position = Vector2(74, 47)
 scale = Vector2(1.17, 1.08)
 texture = ExtResource("1_h1cck")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2075943292]
 offset_left = 59.0
 offset_top = 24.0
 offset_right = 101.0
@@ -17,7 +17,7 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 12
 text = "Press"
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=245184930]
 offset_left = 10.0
 offset_top = 51.0
 offset_right = 143.0

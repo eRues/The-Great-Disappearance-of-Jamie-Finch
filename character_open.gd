@@ -125,7 +125,9 @@ func _process(_delta):
 		inventory_ui.visible = false
 		get_tree().paused = false
 	
-	if(Input.is_action_just_pressed("enter") && Global.can_interact):
+	if(Input.is_action_just_pressed("enter") && Global.can_leave):
+		char_text.start()
+	elif(Input.is_action_just_pressed("click") && Global.can_interact):
 		char_text.start()
 
 func _on_ash_text_dialogue_finished() -> void:
@@ -133,21 +135,41 @@ func _on_ash_text_dialogue_finished() -> void:
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
 	if(Global.post_tutorial):
 		Global.post_tutorial = false
+	if(Global.rock_interact):
+		Global.rubble_done = true
+	if(Global.courtyard_door):
+		Global.courtyard_door = false
+		get_tree().change_scene_to_file("res://Areas/courtyard.tscn")
 
 func _on_tia_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
 	if(Global.post_tutorial):
 		Global.post_tutorial = false
+	if(Global.rock_interact):
+		Global.rubble_done = true
+	if(Global.courtyard_door):
+		Global.courtyard_door = false
+		get_tree().change_scene_to_file("res://Areas/courtyard.tscn")
 
 func _on_eve_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
 	if(Global.post_tutorial):
 		Global.post_tutorial = false
+	if(Global.rock_interact):
+		Global.rubble_done = true
+	if(Global.courtyard_door):
+		Global.courtyard_door = false
+		get_tree().change_scene_to_file("res://Areas/courtyard.tscn")
 
 func _on_nate_text_dialogue_finished() -> void:
 	if(Global.basement_stairs):
 		get_tree().change_scene_to_file("res://Areas/basement.tscn")
 	if(Global.post_tutorial):
 		Global.post_tutorial = false
+	if(Global.rock_interact):
+		Global.rubble_done = true
+	if(Global.courtyard_door):
+		Global.courtyard_door = false
+		get_tree().change_scene_to_file("res://Areas/courtyard.tscn")
