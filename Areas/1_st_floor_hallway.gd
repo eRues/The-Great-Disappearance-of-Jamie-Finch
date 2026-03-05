@@ -11,7 +11,7 @@ func _ready() -> void:
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 	
-	if(Global.walkin):
+	if(Global.walkin or Global.post_tutorial):
 		player.char_text.start()
 	
 	player.position.x = Global.char_position_x
@@ -20,7 +20,6 @@ func _ready() -> void:
 	if(Global.tutorial_finished): 
 		$walk_in.queue_free()
 		$tutorial_interact.queue_free()
-		$tutorial_block.queue_free()
 		$StaticBody2D2.queue_free()
 		$basement_enter.queue_free()
 		$tutorial_change_scene.queue_free()
@@ -28,8 +27,13 @@ func _ready() -> void:
 		$debris.queue_free()
 		$rock_texture.visible = true
 		$rock_texture/StaticBody2D/CollisionShape2D.disabled = false
+		$rock_texture/rock_interact/CollisionShape2D.disabled = false
 		Global.battle_type.health = Global.battle_type.base_health
 
+func _process(delta: float) -> void:
+	if(Global.rubble_done):
+		$Doors/Door_N/CollisionShape2D.disabled = false
+		Global.rubble_done = false
 
 func _on_level_spawn(destination_tag: String):
 	var door_path = "Doors/Door_" + destination_tag
@@ -57,8 +61,35 @@ func _on_text_area_body_exited(_body: Node2D) -> void:
 func _on_basement_enter_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("player")):
 		Global.basement_stairs = true
-		Global.can_interact = true
+		Global.can_leave = true
+		$basement_enter/basement_interact.visible = true
 
 func _on_basement_enter_body_exited(_body: Node2D) -> void:
 	Global.basement_stairs = false
-	Global.can_interact = false
+	Global.can_leave = false
+	$basement_enter/basement_interact.visible = false
+
+func _on_rock_interact_body_entered(body: Node2D) -> void:
+	if(body.is_in_group("player")):
+		Global.rock_interact = true
+		Global.can_interact = true
+		$rock_texture/rock_interact/interact_rock.visible = true
+
+func _on_rock_interact_body_exited(body: Node2D) -> void:
+	if(body.is_in_group("player")):
+		Global.rock_interact = false
+		Global.can_interact = false
+		$rock_texture/rock_interact/interact_rock.visible = false
+
+func _on_door_n_body_entered(body: Node2D) -> void:
+	if(body.is_in_group("player")):
+		Global.can_leave = true
+		Global.courtyard_door = true
+		$Doors/Door_N/court_interact.visible = true
+		print("Ran")
+
+func _on_door_n_body_exited(body: Node2D) -> void:
+	if(body.is_in_group("player")):
+		Global.can_leave = false
+		$Doors/Door_N/court_interact.visible = false
+		Global.courtyard_door = false

@@ -39,6 +39,11 @@ var rabbit_three = false
 var rabbit_four = false
 var rabbit_five = false
 
+#determines if certain areas are blocked off to the player
+var basement_block = false
+var rubble_done = false
+var court_block = true
+
 #tracks character position
 var char_position_x = 30
 var char_position_y = 147
@@ -54,6 +59,7 @@ var rabbit_count = 0
 #determines if character can move during dialogue
 var in_chat = false
 var can_interact = false
+var can_leave = false
 
 #variable that determines which scene a transition want to go to
 var target_scene = ""

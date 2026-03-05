@@ -15,9 +15,11 @@ func _ready():
 func start():
 	finished = false
 	if(self.global_position.x >= 1425):
-			self.global_position.x = 1487
+		self.global_position.x = 1487
 	if(self.global_position.y >= 25):
-			self.global_position.y = 25
+		self.global_position.y = 25
+	if(Global.rock_interact):
+		self.global_position.x = -5
 	if(!finished):
 		self.visible = true
 		Global.in_chat = true
@@ -131,6 +133,40 @@ func load_dialogue():
 			return content
 		elif(Global.nate_chosen):
 			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Coming From Basement/nate_post_tut_cometo.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+	elif(Global.rock_interact):
+		if(Global.ash_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Rubble Interact/ash_exit_rock.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.tia_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Rubble Interact/tia_exit_rock.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.eve_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Rubble Interact/eve_exit_rock.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.nate_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Rubble Interact/nate_exit_rock.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+	elif(Global.courtyard_door):
+		if(Global.ash_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Courtyard Door/ash_court_door.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.tia_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Courtyard Door/tia_court_door.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.eve_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Courtyard Door/eve_court_door.json" , FileAccess.READ)
+			var content = JSON.parse_string(file.get_as_text())
+			return content
+		elif(Global.nate_chosen):
+			var file = FileAccess.open("res://TextFiles/Post Tutorial Hallway/Courtyard Door/nate_court_door.json" , FileAccess.READ)
 			var content = JSON.parse_string(file.get_as_text())
 			return content
 
