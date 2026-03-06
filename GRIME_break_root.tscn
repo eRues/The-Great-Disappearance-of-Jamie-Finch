@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bl70tdwxpp6gl"]
 
-[ext_resource type="Texture2D" uid="uid://b7qeqiod8g70" path="res://Assets/Map Assets/GRIME_break_v2.png" id="1_dfvfo"]
+[ext_resource type="Texture2D" uid="uid://b7qeqiod8g70" path="res://Assets/GRIME/GRIME_break_v2.png" id="1_dfvfo"]
 [ext_resource type="Script" uid="uid://byjh825540hol" path="res://grime_break_root.gd" id="1_nhn2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfvfo"]

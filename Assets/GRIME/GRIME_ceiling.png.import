@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7qeqiod8g70"
-path="res://.godot/imported/GRIME_break_v2.png-82bec83a7e1a5cdc0ceab7d476cc49af.ctex"
+uid="uid://dgw0ywbihrpsd"
+path="res://.godot/imported/GRIME_ceiling.png-9cb00156cfe16fa69923494ee904c220.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map Assets/GRIME_break_v2.png"
-dest_files=["res://.godot/imported/GRIME_break_v2.png-82bec83a7e1a5cdc0ceab7d476cc49af.ctex"]
+source_file="res://Assets/GRIME/GRIME_ceiling.png"
+dest_files=["res://.godot/imported/GRIME_ceiling.png-9cb00156cfe16fa69923494ee904c220.ctex"]
 
 [params]
 

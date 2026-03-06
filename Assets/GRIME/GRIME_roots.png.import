@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg5tn342koatw"
-path="res://.godot/imported/GRIME_delicate_flower.png-a6fb6c9b3469fff726f6581125b80b46.ctex"
+uid="uid://c4emrwqvqlgqh"
+path="res://.godot/imported/GRIME_roots.png-9dc1e5c8bbcfd3b703ec1e3a25069329.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map Assets/GRIME_delicate_flower.png"
-dest_files=["res://.godot/imported/GRIME_delicate_flower.png-a6fb6c9b3469fff726f6581125b80b46.ctex"]
+source_file="res://Assets/GRIME/GRIME_roots.png"
+dest_files=["res://.godot/imported/GRIME_roots.png-9dc1e5c8bbcfd3b703ec1e3a25069329.ctex"]
 
 [params]
 

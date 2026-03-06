@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e0lmebq1xcia"
-path="res://.godot/imported/GRIME_V2.png-01c9b0427a2ec84da847f2e39c878de9.ctex"
+path="res://.godot/imported/GRIME_V2.png-23a194c81cf6699951a6d7e1d607c260.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map Assets/GRIME_V2.png"
-dest_files=["res://.godot/imported/GRIME_V2.png-01c9b0427a2ec84da847f2e39c878de9.ctex"]
+source_file="res://Assets/GRIME/GRIME_V2.png"
+dest_files=["res://.godot/imported/GRIME_V2.png-23a194c81cf6699951a6d7e1d607c260.ctex"]
 
 [params]
 

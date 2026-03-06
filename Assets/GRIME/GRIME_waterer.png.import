@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy043gcgs3lsl"
-path="res://.godot/imported/GRIME.png-f5f200eedd5dd5661ba856764d2d45a1.ctex"
+uid="uid://38stp51vai27"
+path="res://.godot/imported/GRIME_waterer.png-22aee5da7f1a249c4abd8ffb4be9afe9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map Assets/GRIME.png"
-dest_files=["res://.godot/imported/GRIME.png-f5f200eedd5dd5661ba856764d2d45a1.ctex"]
+source_file="res://Assets/GRIME/GRIME_waterer.png"
+dest_files=["res://.godot/imported/GRIME_waterer.png-22aee5da7f1a249c4abd8ffb4be9afe9.ctex"]
 
 [params]
 
