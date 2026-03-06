@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if(in_range):
-		if(event.is_action_pressed("enter")):
+		if(event.is_action_pressed("click")):
 			get_tree().change_scene_to_file("res://battle_scene.tscn")
 			Global.battle_target = "res://Areas/courtyard.tscn"
 

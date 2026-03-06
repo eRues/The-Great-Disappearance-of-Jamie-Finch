@@ -1281,6 +1281,7 @@ offset_bottom = 286.93658
 texture = ExtResource("1_isgx5")
 
 [node name="Label" type="Label" parent="Dialogue_box" unique_id=1072754250]
+visible = false
 layout_mode = 0
 offset_left = 51.0
 offset_top = 2.0

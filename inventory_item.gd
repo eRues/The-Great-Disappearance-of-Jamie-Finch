@@ -16,7 +16,7 @@ var player_in_range = false
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		icon_sprite.texture = item_texture
-
+  
 func _process(_delta) -> void:
 	if Engine.is_editor_hint():
 		icon_sprite.texture = item_texture

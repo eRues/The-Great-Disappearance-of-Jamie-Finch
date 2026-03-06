@@ -30,7 +30,7 @@ func _ready() -> void:
 		$rock_texture/rock_interact/CollisionShape2D.disabled = false
 		Global.battle_type.health = Global.battle_type.base_health
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if(Global.rubble_done):
 		$Doors/Door_N/CollisionShape2D.disabled = false
 		Global.rubble_done = false
@@ -61,12 +61,12 @@ func _on_text_area_body_exited(_body: Node2D) -> void:
 func _on_basement_enter_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("player")):
 		Global.basement_stairs = true
-		Global.can_leave = true
+		Global.can_interact = true
 		$basement_enter/basement_interact.visible = true
 
 func _on_basement_enter_body_exited(_body: Node2D) -> void:
 	Global.basement_stairs = false
-	Global.can_leave = false
+	Global.can_interact = false
 	$basement_enter/basement_interact.visible = false
 
 func _on_rock_interact_body_entered(body: Node2D) -> void:
@@ -83,13 +83,12 @@ func _on_rock_interact_body_exited(body: Node2D) -> void:
 
 func _on_door_n_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("player")):
-		Global.can_leave = true
+		Global.can_interact = true
 		Global.courtyard_door = true
 		$Doors/Door_N/court_interact.visible = true
-		print("Ran")
 
 func _on_door_n_body_exited(body: Node2D) -> void:
 	if(body.is_in_group("player")):
-		Global.can_leave = false
+		Global.can_interact = false
 		$Doors/Door_N/court_interact.visible = false
 		Global.courtyard_door = false
