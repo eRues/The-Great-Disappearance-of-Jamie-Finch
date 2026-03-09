@@ -125,9 +125,7 @@ func _process(_delta):
 		inventory_ui.visible = false
 		get_tree().paused = false
 	
-	if(Input.is_action_just_pressed("enter") && Global.can_leave):
-		char_text.start()
-	elif(Input.is_action_just_pressed("click") && Global.can_interact):
+	if(Input.is_action_just_pressed("click") && Global.can_interact):
 		char_text.start()
 
 func _on_ash_text_dialogue_finished() -> void:

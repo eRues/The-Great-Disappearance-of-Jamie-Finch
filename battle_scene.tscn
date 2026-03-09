@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://sjdwk2o044hb"]
+[gd_scene format=3 uid="uid://sjdwk2o044hb"]
 
 [ext_resource type="Script" uid="uid://dwcg1y17glmcm" path="res://battle_scene.gd" id="1_fw8re"]
 [ext_resource type="Texture2D" uid="uid://bkg2wldj3gwbc" path="res://Assets/enemy_background.png" id="2_5joda"]
@@ -8,15 +8,21 @@
 
 [sub_resource type="Theme" id="Theme_gf131"]
 
-[node name="Battle" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gf131"]
+bg_color = Color(0.10980392, 0.87058824, 0.14901961, 0.43137255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl17i"]
+bg_color = Color(0.10980392, 0.87058824, 0.14901961, 0.39607844)
+
+[node name="Battle" type="Node2D" unique_id=957829045]
 script = ExtResource("1_fw8re")
 
-[node name="EnemyBackground" type="Sprite2D" parent="."]
+[node name="EnemyBackground" type="Sprite2D" parent="." unique_id=1645997680]
 position = Vector2(574.5, 323.50003)
 scale = Vector2(24.062502, 20.531252)
 texture = ExtResource("2_5joda")
 
-[node name="attack_button" type="Button" parent="."]
+[node name="attack_button" type="Button" parent="." unique_id=2125170148]
 offset_left = 77.0
 offset_top = 500.0
 offset_right = 253.0
@@ -25,7 +31,7 @@ focus_mode = 0
 keep_pressed_outside = true
 text = "Attack"
 
-[node name="defend_button" type="Button" parent="."]
+[node name="defend_button" type="Button" parent="." unique_id=1125099106]
 offset_left = 275.0
 offset_top = 501.0
 offset_right = 451.0
@@ -33,7 +39,7 @@ offset_bottom = 577.0
 focus_mode = 0
 text = "Defend"
 
-[node name="inventory_button" type="Button" parent="."]
+[node name="inventory_button" type="Button" parent="." unique_id=435373030]
 offset_left = 475.0
 offset_top = 503.0
 offset_right = 653.0
@@ -41,7 +47,7 @@ offset_bottom = 579.0
 focus_mode = 0
 text = "Inventory"
 
-[node name="skill_button" type="Button" parent="."]
+[node name="skill_button" type="Button" parent="." unique_id=611335346]
 offset_left = 677.0
 offset_top = 503.0
 offset_right = 855.0
@@ -49,7 +55,7 @@ offset_bottom = 579.0
 focus_mode = 0
 text = "Skill"
 
-[node name="run_button" type="Button" parent="."]
+[node name="run_button" type="Button" parent="." unique_id=759213896]
 offset_left = 874.0
 offset_top = 501.0
 offset_right = 1052.0
@@ -57,11 +63,20 @@ offset_bottom = 577.0
 focus_mode = 0
 text = "Run"
 
-[node name="placeholder_sprite" type="Sprite2D" parent="."]
+[node name="placeholder_sprite" type="Sprite2D" parent="." unique_id=1444844407]
 position = Vector2(565, 258)
 scale = Vector2(15, 12.164)
 
-[node name="health_label_e" type="Label" parent="."]
+[node name="health_bar_e" type="ProgressBar" parent="." unique_id=306868820]
+offset_left = 285.0
+offset_top = 56.0
+offset_right = 864.0
+offset_bottom = 119.0
+theme = SubResource("Theme_gf131")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gf131")
+show_percentage = false
+
+[node name="health_label_e" type="Label" parent="." unique_id=377056647]
 offset_left = 502.0
 offset_top = 57.0
 offset_right = 620.0
@@ -69,15 +84,15 @@ offset_bottom = 126.0
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 
-[node name="health_bar_e" type="ProgressBar" parent="."]
-offset_left = 282.0
-offset_top = 56.0
-offset_right = 864.0
-offset_bottom = 119.0
-theme = SubResource("Theme_gf131")
+[node name="health_bar_p" type="ProgressBar" parent="." unique_id=1520296553]
+offset_left = 77.0
+offset_top = 459.0
+offset_right = 1053.0
+offset_bottom = 502.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_sl17i")
 show_percentage = false
 
-[node name="health_label_p" type="Label" parent="."]
+[node name="health_label_p" type="Label" parent="." unique_id=181523801]
 offset_left = 521.0
 offset_top = 461.0
 offset_right = 613.0
@@ -85,25 +100,18 @@ offset_bottom = 513.0
 theme_override_font_sizes/font_size = 31
 horizontal_alignment = 1
 
-[node name="health_bar_p" type="ProgressBar" parent="."]
-offset_left = 192.0
-offset_top = 465.0
-offset_right = 946.0
-offset_bottom = 508.0
-show_percentage = false
-
-[node name="end_battle" parent="." instance=ExtResource("3_5g7vw")]
+[node name="end_battle" parent="." unique_id=186955969 instance=ExtResource("3_5g7vw")]
 position = Vector2(-6, -99)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039325962]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=422509315]
 offset_right = 1148.0
 offset_bottom = 640.0
 color = Color(0.33333334, 0.33333334, 0.33333334, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=678949053]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -115,29 +123,29 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 text = "Inventory"
 
-[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("4_5joda")]
+[node name="Inventory_UI" parent="CanvasLayer" unique_id=571394563 instance=ExtResource("4_5joda")]
 custom_minimum_size = Vector2(100, 100)
 offset_left = -4.0
 offset_top = 1.0
 offset_right = 1.0
 offset_bottom = -11.0
 
-[node name="Exit" type="Button" parent="CanvasLayer"]
+[node name="Exit" type="Button" parent="CanvasLayer" unique_id=1171558461]
 offset_left = 1048.0
 offset_top = 28.0
 offset_right = 1120.0
 offset_bottom = 65.0
 text = "Exit"
 
-[node name="battle_text" type="Node2D" parent="."]
+[node name="battle_text" type="Node2D" parent="." unique_id=2126438419]
 visible = false
 
-[node name="text_back" type="Sprite2D" parent="battle_text"]
+[node name="text_back" type="Sprite2D" parent="battle_text" unique_id=1275730350]
 position = Vector2(565.5, 556.5)
 scale = Vector2(32.031254, 4.3437495)
 texture = ExtResource("5_gf131")
 
-[node name="text" type="RichTextLabel" parent="battle_text"]
+[node name="text" type="RichTextLabel" parent="battle_text" unique_id=192007795]
 offset_left = 103.0
 offset_top = 508.0
 offset_right = 1031.0
