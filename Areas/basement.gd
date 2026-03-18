@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var basement = $"."
+#  d@onready var cutscenes = $Cutscenes
+
 func _ready() -> void:
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
@@ -16,3 +19,10 @@ func _on_temp_fight_pressed() -> void:
 	Global.enemy_name = "phleg_intro"
 	Global.dont_run = true
 	get_tree().change_scene_to_file("res://battle_scene.tscn")
+
+
+func _on_cutscene_start_body_entered(body: Node2D) -> void:
+	if body.has_method("player"):
+		basement.visible = false
+	
+	pass # Replace with function body.
