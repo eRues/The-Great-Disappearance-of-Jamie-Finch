@@ -3,37 +3,68 @@
 [ext_resource type="Texture2D" uid="uid://ba3psg6umvn0m" path="res://Assets/Player Characters/Eve/eve_avatar.png" id="1_ihoy8"]
 [ext_resource type="Script" uid="uid://d2lytojdslakk" path="res://eve_avatar.gd" id="1_k2eby"]
 [ext_resource type="Script" uid="uid://b1aaigj17xljg" path="res://avatar_text.gd" id="2_ne5xb"]
+[ext_resource type="Texture2D" uid="uid://ddfvr6c6ixrtn" path="res://Assets/Items/Weapons/eve_knife.png" id="4_tes11"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ds0n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7pheg"]
 
 [node name="eve_avatar" type="Node2D" unique_id=1035755401]
 script = ExtResource("1_k2eby")
 
 [node name="EveAvatar" type="Sprite2D" parent="." unique_id=1789290246]
-position = Vector2(178, 372)
+visible = false
+position = Vector2(95, 189)
 scale = Vector2(10.1, 9.672)
 texture = ExtResource("1_ihoy8")
 
-[node name="eve_button" type="Button" parent="." unique_id=1466429336]
-offset_left = 75.0
-offset_top = 502.0
-offset_right = 281.0
-offset_bottom = 581.0
-mouse_filter = 1
-mouse_force_pass_scroll_events = false
-text = "Eve"
-
 [node name="PlayerText" type="RichTextLabel" parent="." unique_id=775579916]
-offset_left = 52.0
-offset_top = 72.0
-offset_right = 306.0
-offset_bottom = 221.0
+visible = false
+offset_left = 229.0
+offset_top = 7.0
+offset_right = 579.0
+offset_bottom = 320.0
+theme_override_font_sizes/normal_font_size = 18
 text = "A Geek.
+
 Weapon: Pocket Knife
+
 Special Skill: Play Dead
+Stun your enemy by pretending you're already done for.
+
 HP: 25
 Strength: 6    Speed: 7
 Smarts: 10      Spirit: 4"
 horizontal_alignment = 1
 script = ExtResource("2_ne5xb")
+
+[node name="EveKnife" type="Sprite2D" parent="." unique_id=952271902]
+visible = false
+position = Vector2(222.00002, 80.00001)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_tes11")
+
+[node name="name_label" type="Label" parent="." unique_id=2049044468]
+visible = false
+offset_left = 70.0
+offset_top = 24.0
+offset_right = 123.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 32
+text = "Eve"
+
+[node name="cover" type="ColorRect" parent="." unique_id=162152294]
+offset_right = 578.0
+offset_bottom = 324.0
+color = Color(0.0627451, 0.0627451, 0.0627451, 0.5411765)
+
+[node name="eve_button" type="Button" parent="." unique_id=1466429336]
+offset_right = 578.0
+offset_bottom = 324.0
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
+theme_override_styles/normal = SubResource("StyleBoxTexture_7ds0n")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7pheg")
 
 [connection signal="mouse_entered" from="eve_button" to="." method="_on_eve_button_mouse_entered"]
 [connection signal="mouse_exited" from="eve_button" to="." method="_on_eve_button_mouse_exited"]

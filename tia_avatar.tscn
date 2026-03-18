@@ -1,39 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4gw7gdv07jsp"]
+[gd_scene format=3 uid="uid://d4gw7gdv07jsp"]
 
 [ext_resource type="Script" uid="uid://cwmkr2uxq3iw1" path="res://tia_avatar.gd" id="1_2vjdm"]
 [ext_resource type="Texture2D" uid="uid://c1u74ejr5u70y" path="res://Assets/Player Characters/Tiana/tiana_avatar.png" id="1_hbrys"]
 [ext_resource type="Script" uid="uid://b1aaigj17xljg" path="res://avatar_text.gd" id="3_sgkuc"]
+[ext_resource type="Texture2D" uid="uid://cbxfd75hqja15" path="res://Assets/Items/Weapons/tia_bottle.png" id="4_sgkuc"]
 
-[node name="tia_avatar" type="Node2D"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sgkuc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wj4mq"]
+
+[node name="tia_avatar" type="Node2D" unique_id=1433994445]
 script = ExtResource("1_2vjdm")
 
-[node name="TianaAvatar" type="Sprite2D" parent="."]
-position = Vector2(178, 361)
+[node name="TianaAvatar" type="Sprite2D" parent="." unique_id=1858134023]
+visible = false
+position = Vector2(95, 189)
 scale = Vector2(10.1, 9.672)
 texture = ExtResource("1_hbrys")
 
-[node name="tia_button" type="Button" parent="."]
-offset_left = 75.0
-offset_top = 502.0
-offset_right = 281.0
-offset_bottom = 581.0
-mouse_filter = 1
-mouse_force_pass_scroll_events = false
-text = "Tiana"
-
-[node name="PlayerText" type="RichTextLabel" parent="."]
-offset_left = 52.0
-offset_top = 72.0
-offset_right = 306.0
-offset_bottom = 221.0
+[node name="PlayerText" type="RichTextLabel" parent="." unique_id=980327547]
+visible = false
+offset_left = 229.0
+offset_top = 7.0
+offset_right = 579.0
+offset_bottom = 320.0
+theme_override_font_sizes/normal_font_size = 18
 text = "A Track Runner.
+
 Weapon: Hydro Holder
+
 Special Skill: Greater Endurance
+Take a turn to steady yourself and gather your strength.
+
 HP: 28
 Strength: 6    Speed: 10
 Smarts: 5         Spirit: 9"
 horizontal_alignment = 1
 script = ExtResource("3_sgkuc")
+
+[node name="TiaBottle" type="Sprite2D" parent="." unique_id=888086211]
+visible = false
+position = Vector2(221.00002, 80.00001)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_sgkuc")
+
+[node name="name_label" type="Label" parent="." unique_id=859767326]
+visible = false
+offset_left = 53.0
+offset_top = 13.0
+offset_right = 137.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 32
+text = "Tiana"
+
+[node name="cover" type="ColorRect" parent="." unique_id=344302747]
+offset_right = 578.0
+offset_bottom = 324.0
+color = Color(0.0627451, 0.0627451, 0.0627451, 0.5411765)
+
+[node name="tia_button" type="Button" parent="." unique_id=484614696]
+offset_right = 578.0
+offset_bottom = 324.0
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sgkuc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wj4mq")
 
 [connection signal="mouse_entered" from="tia_button" to="." method="_on_tia_button_mouse_entered"]
 [connection signal="mouse_exited" from="tia_button" to="." method="_on_tia_button_mouse_exited"]

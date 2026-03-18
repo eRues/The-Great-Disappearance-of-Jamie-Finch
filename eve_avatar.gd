@@ -1,5 +1,4 @@
 extends Node2D
-@onready var text = get_node("PlayerText") 
 
 func _on_eve_button_pressed() -> void:
 	Global.eve_chosen = true
@@ -9,7 +8,15 @@ func _on_eve_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://opening_cutscene.tscn")
 
 func _on_eve_button_mouse_entered() -> void:
-	text.visible = true
+	$cover.visible = false
+	$EveAvatar.visible = true
+	$PlayerText.visible = true
+	$EveKnife.visible = true
+	$name_label.visible = true
 
 func _on_eve_button_mouse_exited() -> void:
-	text.visible = false
+	$cover.visible = true
+	$EveAvatar.visible = false
+	$PlayerText.visible = false
+	$EveKnife.visible = false
+	$name_label.visible = false
