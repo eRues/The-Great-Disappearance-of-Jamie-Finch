@@ -23,4 +23,4 @@ position = Vector2(578, 0)
 position = Vector2(0, 324)
 
 [node name="nate_avatar" parent="." unique_id=765504514 instance=ExtResource("5_mn8d4")]
-position = Vector2(816, 36)
+position = Vector2(578, 324)
