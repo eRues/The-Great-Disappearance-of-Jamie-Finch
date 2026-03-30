@@ -9,7 +9,15 @@ func _on_nate_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://opening_cutscene.tscn")
 
 func _on_nate_button_mouse_entered() -> void:
-	text.visible = true
+	$NathanAvatar.visible = true
+	$PlayerText.visible = true
+	$NathanLight.visible = true
+	$name_label.visible = true
+	$ColorRect.visible = false
 
 func _on_nate_button_mouse_exited() -> void:
-	text.visible = false
+	$NathanAvatar.visible = false
+	$PlayerText.visible = false
+	$NathanLight.visible = false
+	$name_label.visible = false
+	$ColorRect.visible = true
