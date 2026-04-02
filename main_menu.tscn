@@ -13,9 +13,9 @@ color = Color(0.1290333, 0.18698734, 0.064892456, 1)
 
 [node name="new_game_button" type="Button" parent="." unique_id=1304726259]
 offset_left = 434.0
-offset_top = 347.0
+offset_top = 318.0
 offset_right = 673.0
-offset_bottom = 413.0
+offset_bottom = 384.0
 text = "New Game"
 
 [node name="load_button" type="Button" parent="." unique_id=1270406003]
@@ -44,7 +44,7 @@ offset_bottom = 501.0
 text = "Quit"
 
 [node name="GdTitle" type="Sprite2D" parent="." unique_id=1212539665]
-position = Vector2(553, 169)
+position = Vector2(553, 136)
 scale = Vector2(4, 4)
 texture = ExtResource("2_7vrkn")
 

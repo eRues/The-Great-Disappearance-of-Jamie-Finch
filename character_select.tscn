@@ -24,3 +24,11 @@ position = Vector2(0, 324)
 
 [node name="nate_avatar" parent="." unique_id=765504514 instance=ExtResource("5_mn8d4")]
 position = Vector2(578, 324)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=554449204]
+offset_left = 540.0
+offset_top = 284.0
+offset_right = 580.0
+offset_bottom = 324.0
+scale = Vector2(2, 2)
+color = Color(0.1148968, 0.11489681, 0.1148968, 1)
