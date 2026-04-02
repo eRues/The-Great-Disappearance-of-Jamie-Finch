@@ -70,6 +70,7 @@ text = "Press here to fight the Phlegathon!"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cutscene_start" unique_id=2014296113]
 position = Vector2(556, 216)
 shape = SubResource("RectangleShape2D_uwt3o")
+disabled = true
 
 [connection signal="pressed" from="temp_fight" to="." method="_on_temp_fight_pressed"]
 [connection signal="body_entered" from="cutscene_start" to="." method="_on_cutscene_start_body_entered"]
